@@ -7,3 +7,4 @@ A case study of the company Desion GmbH, a German company specializing in AI sol
 Desion needs customized RPA solutions to meet specific industry demands.
 The findings of this research provide information on how to improve the adaptability of RPA to industry needs and improve its role in optimizing Enterprise Systems to drive Digital Transformation with the use of Automation Technologies.
 
+npm i -S @react-hook/size

@@ -1,0 +1,10 @@
+{
+  "settings": {
+    "hookTheme": "yellow",
+    "hookHeaderEnable": true,
+    "hookSidebarEnable": true,
+    "hookFooterEnable": true,
+    "hookSettingsEnable": true,
+    "hookSettingsVisible": true
+  }
+}

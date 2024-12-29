@@ -1,0 +1,78 @@
+{
+  "name": "default",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.1",
+    "@react-hook/size": "^2.1.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.9",
+    "concurrently": "^9.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "http-server": "^14.1.1",
+    "json-server": "^0.17.4",
+    "mdb-react-calendar": "./plugins/calendar.tgz",
+    "mdb-react-captcha": "./plugins/captcha.tgz",
+    "mdb-react-color-picker": "./plugins/color-picker.tgz",
+    "mdb-react-cookies-management": "./plugins/cookies-management.tgz",
+    "mdb-react-countdown": "./plugins/countdown.tgz",
+    "mdb-react-data-parser": "./plugins/data-parser.tgz",
+    "mdb-react-drag-and-drop": "./plugins/drag-and-drop.tgz",
+    "mdb-react-dummy": "./plugins/dummy.tgz",
+    "mdb-react-ecommerce-gallery.": "./plugins/ecommerce-gallery.tgz",
+    "mdb-react-file-upload": "./plugins/file-upload.tgz",
+    "mdb-react-filters": "./plugins/filters.tgz",
+    "mdb-react-input-mask": "./plugins/input-mask.tgz",
+    "mdb-react-mention": "./plugins/mention.tgz",
+    "mdb-react-multi-carousel": "./plugins/multi-carousel.tgz",
+    "mdb-react-onboarding": "./plugins/onboarding.tgz",
+    "mdb-react-organization-chart": "./plugins/organization-chart.tgz",
+    "mdb-react-parallax": "./plugins/parallax.tgz",
+    "mdb-react-scroll-status": "./plugins/scroll-status.tgz",
+    "mdb-react-storage-management": "./plugins/storage-management.tgz",
+    "mdb-react-table-editor": "./plugins/table-editor.tgz",
+    "mdb-react-transfer": "./plugins/transfer.tgz",
+    "mdb-react-treetable": "./plugins/treetable.tgz",
+    "mdb-react-treeview": "./plugins/treeview.tgz",
+    "mdb-react-ui-kit": "./mdb-react-ui-kit-9.0.0.tgz",
+    "mdb-react-vector-maps": "./plugins/vector-maps.tgz",
+    "mdb-react-wysiwyg-editor": "./plugins/wysiwyg-editor.tgz",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.0.2",
+    "react-scripts": "5.0.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run start:frontend\" \"npm run start:backend\" \"npm run start:server\"",
+    "start:frontend": "react-scripts start",
+    "start:backend": "json-server --watch ./src/data/DataSettings.json --host localhost --port 3001",
+    "start:server": "http-server ./images -p 3002 --cors",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
