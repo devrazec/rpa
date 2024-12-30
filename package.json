@@ -1,5 +1,5 @@
 {
-  "name": "default",
+  "name": "rpa",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,8 +9,11 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
     "concurrently": "^9.1.0",
+    "cors": "^2.8.5",
     "eslint-plugin-react-refresh": "^0.4.16",
+    "express": "^4.21.2",
     "http-server": "^14.1.1",
     "json-server": "^0.17.4",
     "mdb-react-calendar": "./plugins/calendar.tgz",
@@ -39,6 +42,12 @@
     "mdb-react-ui-kit": "./mdb-react-ui-kit-9.0.0.tgz",
     "mdb-react-vector-maps": "./plugins/vector-maps.tgz",
     "mdb-react-wysiwyg-editor": "./plugins/wysiwyg-editor.tgz",
+    "puppeteer": "^23.11.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-adblocker": "^2.13.6",
+    "puppeteer-extra-plugin-anonymize-ua": "^2.4.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "puppeteer-extra-plugin-user-preferences": "^2.4.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
@@ -49,10 +58,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"npm run start:frontend\" \"npm run start:backend\" \"npm run start:server\"",
-    "start:frontend": "react-scripts start",
+    "start": "concurrently --kill-others \"npm run start:backend\" \"npm run start:server\" \"npm run start:express\" \"npm run start:frontend\"",
     "start:backend": "json-server --watch ./src/data/DataSettings.json --host localhost --port 3001",
     "start:server": "http-server ./images -p 3002 --cors",
+    "start:express": "node ./express/index.js",
+    "start:frontend": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

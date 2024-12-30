@@ -34,8 +34,21 @@ async function patchtHookSettingsVisible(hookSettingsVisible) {
     }
 }
 
+async function patchtHookSettingsEnable(hookSettingsEnable) {
+    try {
+        return await axios.patch(
+            `http://localhost:3001/settings`, {
+            hookSettingsEnable
+        }).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
 export {
     getSettings,
     postSettings,
-    patchtHookSettingsVisible
+    patchtHookSettingsVisible,
+    patchtHookSettingsEnable
 };

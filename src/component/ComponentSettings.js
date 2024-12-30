@@ -15,7 +15,7 @@ import {
 import { DataContext } from '../data/DataContext';
 
 // Rest Api
-import { getSettings, postSettings, patchtHookSettingsVisible } from '../api/ApiSettings';
+import { getSettings, postSettings, patchtHookSettingsVisible, patchtHookSettingsEnable } from '../api/ApiSettings';
 
 const ComponentSettings = () => {
 
@@ -66,6 +66,7 @@ const ComponentSettings = () => {
         handleResize();
 
         return () => window.removeEventListener("resize", handleResize);
+
     }, []);
 
     useEffect(() => {
@@ -113,11 +114,6 @@ const ComponentSettings = () => {
         hookSettingsEnable,
         hookSettingsVisible,
     ]);
-
-    const handleHide = () => {
-        setHookSettingsVisible(false);
-        patchtHookSettingsVisible(!hookSettingsVisible);
-    };
 
     const loadTheme = async () => {
 
@@ -192,6 +188,18 @@ const ComponentSettings = () => {
         }
     }, [hookTheme]);
 
+    const handleSettingsVisible = () => {
+        setHookSettingsVisible(false);
+        patchtHookSettingsVisible(!hookSettingsVisible);
+    };
+
+    const handleSettingsEnable = () => {
+        setHookSettingsVisible(false);
+        setHookSettingsEnable(false);
+        patchtHookSettingsVisible(!hookSettingsVisible);
+        patchtHookSettingsEnable(!hookSettingsEnable);
+    };
+
     return (
         <>
             {hookSettingsEnable && (
@@ -213,7 +221,7 @@ const ComponentSettings = () => {
                                     //size="sm"
                                     outline
                                     floating
-                                    onClick={() => handleHide()}
+                                    onClick={() => handleSettingsVisible()}
                                 >
                                     <MDBIcon fas icon='times' size='2x' />
                                 </MDBBtn>
@@ -269,11 +277,10 @@ const ComponentSettings = () => {
                                     role="switch"
                                     id="switchSettings"
                                     checked={hookSettingsEnable}
-                                    onChange={(e) => setHookSettingsEnable(e.target.checked)}
+                                    onChange={() => handleSettingsEnable()}
                                 />
                                 <label className="form-check-label" htmlFor="switchSettings">Enable Settings</label>
                             </div>
-
 
                         </MDBSideNavMenu>
                     </MDBSideNav>

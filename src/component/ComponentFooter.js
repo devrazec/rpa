@@ -39,14 +39,14 @@ const ComponentFooter = () => {
         <>
             {hookFooterEnable && (
                 <MDBFooter
-                    className='text-end shadow-inner'
+                    className='text-center shadow-inner'
                     style={{   
                         marginLeft: hookSidebarEnable ? '242px' : '0px',                   
                         //backgroundColor: '#e3f2fd',
                     }}
                 >
                     <MDBContainer fluid>
-                        <div className='text-end p-3' style={{}}>
+                        <div className='text-center p-3' style={{}}>
                             &copy; {new Date().getFullYear()} Copyright:{' '}
                             <a className='' href='https://test.com/'>
                                 test.com
