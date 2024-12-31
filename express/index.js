@@ -11,7 +11,7 @@ const scrapping_ikea = require('./scrapping_ikea.js');
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/get_source_ikea', (req, res) => {
+app.get('/get_source_ikea', async (req, res) => {
     const filePath = path.join(__dirname, './source_ikea.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
@@ -21,15 +21,15 @@ app.get('/get_source_ikea', (req, res) => {
             console.log('File has been read!');
             setTimeout(() => {
                 res.status(200).send(data);
-            }, 2000); 
+            }, 2000);
         }
     });
 });
 
-app.post('/post_source_ikea', (req, res) => {
-    const data = req.body;   
-    const filePath = path.join(__dirname, './source_ikea.json'); 
-    fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8', (err) => {
+app.post('/post_source_ikea', async (req, res) => {
+    const body = req.body;
+    const filePath = path.join(__dirname, './source_ikea.json');
+    fs.writeFile(filePath, JSON.stringify(body.params.data), 'utf8', (err) => {
         if (err) {
             console.error('Error writing file:', err);
             return res.status(500).send('Error writing file');
@@ -37,46 +37,45 @@ app.post('/post_source_ikea', (req, res) => {
             console.log('File has been saved!');
             setTimeout(() => {
                 res.status(200).send('File has been saved!');
-            }, 2000); 
+            }, 2000);
         }
     });
 });
 
-app.get('/scrapping_ikea', (req, res) => {
+app.post('/post_scrapping_ikea', async (req, res) => {
     try {
-
-        (async () => {
-            await scrapping_ikea.initialize();
-            await scrapping_ikea.scrapping();
-            res.status(200).send('Script executed successfully!');
-        })();
-
+        const body = req.body;
+        const data = JSON.stringify(body.params.data);
+        await scrapping_ikea.initialize();
+        await scrapping_ikea.scrapping(data);
+        console.log('Script executed successfully!');
+        res.status(200).send('Script executed successfully!');
     } catch (error) {
         console.error('Error running scrapping_ikea:', error);
         res.status(500).send('Failed to execute scrapping_ikea script!');
     }
 });
 
-app.get('/format_json_ikea', async (req, res) => {
+app.get('/get_format_ikea', async (req, res) => {
     try {
         scrapping_ikea.formatJson();
         console.log('Script executed successfully!');
         setTimeout(() => {
             res.status(200).send('Script executed successfully!');
-        }, 2000); 
+        }, 2000);
     } catch (error) {
         console.error('Error running format_json_ikea:', error);
         res.status(500).send('Failed to execute format_json_ikea script!');
     }
 });
 
-app.get('/clean_json_ikea', async (req, res) => {
+app.get('/get_clean_ikea', async (req, res) => {
     try {
         scrapping_ikea.cleanJson();
         console.log('Script executed successfully!');
         setTimeout(() => {
             res.status(200).send('Script executed successfully!');
-        }, 2000); 
+        }, 2000);
     } catch (error) {
         console.error('Error running clean_json_ikea:', error);
         res.status(500).send('Failed to execute clean_json_ikea script!');

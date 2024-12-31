@@ -28,7 +28,7 @@ import { DataContext } from '../data/DataContext';
 import {
     getSource,
     postSource,
-    getScrapping,
+    postScrapping,
     getFormatJson,
     getCleanJson,
 } from '../api/ApiScrapping';
@@ -63,27 +63,12 @@ const PageHome = () => {
         dataSourceSelected, setDataSourceSelected,
         dataCategoryOption, setDataCategoryOption,
         dataSubcategoryOption, setDataSubcategoryOption,
+        dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
 
     } = useContext(DataContext);
 
     const [iconsActive, setIconsActive] = useState('Source');
-
-    useEffect(() => {
-        // Add the Save button dynamically after the search bar is rendered
-        const searchBarContainer = document.querySelector('.mdb-table-editor-search');
-        if (searchBarContainer && !searchBarContainer.querySelector('.save-button')) {
-            const saveButton = document.createElement('button');
-            saveButton.innerText = 'Save';
-            saveButton.className = 'btn btn-success save-button';
-            saveButton.style.marginLeft = '8px';
-            saveButton.onclick = () => {
-                console.log('Save button clicked', dataSourceTable.rows);
-                // Add your save logic here
-            };
-            searchBarContainer.appendChild(saveButton);
-        }
-    }, [dataSourceTable]);
 
     const handleIconsClick = (value) => {
         if (value === iconsActive) {
@@ -92,13 +77,29 @@ const PageHome = () => {
         setIconsActive(value);
     };
 
-    const onSaveSource = () => {
-       
-    };
+    function convertRowsToJson(rows) {
+        return rows.map(row => ({
+            id: row.id,
+            source: row.source,
+            category: row.category,
+            subcategory: row.subcategory,
+            url: row.url,
+            image: row.image,
+            enable: row.enable
+        }));
+    }
 
     const handleRowEdit = (modifiedData) => {
         setDataSourceTable({ ...dataSourceTable, rows: modifiedData });
-        onSaveSource();
+        const jsonOutput = convertRowsToJson(modifiedData);
+        setDataSourceJson(jsonOutput);
+        postSource(dataSourceSelected, jsonOutput).then(
+            (response) => {
+                if (response) {
+                    //console.log(response);
+                }
+            }
+        );        
     };
 
     return (
@@ -155,8 +156,6 @@ const PageHome = () => {
 
                     </MDBTabsPane>
                 </MDBTabsContent>
-
-
 
             </MDBContainer>
         </>

@@ -35,6 +35,7 @@ const DataProvider = (props) => {
   const [dataSourceSelected, setDataSourceSelected] = useState(null);
   const [dataCategoryOption, setDataCategoryOption] = useState(null);
   const [dataSubcategoryOption, setDataSubcategoryOption] = useState(null);
+  const [dataSourceJson, setDataSourceJson] = useState(null);
   const [dataSourceTable, setDataSourceTable] = useState({
     columns: [      
       {        
@@ -113,6 +114,7 @@ const DataProvider = (props) => {
       dataSourceSelected, setDataSourceSelected,
       dataCategoryOption, setDataCategoryOption,
       dataSubcategoryOption, setDataSubcategoryOption,
+      dataSourceJson, setDataSourceJson,
       dataSourceTable, setDataSourceTable,
 
     }}>

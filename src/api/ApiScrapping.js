@@ -11,10 +11,38 @@ async function getSource(data) {
     }
 }
 
-async function postSource(data) {
+async function postSource(source, data) {
     try {
         return await axios.post(
-            `http://localhost:3003/post_source_`, data
+            `http://localhost:3003/post_source_` + source, {
+            params: {
+                data: data,
+            }
+        }).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function postScrappingData(source, data) {
+    try {
+        return await axios.post(
+            `http://localhost:3003/post_scrapping_` + source, {
+            params: {
+                data: data,
+            }           
+        }).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function getFormatScrappingData(data) {
+    try {
+        return await axios.get(
+            `http://localhost:3003/get_format_` + data
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -22,32 +50,10 @@ async function postSource(data) {
     }
 }
 
-async function getScrapping(data) {
+async function getCleanScrappingData(data) {
     try {
         return await axios.get(
-            `http://localhost:3003/scrapping_` + data
-        ).then((response) => response.data);
-    } catch (error) {
-        console.log(error);
-        return error;
-    }
-}
-
-async function getFormatJson(data) {
-    try {
-        return await axios.get(
-            `http://localhost:3003/format_json_` + data
-        ).then((response) => response.data);
-    } catch (error) {
-        console.log(error);
-        return error;
-    }
-}
-
-async function getCleanJson(data) {
-    try {
-        return await axios.get(
-            `http://localhost:3003/clean_json_` + data
+            `http://localhost:3003/get_clean_` + data
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -57,7 +63,8 @@ async function getCleanJson(data) {
 
 export {
     getSource,
-    getScrapping,
-    getFormatJson,
-    getCleanJson,
+    postSource,
+    postScrappingData,
+    getFormatScrappingData,
+    getCleanScrappingData,
 };

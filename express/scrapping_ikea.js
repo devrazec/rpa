@@ -18,37 +18,37 @@ async function handleHtmlItems(htmlItems, category, subcategory) {
             item_id: '',
             item_number: e?.getAttribute('data-product-number') || '',
             item_name: e?.getAttribute('data-product-name') || '',
-            item_price: e?.getAttribute('data-price') || '',            
+            item_price: e?.getAttribute('data-price') || '',
             item_url: e?.querySelector('.plp-product__image-link').href || '',
             item_image_url: e?.querySelector('.plp-mastercard__image img').src || '',
             category: '',
-            subcategory: ''           
+            subcategory: ''
         }));
-        
+
         return elements;
     });
 
     if (arrayItems) {
-        for (let i = 0; i < arrayItems.length; i++){
-            arrayItems[i]['category'] = category; 
-            arrayItems[i]['subcategory'] = subcategory; 
-        }             
+        for (let i = 0; i < arrayItems.length; i++) {
+            arrayItems[i]['category'] = category;
+            arrayItems[i]['subcategory'] = subcategory;
+        }
 
         writeJsonFile(arrayItems);
-    };               
+    };
 };
 
 async function writeJsonFile(arrayItems) {
 
     if (arrayItems) {
 
-        const filename = path.join(__dirname, './items_ikea.json');
+        const filename = path.join(__dirname, './data_ikea.json');
 
         let json = JSON.stringify(arrayItems);
 
-        fs.appendFileSync(filename, json); 
+        fs.appendFileSync(filename, json);
 
-        console.log('Updated json file items_ikea.json!');    
+        console.log('Updated json file data_ikea.json!');
     };
 };
 
@@ -105,30 +105,37 @@ const scrapping_ikea = {
         console.log('03 - Creating a Browser Context!');
     },
 
-    scrapping: async () => {
-               
-        const filePath = path.join(__dirname, './source_ikea.json');
-        const json_url = fs.readFileSync(filePath, 'utf8');
-        const array_url = JSON.parse(json_url);
+    scrapping: async (data) => {
+
+        //const filePath = path.join(__dirname, './source_ikea.json');
+        //const json_url = fs.readFileSync(filePath, 'utf8');
+        const array_url = JSON.parse(data);
+        //const array_url = JSON.parse(json_url);
+
+        //console.log(array_url1);
+        //console.log(array_url);
+
         console.log('04 - Loading Url from json File: source_ikea.json');
 
-        for (let i = 0; i < array_url.length; i++) {        
-           
-            await page.goto(array_url[i].url, {
-                timeout: 0,
-                waitUntil: [
-                    'load',
-                    'domcontentloaded',
-                    'networkidle0',
-                    'networkidle2'
-                ]
-            });
-            console.log('05 - Opening the url: ' + array_url[i].url);
-            
-            let htmlItems = await page.$('#product-list');
-            await handleHtmlItems(htmlItems, array_url[i].category, array_url[i].subcategory);
-            console.log('06 - Starting Scrapping!');            
-        }         
+        for (let i = 0; i < array_url.length; i++) {
+
+            if (array_url[i].enable) {
+                await page.goto(array_url[i].url, {
+                    timeout: 0,
+                    waitUntil: [
+                        'load',
+                        'domcontentloaded',
+                        'networkidle0',
+                        'networkidle2'
+                    ]
+                });
+                console.log('05 - Opening the url: ' + array_url[i].url);
+
+                let htmlItems = await page.$('#product-list');
+                await handleHtmlItems(htmlItems, array_url[i].category, array_url[i].subcategory);
+                console.log('06 - Starting Scrapping!');
+            }
+        }
 
         // Close Chrome Testing Browser
         await page.close();
@@ -139,40 +146,40 @@ const scrapping_ikea = {
 
     formatJson: async () => {
 
-        const filename = path.join(__dirname, './items_ikea.json');
+        const filename = path.join(__dirname, './data_ikea.json');
 
         fs.readFile(filename, 'utf8', (err, data) => {
             if (err) {
                 console.error('Error reading the file:', err);
                 return;
             }
-        
+
             // Replace "][" with ","
             const modifiedData = data.replace(/\]\[/g, ',');
 
-            const json_parse = JSON.parse(modifiedData);  
+            const json_parse = JSON.parse(modifiedData);
 
-            for (let i = 0; i < json_parse.length; i++){
-                json_parse[i].item_id = i + 1; 
+            for (let i = 0; i < json_parse.length; i++) {
+                json_parse[i].item_id = i + 1;
             }
-        
+
             fs.writeFileSync(filename, JSON.stringify(json_parse), 'utf8', (err) => {
                 if (err) {
                     console.error('Error writing the file: ', err);
                     return;
                 }
-                console.log('Json file items_ikea.json format completed!');
+                console.log('Json file data_ikea.json format completed!');
             });
         });
     },
 
     cleanJson: async () => {
 
-        const filename = path.join(__dirname, './items_ikea.json');
+        const filename = path.join(__dirname, './data_ikea.json');
 
-        fs.writeFileSync(filename, ''); 
+        fs.writeFileSync(filename, '');
 
-        console.log('Json file items_ikea.json cleaned!'); 
+        console.log('Json file data_ikea.json cleaned!');
     }
 };
 

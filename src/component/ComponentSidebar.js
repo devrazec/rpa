@@ -20,9 +20,9 @@ import { DataContext } from '../data/DataContext';
 import {
     getSource,
     postSource,
-    getScrapping,
-    getFormatJson,
-    getCleanJson,
+    postScrappingData,
+    getFormatScrappingData,
+    getCleanScrappingData,
 } from '../api/ApiScrapping';
 
 const ComponentSidebar = () => {
@@ -55,6 +55,7 @@ const ComponentSidebar = () => {
         dataSourceSelected, setDataSourceSelected,
         dataCategoryOption, setDataCategoryOption,
         dataSubcategoryOption, setDataSubcategoryOption,
+        dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
 
     } = useContext(DataContext);
@@ -88,6 +89,8 @@ const ComponentSidebar = () => {
         getSource(data).then(
             (response) => {
                 if (response) {
+
+                    setDataSourceJson(response);
 
                     const dataCategories = [...new Set(response.map(item => item.category.trim()))];
                     const dataSubcategories = [...new Set(response.map(item => item.subcategory.trim()))];
@@ -126,11 +129,11 @@ const ComponentSidebar = () => {
         );
     };
 
-    const onGetScrapping = (data) => {
+    const onScrappingData = (source) => {
 
         setHookLoadingVisible(true);
 
-        getScrapping(data).then(
+        postScrappingData(source, dataSourceJson).then(
             (response) => {
                 if (response) {
                     setHookLoadingVisible(false);
@@ -139,11 +142,11 @@ const ComponentSidebar = () => {
         );
     };
 
-    const onGetFormatJson = (data) => {
+    const onFormatScrappingData = (data) => {
 
         setHookLoadingVisible(true);
 
-        getFormatJson(data).then(
+        getFormatScrappingData(data).then(
             (response) => {
                 if (response) {
                     setHookLoadingVisible(false);
@@ -152,11 +155,24 @@ const ComponentSidebar = () => {
         );
     };
 
-    const onGetCleanJson = (data) => {
+    const onLoadingScrappingData = (data) => {
+
+        //setHookLoadingVisible(true);
+
+        /* getCleanJson(data).then(
+            (response) => {
+                if (response) {
+                    setHookLoadingVisible(false);
+                }
+            }
+        ); */
+    };
+
+    const onCleanScrappingData = (data) => {
 
         setHookLoadingVisible(true);
 
-        getCleanJson(data).then(
+        getCleanScrappingData(data).then(
             (response) => {
                 if (response) {
                     setHookLoadingVisible(false);
@@ -189,8 +205,8 @@ const ComponentSidebar = () => {
                             />
 
                         </MDBRipple>
-                        <hr />
 
+                        <hr />
 
                         <MDBSideNavMenu>
 
@@ -214,7 +230,6 @@ const ComponentSidebar = () => {
                                 onClick={() => onGetSource(dataSourceSelected)}
                                 disabled={dataSourceSelected ? (false) : (true)}
                                 style={{
-
                                 }}
                             >
                                 <MDBIcon className='me-4' fas icon='redo' size='1x' />
@@ -222,34 +237,18 @@ const ComponentSidebar = () => {
                             </MDBBtn>
                             <hr />
                             <p className="mb-3">Scrapping</p>
-                            <div className="d-flex align-items-center justify-content-between">
-                                <MDBBtn
-                                    className=""
-                                    size="sm"
-                                    color='success'
-                                    onClick={() => onGetScrapping(dataSourceSelected)}
-                                    disabled={dataSourceSelected ? (false) : (true)}
-                                    style={{
-                                    }}
-                                >
-                                    <MDBIcon className='me-3' fas icon='play' size='1x' />
-                                    Start
-                                </MDBBtn>
-
-                                <MDBBtn
-                                    className=""
-                                    size="sm"
-                                    color='secondary'
-                                    onClick={() => onGetFormatJson(dataSourceSelected)}
-                                    disabled={dataSourceSelected ? (false) : (true)}
-                                    style={{
-
-                                    }}
-                                >
-                                    <MDBIcon className='me-1' fas icon='align-justify' size='1x' />
-                                    Format
-                                </MDBBtn>
-                            </div>
+                            <MDBBtn
+                                className="w-100"
+                                size="sm"
+                                color='success'
+                                onClick={() => onScrappingData(dataSourceSelected)}
+                                disabled={dataSourceSelected && dataSourceJson ? (false) : (true)}
+                                style={{
+                                }}
+                            >
+                                <MDBIcon className='me-3' fas icon='play' size='1x' />
+                                Start
+                            </MDBBtn>
 
                             <hr />
 
@@ -257,11 +256,22 @@ const ComponentSidebar = () => {
                             <MDBBtn
                                 className="w-100 mb-4"
                                 size="sm"
+                                color='secondary'
+                                onClick={() => onFormatScrappingData(dataSourceSelected)}
+                                disabled={dataSourceSelected && dataSourceJson ? (false) : (true)}
+                                style={{
+                                }}
+                            >
+                                <MDBIcon className='me-1' fas icon='align-justify' size='1x' />
+                                Format
+                            </MDBBtn>
+                            <MDBBtn
+                                className="w-100 mb-4"
+                                size="sm"
                                 color='success'
-                                onClick={() => onGetSource(dataSourceSelected)}
+                                onClick={() => onLoadingScrappingData(dataSourceSelected)}
                                 disabled={dataSourceSelected ? (false) : (true)}
                                 style={{
-
                                 }}
                             >
                                 <MDBIcon className='me-4' fas icon='redo' size='1x' />
@@ -271,7 +281,7 @@ const ComponentSidebar = () => {
                                 className="w-100"
                                 size="sm"
                                 color='danger'
-                                onClick={() => onGetCleanJson(dataSourceSelected)}
+                                onClick={() => onCleanScrappingData(dataSourceSelected)}
                                 disabled={dataSourceSelected ? (false) : (true)}
                                 style={{
                                 }}
