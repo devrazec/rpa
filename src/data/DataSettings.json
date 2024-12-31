@@ -1,10 +1,10 @@
 {
   "settings": {
-    "hookTheme": "blue",
+    "hookTheme": "green",
     "hookHeaderEnable": true,
     "hookSidebarEnable": true,
     "hookFooterEnable": true,
     "hookSettingsEnable": true,
-    "hookSettingsVisible": true
+    "hookSettingsVisible": false
   }
 }

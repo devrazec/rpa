@@ -79,7 +79,7 @@ const scrapping_ikea = {
         console.log('01 - Starting Puppeteer Plugins!');
 
         browser = await puppeteer.launch({
-            headless: false,
+            headless: true,
             args: [
                 '--start-maximized',
                 //'--incognito',

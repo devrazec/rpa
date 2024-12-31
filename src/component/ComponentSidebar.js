@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useRef } from 'react';
+import React, { useEffect, useContext, useRef, useState } from 'react';
 
 // MD BootStrap Component
 import {
@@ -6,11 +6,24 @@ import {
     MDBSideNavMenu,
     MDBSideNavItem,
     MDBSideNavLink,
-    MDBIcon
+    MDBIcon,
+    MDBSelect,
+    MDBBtn,
+    MDBRipple,
+
 } from 'mdb-react-ui-kit';
 
 // Data Provider
 import { DataContext } from '../data/DataContext';
+
+// Api
+import {
+    getSource,
+    postSource,
+    getScrapping,
+    getFormatJson,
+    getCleanJson,
+} from '../api/ApiScrapping';
 
 const ComponentSidebar = () => {
 
@@ -35,10 +48,22 @@ const ComponentSidebar = () => {
 
         // Visible
         hookSettingsVisible, setHookSettingsVisible,
+        hookLoadingVisible, setHookLoadingVisible,
+
+        // Data       
+        dataSourceOption, setDataSourceOption,
+        dataSourceSelected, setDataSourceSelected,
+        dataCategoryOption, setDataCategoryOption,
+        dataSubcategoryOption, setDataSubcategoryOption,
+        dataSourceTable, setDataSourceTable,
 
     } = useContext(DataContext);
 
     const sidebarRef = useRef(null);
+
+    useEffect(() => {
+        setDataSourceSelected('ikea');
+    }, []);
 
     useEffect(() => {
         if (sidebarRef.current) {
@@ -56,6 +81,90 @@ const ComponentSidebar = () => {
         }
     }, []);
 
+    const onGetSource = (data) => {
+
+        setHookLoadingVisible(true);
+
+        getSource(data).then(
+            (response) => {
+                if (response) {
+
+                    const dataCategories = [...new Set(response.map(item => item.category.trim()))];
+                    const dataSubcategories = [...new Set(response.map(item => item.subcategory.trim()))];
+
+                    setDataSourceTable({
+                        columns: dataSourceTable.columns.map((column) => {
+                            if (column.field === "category") {
+                                return {
+                                    ...column,
+                                    options: dataCategories,
+                                };
+                            }
+                            if (column.field === "subcategory") {
+                                return {
+                                    ...column,
+                                    options: dataSubcategories,
+                                };
+                            }
+                            return column;
+                        }),
+                        rows: response.map((item) => ({
+                            ...item,
+                            id: item.id,
+                            source: item.source,
+                            category: item.category.trim(),
+                            subcategory: item.subcategory.trim(),
+                            url: item.url,
+                            image: item.image,
+                            enable: item.enable
+                        })),
+                    });
+
+                    setHookLoadingVisible(false);
+                }
+            }
+        );
+    };
+
+    const onGetScrapping = (data) => {
+
+        setHookLoadingVisible(true);
+
+        getScrapping(data).then(
+            (response) => {
+                if (response) {
+                    setHookLoadingVisible(false);
+                }
+            }
+        );
+    };
+
+    const onGetFormatJson = (data) => {
+
+        setHookLoadingVisible(true);
+
+        getFormatJson(data).then(
+            (response) => {
+                if (response) {
+                    setHookLoadingVisible(false);
+                }
+            }
+        );
+    };
+
+    const onGetCleanJson = (data) => {
+
+        setHookLoadingVisible(true);
+
+        getCleanJson(data).then(
+            (response) => {
+                if (response) {
+                    setHookLoadingVisible(false);
+                }
+            }
+        );
+    };
+
     return (
         <>
             {hookSidebarEnable && (
@@ -63,27 +172,113 @@ const ComponentSidebar = () => {
                     <MDBSideNav
                         ref={sidebarRef}
                         backdrop={false}
-                        absolute                       
+                        absolute
+                        style={{
+                            padding: '15px',
+                            //backgroundColor: '#e3f2fd'
+                        }}
                     >
+                        <MDBRipple tag="a" className="d-flex justify-content-center">
+                            <img
+                                className=""
+                                id="desion-logo"
+                                src="./desion_logo.png"
+                                alt="Desion Logo"
+                                width="150px"
+                                draggable="false"
+                            />
+
+                        </MDBRipple>
+                        <hr />
+
+
                         <MDBSideNavMenu>
-                            <MDBSideNavItem>
-                                <MDBSideNavLink>
-                                    <MDBIcon far icon='smile' className='fa-fw me-3' />
-                                    Link 1
-                                </MDBSideNavLink>
-                            </MDBSideNavItem>
-                            <MDBSideNavItem>
-                                <MDBSideNavLink>
-                                    <MDBIcon fas icon='grin' className='fa-fw me-3' />
-                                    Link 2
-                                </MDBSideNavLink>
-                            </MDBSideNavItem>
-                            <MDBSideNavItem>
-                                <MDBSideNavLink>
-                                    <MDBIcon fas icon='grin' className='fa-fw me-3' />
-                                    Link 3
-                                </MDBSideNavLink>
-                            </MDBSideNavItem>
+
+                            <p className="mb-1">Source</p>
+                            <MDBSelect
+                                className="mb-4"
+                                size="lg"
+                                data={dataSourceOption}
+                                placeholder='Select'
+                                //label='Theme'
+                                value={dataSourceSelected}
+                                onChange={(e) => {
+                                    setDataSourceSelected(e.value);
+                                }}
+                            />
+
+                            <MDBBtn
+                                className="w-100"
+                                size="sm"
+                                color='success'
+                                onClick={() => onGetSource(dataSourceSelected)}
+                                disabled={dataSourceSelected ? (false) : (true)}
+                                style={{
+
+                                }}
+                            >
+                                <MDBIcon className='me-4' fas icon='redo' size='1x' />
+                                Loading
+                            </MDBBtn>
+                            <hr />
+                            <p className="mb-3">Scrapping</p>
+                            <div className="d-flex align-items-center justify-content-between">
+                                <MDBBtn
+                                    className=""
+                                    size="sm"
+                                    color='success'
+                                    onClick={() => onGetScrapping(dataSourceSelected)}
+                                    disabled={dataSourceSelected ? (false) : (true)}
+                                    style={{
+                                    }}
+                                >
+                                    <MDBIcon className='me-3' fas icon='play' size='1x' />
+                                    Start
+                                </MDBBtn>
+
+                                <MDBBtn
+                                    className=""
+                                    size="sm"
+                                    color='secondary'
+                                    onClick={() => onGetFormatJson(dataSourceSelected)}
+                                    disabled={dataSourceSelected ? (false) : (true)}
+                                    style={{
+
+                                    }}
+                                >
+                                    <MDBIcon className='me-1' fas icon='align-justify' size='1x' />
+                                    Format
+                                </MDBBtn>
+                            </div>
+
+                            <hr />
+
+                            <p className="mb-3">Data</p>
+                            <MDBBtn
+                                className="w-100 mb-4"
+                                size="sm"
+                                color='success'
+                                onClick={() => onGetSource(dataSourceSelected)}
+                                disabled={dataSourceSelected ? (false) : (true)}
+                                style={{
+
+                                }}
+                            >
+                                <MDBIcon className='me-4' fas icon='redo' size='1x' />
+                                Loading
+                            </MDBBtn>
+                            <MDBBtn
+                                className="w-100"
+                                size="sm"
+                                color='danger'
+                                onClick={() => onGetCleanJson(dataSourceSelected)}
+                                disabled={dataSourceSelected ? (false) : (true)}
+                                style={{
+                                }}
+                            >
+                                <MDBIcon className='me-4' fas icon='trash-alt' size='1x' />
+                                Clean
+                            </MDBBtn>
                         </MDBSideNavMenu>
                     </MDBSideNav>
                 </div>

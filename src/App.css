@@ -1,0 +1,7 @@
+.mdb-navbar-toggler {
+    border: none; /* Remove border */
+}
+
+.mdb-navbar-toggler:hover {
+    background-color: #f8f9fa; /* Optional hover effect */
+}

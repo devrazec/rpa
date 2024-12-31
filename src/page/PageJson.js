@@ -3,13 +3,12 @@ import React, { useContext } from 'react'
 // MD BootStrap Component
 import {
     MDBContainer,
-    MDBFooter,
 } from 'mdb-react-ui-kit';
 
 // Data Provider
 import { DataContext } from '../data/DataContext';
 
-const ComponentFooter = () => {
+const PageJson = () => {
 
     // Global Data Context
     const {
@@ -34,30 +33,34 @@ const ComponentFooter = () => {
         hookSettingsVisible, setHookSettingsVisible,
         hookLoadingVisible, setHookLoadingVisible,
 
+        // Data       
+        dataSourceOption, setDataSourceOption,
+        dataSourceSelected, setDataSourceSelected,
+        dataCategoryOption, setDataCategoryOption,
+        dataSubcategoryOption, setDataSubcategoryOption,
+        dataSourceTable, setDataSourceTable,
+
     } = useContext(DataContext);
 
     return (
         <>
-            {hookFooterEnable && (
-                <MDBFooter
-                    className='text-center shadow-inner'
-                    style={{
-                        marginLeft: hookSidebarEnable ? '242px' : '0px',
-                        //backgroundColor: '#e3f2fd',
-                    }}
-                >
-                    <MDBContainer fluid>
-                        <div className='text-center p-3' style={{}}>
-                            &copy; {new Date().getFullYear()} Copyright:{' '}
-                            <a className='' href='https://test.com/'>
-                                test.com
-                            </a>
-                        </div>
-                    </MDBContainer>
-                </MDBFooter>
-            )}
+            <MDBContainer fluid
+                style={{
+                    flex: 1,
+                    marginLeft: '0px',
+                    //marginTop: hookHeaderEnable ? '20px' : '0px',
+                    //backgroundColor: '#e3f2fd'
+                }}
+            >
+                <h1 className="h5 text-center py-3 mb-0">Json Management</h1>
+
+                <div>
+
+                </div>
+
+            </MDBContainer>
         </>
     );
 };
 
-export default React.memo(ComponentFooter);
+export default React.memo(PageJson);

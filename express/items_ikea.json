@@ -131,11 +131,11 @@
     },
     {
         "item_id": 14,
-        "item_number": "s99440590",
-        "item_name": "KIVIK",
-        "item_price": "649",
-        "item_url": "https://www.ikea.com/pt/en/p/kivik-3-seat-sofa-with-chaise-longue-tibbleby-beige-grey-s99440590/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/kivik-3-seat-sofa-with-chaise-longue-tibbleby-beige-grey__1056147_pe848280_s5.jpg?f=xxs",
+        "item_number": "s99449642",
+        "item_name": "SÖDERHAMN",
+        "item_price": "559",
+        "item_url": "https://www.ikea.com/pt/en/p/soederhamn-3-seat-section-fridtuna-light-beige-s99449642/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/soederhamn-3-seat-section-fridtuna-light-beige__1057705_pe848919_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Sofa"
     },
@@ -151,21 +151,21 @@
     },
     {
         "item_id": 16,
-        "item_number": "s39216754",
-        "item_name": "FRIHETEN",
-        "item_price": "499",
-        "item_url": "https://www.ikea.com/pt/en/p/friheten-corner-sofa-bed-with-storage-skiftebo-dark-grey-s39216754/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/friheten-corner-sofa-bed-with-storage-skiftebo-dark-grey__0175610_pe328883_s5.jpg?f=xxs",
+        "item_number": "s99440590",
+        "item_name": "KIVIK",
+        "item_price": "649",
+        "item_url": "https://www.ikea.com/pt/en/p/kivik-3-seat-sofa-with-chaise-longue-tibbleby-beige-grey-s99440590/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/kivik-3-seat-sofa-with-chaise-longue-tibbleby-beige-grey__1056147_pe848280_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Sofa"
     },
     {
         "item_id": 17,
-        "item_number": "s69509010",
-        "item_name": "EKTORP",
-        "item_price": "399",
-        "item_url": "https://www.ikea.com/pt/en/p/ektorp-3-seat-sofa-kilanda-light-beige-s69509010/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ektorp-3-seat-sofa-kilanda-light-beige__1194853_pe902103_s5.jpg?f=xxs",
+        "item_number": "s69216818",
+        "item_name": "FRIHETEN",
+        "item_price": "599",
+        "item_url": "https://www.ikea.com/pt/en/p/friheten-corner-sofa-bed-with-storage-bomstad-black-s69216818/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/friheten-corner-sofa-bed-with-storage-bomstad-black__0248337_pe386785_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Sofa"
     },
@@ -181,6 +181,16 @@
     },
     {
         "item_id": 19,
+        "item_number": "s69509010",
+        "item_name": "EKTORP",
+        "item_price": "399",
+        "item_url": "https://www.ikea.com/pt/en/p/ektorp-3-seat-sofa-kilanda-light-beige-s69509010/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ektorp-3-seat-sofa-kilanda-light-beige__1194853_pe902103_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Sofa"
+    },
+    {
+        "item_id": 20,
         "item_number": "s19399033",
         "item_name": "VIMLE",
         "item_price": "569",
@@ -190,7 +200,7 @@
         "subcategory": "Sofa"
     },
     {
-        "item_id": 20,
+        "item_id": 21,
         "item_number": "s09440599",
         "item_name": "KIVIK",
         "item_price": "349",
@@ -200,57 +210,7 @@
         "subcategory": "Sofa"
     },
     {
-        "item_id": 21,
-        "item_number": "s89305615",
-        "item_name": "SÖDERHAMN",
-        "item_price": "609",
-        "item_url": "https://www.ikea.com/pt/en/p/soederhamn-3-seat-section-viarp-beige-brown-s89305615/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/soederhamn-3-seat-section-viarp-beige-brown__0802813_pe768605_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Sofa"
-    },
-    {
         "item_id": 22,
-        "item_number": "s49440597",
-        "item_name": "KIVIK",
-        "item_price": "429",
-        "item_url": "https://www.ikea.com/pt/en/p/kivik-3-seat-sofa-tibbleby-beige-grey-s49440597/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/kivik-3-seat-sofa-tibbleby-beige-grey__1056144_pe848277_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Sofa"
-    },
-    {
-        "item_id": 23,
-        "item_number": "40499974",
-        "item_name": "LINANÄS",
-        "item_price": "199",
-        "item_url": "https://www.ikea.com/pt/en/p/linanaes-2-seat-sofa-vissle-beige-40499974/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/linanaes-2-seat-sofa-vissle-beige__0972125_pe811545_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Sofa"
-    },
-    {
-        "item_id": 24,
-        "item_number": "60582547",
-        "item_name": "SKÖNABÄCK",
-        "item_price": "299",
-        "item_url": "https://www.ikea.com/pt/en/p/skoenabaeck-2-seat-sofa-bed-vissle-yellow-green-60582547/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/skoenabaeck-2-seat-sofa-bed-vissle-yellow-green__1360562_pe954483_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Sofa"
-    },
-    {
-        "item_id": 25,
-        "item_number": "s99399109",
-        "item_name": "VIMLE",
-        "item_price": "799",
-        "item_url": "https://www.ikea.com/pt/en/p/vimle-3-seat-sofa-with-chaise-longue-gunnared-beige-s99399109/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/vimle-3-seat-sofa-with-chaise-longue-gunnared-beige__0514360_pe639436_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Sofa"
-    },
-    {
-        "item_id": 26,
         "item_number": "s99471261",
         "item_name": "LILLEHEM",
         "item_price": "419",
@@ -260,17 +220,47 @@
         "subcategory": "Sofa"
     },
     {
-        "item_id": 27,
-        "item_number": "50489012",
-        "item_name": "GLOSTAD",
-        "item_price": "139",
-        "item_url": "https://www.ikea.com/pt/en/p/glostad-2-seat-sofa-knisa-dark-grey-50489012/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/glostad-2-seat-sofa-knisa-dark-grey__0950864_pe800736_s5.jpg?f=xxs",
+        "item_id": 23,
+        "item_number": "s49440597",
+        "item_name": "KIVIK",
+        "item_price": "429",
+        "item_url": "https://www.ikea.com/pt/en/p/kivik-3-seat-sofa-tibbleby-beige-grey-s49440597/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/kivik-3-seat-sofa-tibbleby-beige-grey__1056144_pe848277_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Sofa"
     },
     {
-        "item_id": 28,
+        "item_id": 24,
+        "item_number": "40499974",
+        "item_name": "LINANÄS",
+        "item_price": "199",
+        "item_url": "https://www.ikea.com/pt/en/p/linanaes-2-seat-sofa-vissle-beige-40499974/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/linanaes-2-seat-sofa-vissle-beige__0972125_pe811545_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Sofa"
+    },
+    {
+        "item_id": 25,
+        "item_number": "70582542",
+        "item_name": "SKÖNABÄCK",
+        "item_price": "299",
+        "item_url": "https://www.ikea.com/pt/en/p/skoenabaeck-2-seat-sofa-bed-knisa-dark-grey-70582542/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/skoenabaeck-2-seat-sofa-bed-knisa-dark-grey__1360572_pe954478_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Sofa"
+    },
+    {
+        "item_id": 26,
+        "item_number": "s99399109",
+        "item_name": "VIMLE",
+        "item_price": "799",
+        "item_url": "https://www.ikea.com/pt/en/p/vimle-3-seat-sofa-with-chaise-longue-gunnared-beige-s99399109/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/vimle-3-seat-sofa-with-chaise-longue-gunnared-beige__0514360_pe639436_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Sofa"
+    },
+    {
+        "item_id": 27,
         "item_number": "80541594",
         "item_name": "BÅRSLÖV",
         "item_price": "749",
@@ -280,22 +270,32 @@
         "subcategory": "Sofa"
     },
     {
-        "item_id": 29,
-        "item_number": "20572324",
-        "item_name": "EKHOLMA",
-        "item_price": "399",
-        "item_url": "https://www.ikea.com/pt/en/p/ekholma-cvr-f-crnr-sofa-4-seat-w-open-end-hemmesta-grey-green-20572324/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekholma-cvr-f-crnr-sofa-4-seat-w-open-end-hemmesta-grey-green__1360581_pe954496_s5.jpg?f=xxs",
+        "item_id": 28,
+        "item_number": "50489012",
+        "item_name": "GLOSTAD",
+        "item_price": "139",
+        "item_url": "https://www.ikea.com/pt/en/p/glostad-2-seat-sofa-knisa-dark-grey-50489012/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/glostad-2-seat-sofa-knisa-dark-grey__0950864_pe800736_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Sofa"
     },
     {
-        "item_id": 30,
+        "item_id": 29,
         "item_number": "s39509016",
         "item_name": "EKTORP",
         "item_price": "299",
         "item_url": "https://www.ikea.com/pt/en/p/ektorp-2-seat-sofa-hakebo-grey-green-s39509016/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/ektorp-2-seat-sofa-hakebo-grey-green__1194829_pe902078_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Sofa"
+    },
+    {
+        "item_id": 30,
+        "item_number": "20572324",
+        "item_name": "EKHOLMA",
+        "item_price": "399",
+        "item_url": "https://www.ikea.com/pt/en/p/ekholma-cvr-f-crnr-sofa-4-seat-w-open-end-hemmesta-grey-green-20572324/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekholma-cvr-f-crnr-sofa-4-seat-w-open-end-hemmesta-grey-green__1360581_pe954496_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Sofa"
     },
@@ -311,21 +311,21 @@
     },
     {
         "item_id": 32,
-        "item_number": "s59326624",
-        "item_name": "FRIHETEN",
-        "item_price": "579",
-        "item_url": "https://www.ikea.com/pt/en/p/friheten-corner-sofa-bed-with-storage-with-extra-back-cushions-skiftebo-dark-grey-s59326624/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/friheten-corner-sofa-bed-with-storage-with-extra-back-cushions-skiftebo-dark-grey__0796781_pe766567_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Sofa"
-    },
-    {
-        "item_id": 33,
         "item_number": "s59537396",
         "item_name": "ESKILSTUNA",
         "item_price": "574",
         "item_url": "https://www.ikea.com/pt/en/p/eskilstuna-2-seat-sofa-hillared-beige-s59537396/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/eskilstuna-2-seat-sofa-hillared-beige__1256273_pe924996_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Sofa"
+    },
+    {
+        "item_id": 33,
+        "item_number": "s69326628",
+        "item_name": "FRIHETEN",
+        "item_price": "679",
+        "item_url": "https://www.ikea.com/pt/en/p/friheten-corner-sofa-bed-with-storage-with-extra-back-cushions-bomstad-black-s69326628/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/friheten-corner-sofa-bed-with-storage-with-extra-back-cushions-bomstad-black__0796777_pe766562_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Sofa"
     },
@@ -371,21 +371,21 @@
     },
     {
         "item_id": 38,
-        "item_number": "60494584",
-        "item_name": "EKERÖ",
-        "item_price": "179",
-        "item_url": "https://www.ikea.com/pt/en/p/ekeroe-armchair-skiftebo-dark-grey-60494584/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekeroe-armchair-skiftebo-dark-grey__0983033_pe815899_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Armchair"
-    },
-    {
-        "item_id": 39,
         "item_number": "s19534413",
         "item_name": "SALNÖ / GRYTTOM",
         "item_price": "139",
         "item_url": "https://www.ikea.com/pt/en/p/salnoe-gryttom-armchair-with-cushion-s19534413/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/salnoe-gryttom-armchair-with-cushion__1224551_pe915022_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Armchair"
+    },
+    {
+        "item_id": 39,
+        "item_number": "60494584",
+        "item_name": "EKERÖ",
+        "item_price": "179",
+        "item_url": "https://www.ikea.com/pt/en/p/ekeroe-armchair-skiftebo-dark-grey-60494584/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekeroe-armchair-skiftebo-dark-grey__0983033_pe815899_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Armchair"
     },
@@ -431,21 +431,21 @@
     },
     {
         "item_id": 44,
-        "item_number": "30304793",
-        "item_name": "FRIHETEN",
-        "item_price": "129",
-        "item_url": "https://www.ikea.com/pt/en/p/friheten-armchair-skiftebo-grey-30304793/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/friheten-armchair-skiftebo-grey__0372949_pe552033_s5.jpg?f=xxs",
+        "item_number": "90554388",
+        "item_name": "SKÅLBODA",
+        "item_price": "69",
+        "item_url": "https://www.ikea.com/pt/en/p/skalboda-armchair-black-90554388/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/skalboda-armchair-black__1180834_pe896474_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Armchair"
     },
     {
         "item_id": 45,
-        "item_number": "s09508848",
-        "item_name": "ROCKSJÖN",
-        "item_price": "169",
-        "item_url": "https://www.ikea.com/pt/en/p/rocksjoen-armchair-blekinge-white-s09508848/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/rocksjoen-armchair-blekinge-white__1247358_pe922626_s5.jpg?f=xxs",
+        "item_number": "30304793",
+        "item_name": "FRIHETEN",
+        "item_price": "129",
+        "item_url": "https://www.ikea.com/pt/en/p/friheten-armchair-skiftebo-grey-30304793/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/friheten-armchair-skiftebo-grey__0372949_pe552033_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Armchair"
     },
@@ -461,21 +461,21 @@
     },
     {
         "item_id": 47,
-        "item_number": "80275887",
-        "item_name": "KALLAX",
-        "item_price": "55",
-        "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-white-80275887/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-white__0644757_pe702939_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Shelve"
-    },
-    {
-        "item_id": 48,
         "item_number": "20436713",
         "item_name": "BAGGEBO",
         "item_price": "24",
         "item_url": "https://www.ikea.com/pt/en/p/baggebo-bookcase-white-20436713/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/baggebo-bookcase-white__0981552_pe815388_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Shelve"
+    },
+    {
+        "item_id": 48,
+        "item_number": "80275887",
+        "item_name": "KALLAX",
+        "item_price": "55",
+        "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-white-80275887/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-white__0644757_pe702939_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Shelve"
     },
@@ -501,26 +501,6 @@
     },
     {
         "item_id": 51,
-        "item_number": "50481172",
-        "item_name": "BAGGEBO",
-        "item_price": "15",
-        "item_url": "https://www.ikea.com/pt/en/p/baggebo-shelving-unit-metal-white-50481172/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/baggebo-shelving-unit-metal-white__0981562_pe815396_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Shelve"
-    },
-    {
-        "item_id": 52,
-        "item_number": "s59278307",
-        "item_name": "KALLAX",
-        "item_price": "104.98",
-        "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-with-4-inserts-white-s59278307/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-with-4-inserts-white__0754627_pe747994_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Shelve"
-    },
-    {
-        "item_id": 53,
         "item_number": "50263838",
         "item_name": "BILLY",
         "item_price": "45",
@@ -530,7 +510,17 @@
         "subcategory": "Shelve"
     },
     {
-        "item_id": 54,
+        "item_id": 52,
+        "item_number": "50481172",
+        "item_name": "BAGGEBO",
+        "item_price": "15",
+        "item_url": "https://www.ikea.com/pt/en/p/baggebo-shelving-unit-metal-white-50481172/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/baggebo-shelving-unit-metal-white__0981562_pe815396_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Shelve"
+    },
+    {
+        "item_id": 53,
         "item_number": "00275848",
         "item_name": "KALLAX",
         "item_price": "50",
@@ -540,22 +530,32 @@
         "subcategory": "Shelve"
     },
     {
-        "item_id": 55,
-        "item_number": "60481204",
-        "item_name": "BAGGEBO",
-        "item_price": "25",
-        "item_url": "https://www.ikea.com/pt/en/p/baggebo-cabinet-with-door-white-60481204/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/baggebo-cabinet-with-door-white__1016757_pe830615_s5.jpg?f=xxs",
+        "item_id": 54,
+        "item_number": "s59278307",
+        "item_name": "KALLAX",
+        "item_price": "104.98",
+        "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-with-4-inserts-white-s59278307/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-with-4-inserts-white__0754627_pe747994_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Shelve"
     },
     {
-        "item_id": 56,
+        "item_id": 55,
         "item_number": "70261131",
         "item_name": "GERSBY",
         "item_price": "39",
         "item_url": "https://www.ikea.com/pt/en/p/gersby-bookcase-white-70261131/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/gersby-bookcase-white__0251910_pe390723_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Shelve"
+    },
+    {
+        "item_id": 56,
+        "item_number": "60481204",
+        "item_name": "BAGGEBO",
+        "item_price": "25",
+        "item_url": "https://www.ikea.com/pt/en/p/baggebo-cabinet-with-door-white-60481204/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/baggebo-cabinet-with-door-white__1016757_pe830615_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Shelve"
     },
@@ -621,16 +621,6 @@
     },
     {
         "item_id": 63,
-        "item_number": "s69431974",
-        "item_name": "LAGKAPTEN / ALEX",
-        "item_price": "100",
-        "item_url": "https://www.ikea.com/pt/en/p/lagkapten-alex-desk-white-white-stained-oak-effect-s69431974/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/lagkapten-alex-desk-white-white-stained-oak-effect__1022427_pe832715_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Table"
-    },
-    {
-        "item_id": 64,
         "item_number": "30213076",
         "item_name": "MICKE",
         "item_price": "49",
@@ -640,22 +630,32 @@
         "subcategory": "Table"
     },
     {
-        "item_id": 65,
-        "item_number": "90214308",
-        "item_name": "MICKE",
-        "item_price": "99",
-        "item_url": "https://www.ikea.com/pt/en/p/micke-desk-white-90214308/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/micke-desk-white__0736020_pe740347_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Table"
-    },
-    {
-        "item_id": 66,
+        "item_id": 64,
         "item_number": "90493955",
         "item_name": "TORALD",
         "item_price": "19.99",
         "item_url": "https://www.ikea.com/pt/en/p/torald-desk-white-90493955/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/torald-desk-white__1055403_pe847976_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Table"
+    },
+    {
+        "item_id": 65,
+        "item_number": "s69431974",
+        "item_name": "LAGKAPTEN / ALEX",
+        "item_price": "100",
+        "item_url": "https://www.ikea.com/pt/en/p/lagkapten-alex-desk-white-white-stained-oak-effect-s69431974/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/lagkapten-alex-desk-white-white-stained-oak-effect__1022427_pe832715_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Table"
+    },
+    {
+        "item_id": 66,
+        "item_number": "90214308",
+        "item_name": "MICKE",
+        "item_price": "99",
+        "item_url": "https://www.ikea.com/pt/en/p/micke-desk-white-90214308/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/micke-desk-white__0736020_pe740347_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Table"
     },
@@ -701,6 +701,16 @@
     },
     {
         "item_id": 71,
+        "item_number": "50413507",
+        "item_name": "HEMNES",
+        "item_price": "419",
+        "item_url": "https://www.ikea.com/pt/en/p/hemnes-glass-door-cabinet-with-3-drawers-white-stain-light-brown-50413507/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/hemnes-glass-door-cabinet-with-3-drawers-white-stain-light-brown__0805255_pe769478_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Cabinet"
+    },
+    {
+        "item_id": 72,
         "item_number": "40300662",
         "item_name": "BRIMNES",
         "item_price": "79",
@@ -710,22 +720,12 @@
         "subcategory": "Cabinet"
     },
     {
-        "item_id": 72,
+        "item_id": 73,
         "item_number": "s59412594",
         "item_name": "BESTÅ",
         "item_price": "180",
         "item_url": "https://www.ikea.com/pt/en/p/besta-storage-combination-w-doors-drawers-white-lappviken-stubbarp-white-s59412594/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/besta-storage-combination-w-doors-drawers-white-lappviken-stubbarp-white__0349566_pe538387_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Cabinet"
-    },
-    {
-        "item_id": 73,
-        "item_number": "50413507",
-        "item_name": "HEMNES",
-        "item_price": "419",
-        "item_url": "https://www.ikea.com/pt/en/p/hemnes-glass-door-cabinet-with-3-drawers-white-stain-light-brown-50413507/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/hemnes-glass-door-cabinet-with-3-drawers-white-stain-light-brown__0805255_pe769478_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Cabinet"
     },
@@ -761,11 +761,11 @@
     },
     {
         "item_id": 77,
-        "item_number": "10496038",
-        "item_name": "IDANÄS",
-        "item_price": "449",
-        "item_url": "https://www.ikea.com/pt/en/p/idanaes-cabinet-with-bi-folded-glass-doors-white-10496038/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/idanaes-cabinet-with-bi-folded-glass-doors-white__1009038_pe827427_s5.jpg?f=xxs",
+        "item_number": "s89209826",
+        "item_name": "BESTÅ",
+        "item_price": "150",
+        "item_url": "https://www.ikea.com/pt/en/p/besta-storage-combination-with-doors-white-lappviken-stubbarp-white-s89209826/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/besta-storage-combination-with-doors-white-lappviken-stubbarp-white__0494338_pe626953_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Cabinet"
     },
@@ -831,16 +831,6 @@
     },
     {
         "item_id": 84,
-        "item_number": "s19278229",
-        "item_name": "BRIMNES",
-        "item_price": "387",
-        "item_url": "https://www.ikea.com/pt/en/p/brimnes-tv-storage-combination-glass-doors-black-s19278229/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/brimnes-tv-storage-combination-glass-doors-black__0724175_pe734355_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "TV Stand"
-    },
-    {
-        "item_id": 85,
         "item_number": "s59560674",
         "item_name": "KALLAX",
         "item_price": "118.98",
@@ -850,7 +840,27 @@
         "subcategory": "TV Stand"
     },
     {
+        "item_id": 85,
+        "item_number": "s19278229",
+        "item_name": "BRIMNES",
+        "item_price": "387",
+        "item_url": "https://www.ikea.com/pt/en/p/brimnes-tv-storage-combination-glass-doors-black-s19278229/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/brimnes-tv-storage-combination-glass-doors-black__0724175_pe734355_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "TV Stand"
+    },
+    {
         "item_id": 86,
+        "item_number": "s79411013",
+        "item_name": "BESTÅ",
+        "item_price": "790",
+        "item_url": "https://www.ikea.com/pt/en/p/besta-tv-storage-combination-glass-doors-white-lappviken-white-clear-glass-s79411013/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/besta-tv-storage-combination-glass-doors-white-lappviken-white-clear-glass__0645055_pe703188_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "TV Stand"
+    },
+    {
+        "item_id": 87,
         "item_number": "s09329413",
         "item_name": "BESTÅ",
         "item_price": "285",
@@ -860,22 +870,12 @@
         "subcategory": "TV Stand"
     },
     {
-        "item_id": 87,
-        "item_number": "80562096",
+        "item_id": 88,
+        "item_number": "70562087",
         "item_name": "KALLAX",
         "item_price": "69",
-        "item_url": "https://www.ikea.com/pt/en/p/kallax-tv-bench-white-stained-oak-effect-80562096/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-tv-bench-white-stained-oak-effect__1238899_pe918670_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "TV Stand"
-    },
-    {
-        "item_id": 88,
-        "item_number": "s79411013",
-        "item_name": "BESTÅ",
-        "item_price": "790",
-        "item_url": "https://www.ikea.com/pt/en/p/besta-tv-storage-combination-glass-doors-white-lappviken-white-clear-glass-s79411013/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/besta-tv-storage-combination-glass-doors-white-lappviken-white-clear-glass__0645055_pe703188_s5.jpg?f=xxs",
+        "item_url": "https://www.ikea.com/pt/en/p/kallax-tv-bench-white-70562087/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-tv-bench-white__1238898_pe918671_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "TV Stand"
     },
@@ -931,16 +931,6 @@
     },
     {
         "item_id": 94,
-        "item_number": "40532742",
-        "item_name": "NÄMMARÖ",
-        "item_price": "69",
-        "item_url": "https://www.ikea.com/pt/en/p/naemmaroe-storage-box-light-brown-stained-indoor-outdoor-40532742/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-storage-box-light-brown-stained-indoor-outdoor__1175345_pe894657_s5.jpg?f=xxs",
-        "category": "Garden",
-        "subcategory": "Outdoor"
-    },
-    {
-        "item_id": 95,
         "item_number": "60515483",
         "item_name": "JOLPEN",
         "item_price": "79",
@@ -950,17 +940,17 @@
         "subcategory": "Outdoor"
     },
     {
-        "item_id": 96,
-        "item_number": "s19535196",
+        "item_id": 95,
+        "item_number": "40532742",
         "item_name": "NÄMMARÖ",
-        "item_price": "90",
-        "item_url": "https://www.ikea.com/pt/en/p/naemmaroe-reclining-chair-outdoor-light-brown-stained-froesoen-duvholmen-multicolour-stripe-pattern-s19535196/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-reclining-chair-outdoor-light-brown-stained-froesoen-duvholmen-multicolour-stripe-pattern__1239764_pe919095_s5.jpg?f=xxs",
+        "item_price": "69",
+        "item_url": "https://www.ikea.com/pt/en/p/naemmaroe-storage-box-light-brown-stained-indoor-outdoor-40532742/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-storage-box-light-brown-stained-indoor-outdoor__1175345_pe894657_s5.jpg?f=xxs",
         "category": "Garden",
         "subcategory": "Outdoor"
     },
     {
-        "item_id": 97,
+        "item_id": 96,
         "item_number": "70557496",
         "item_name": "ASKHOLMEN",
         "item_price": "29",
@@ -970,17 +960,17 @@
         "subcategory": "Outdoor"
     },
     {
-        "item_id": 98,
-        "item_number": "70095429",
-        "item_name": "TÄRNÖ",
-        "item_price": "29",
-        "item_url": "https://www.ikea.com/pt/en/p/taernoe-table-outdoor-black-light-brown-stained-70095429/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/taernoe-table-outdoor-black-light-brown-stained__0735751_pe740159_s5.jpg?f=xxs",
+        "item_id": 97,
+        "item_number": "s19535196",
+        "item_name": "NÄMMARÖ",
+        "item_price": "90",
+        "item_url": "https://www.ikea.com/pt/en/p/naemmaroe-reclining-chair-outdoor-light-brown-stained-froesoen-duvholmen-multicolour-stripe-pattern-s19535196/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-reclining-chair-outdoor-light-brown-stained-froesoen-duvholmen-multicolour-stripe-pattern__1239764_pe919095_s5.jpg?f=xxs",
         "category": "Garden",
         "subcategory": "Outdoor"
     },
     {
-        "item_id": 99,
+        "item_id": 98,
         "item_number": "70543739",
         "item_name": "REVSKÄR",
         "item_price": "299",
@@ -990,12 +980,22 @@
         "subcategory": "Outdoor"
     },
     {
+        "item_id": 99,
+        "item_number": "s89505394",
+        "item_name": "NÄMMARÖ",
+        "item_price": "339",
+        "item_url": "https://www.ikea.com/pt/en/p/naemmaroe-table-2-chairs-bench-outdoor-light-brown-stained-froesoen-duvholmen-beige-s89505394/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-table-2-chairs-bench-outdoor-light-brown-stained-froesoen-duvholmen-beige__1174485_pe894508_s5.jpg?f=xxs",
+        "category": "Garden",
+        "subcategory": "Outdoor"
+    },
+    {
         "item_id": 100,
-        "item_number": "40469019",
-        "item_name": "FEJAN",
-        "item_price": "15",
-        "item_url": "https://www.ikea.com/pt/en/p/fejan-table-outdoor-white-40469019/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/fejan-table-outdoor-white__1035316_pe838042_s5.jpg?f=xxs",
+        "item_number": "70095429",
+        "item_name": "TÄRNÖ",
+        "item_price": "29",
+        "item_url": "https://www.ikea.com/pt/en/p/taernoe-table-outdoor-black-light-brown-stained-70095429/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/taernoe-table-outdoor-black-light-brown-stained__0735751_pe740159_s5.jpg?f=xxs",
         "category": "Garden",
         "subcategory": "Outdoor"
     },
@@ -1181,21 +1181,21 @@
     },
     {
         "item_id": 119,
-        "item_number": "s79425185",
-        "item_name": "PLATSA",
-        "item_price": "279",
-        "item_url": "https://www.ikea.com/pt/en/p/platsa-wardrobe-with-4-doors-white-fonnes-white-s79425185/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/platsa-wardrobe-with-4-doors-white-fonnes-white__1052918_pe846527_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Wardrobe"
-    },
-    {
-        "item_id": 120,
         "item_number": "70453762",
         "item_name": "RAKKESTAD",
         "item_price": "199",
         "item_url": "https://www.ikea.com/pt/en/p/rakkestad-wardrobe-with-3-doors-black-brown-70453762/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/rakkestad-wardrobe-with-3-doors-black-brown__0823987_pe776018_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Wardrobe"
+    },
+    {
+        "item_id": 120,
+        "item_number": "s79425185",
+        "item_name": "PLATSA",
+        "item_price": "279",
+        "item_url": "https://www.ikea.com/pt/en/p/platsa-wardrobe-with-4-doors-white-fonnes-white-s79425185/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/platsa-wardrobe-with-4-doors-white-fonnes-white__1052918_pe846527_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Wardrobe"
     },
@@ -1211,21 +1211,21 @@
     },
     {
         "item_id": 122,
-        "item_number": "s19424042",
-        "item_name": "SKYTTA / HOKKSUND",
-        "item_price": "785",
-        "item_url": "https://www.ikea.com/pt/en/p/skytta-hokksund-sliding-door-combination-black-high-gloss-light-grey-s19424042/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/skytta-hokksund-sliding-door-combination-black-high-gloss-light-grey__1004804_pe825191_s5.jpg?f=xxs",
+        "item_number": "s99390316",
+        "item_name": "SMÅSTAD",
+        "item_price": "127",
+        "item_url": "https://www.ikea.com/pt/en/p/smastad-wardrobe-white-white-s99390316/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/smastad-wardrobe-white-white__0922429_pe788173_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Wardrobe"
     },
     {
         "item_id": 123,
-        "item_number": "s39240787",
-        "item_name": "POÄNG",
-        "item_price": "69",
-        "item_url": "https://www.ikea.com/pt/en/p/poaeng-armchair-birch-veneer-knisa-light-beige-s39240787/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/poaeng-armchair-birch-veneer-knisa-light-beige__0571500_pe666933_s5.jpg?f=xxs",
+        "item_number": "s39388081",
+        "item_name": "BERGMUND",
+        "item_price": "85",
+        "item_url": "https://www.ikea.com/pt/en/p/bergmund-chair-oak-effect-hallarp-beige-s39388081/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/bergmund-chair-oak-effect-hallarp-beige__0926594_pe789377_s5.jpg?f=xxs",
         "category": "Home Office",
         "subcategory": "Chair"
     },
@@ -1241,6 +1241,16 @@
     },
     {
         "item_id": 125,
+        "item_number": "s39240787",
+        "item_name": "POÄNG",
+        "item_price": "69",
+        "item_url": "https://www.ikea.com/pt/en/p/poaeng-armchair-birch-veneer-knisa-light-beige-s39240787/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/poaeng-armchair-birch-veneer-knisa-light-beige__0571500_pe666933_s5.jpg?f=xxs",
+        "category": "Home Office",
+        "subcategory": "Chair"
+    },
+    {
+        "item_id": 126,
         "item_number": "90214285",
         "item_name": "ADDE",
         "item_price": "12",
@@ -1250,27 +1260,7 @@
         "subcategory": "Chair"
     },
     {
-        "item_id": 126,
-        "item_number": "s39388081",
-        "item_name": "BERGMUND",
-        "item_price": "85",
-        "item_url": "https://www.ikea.com/pt/en/p/bergmund-chair-oak-effect-hallarp-beige-s39388081/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/bergmund-chair-oak-effect-hallarp-beige__0926594_pe789377_s5.jpg?f=xxs",
-        "category": "Home Office",
-        "subcategory": "Chair"
-    },
-    {
         "item_id": 127,
-        "item_number": "90571528",
-        "item_name": "MATCHSPEL",
-        "item_price": "189",
-        "item_url": "https://www.ikea.com/pt/en/p/matchspel-gaming-chair-bomstad-light-grey-90571528/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/matchspel-gaming-chair-bomstad-light-grey__1248931_pe923288_s5.jpg?f=xxs",
-        "category": "Home Office",
-        "subcategory": "Chair"
-    },
-    {
-        "item_id": 128,
         "item_number": "60341015",
         "item_name": "EKEDALEN",
         "item_price": "45",
@@ -1280,22 +1270,32 @@
         "subcategory": "Chair"
     },
     {
+        "item_id": 128,
+        "item_number": "00472491",
+        "item_name": "MULLFJÄLLET",
+        "item_price": "179",
+        "item_url": "https://www.ikea.com/pt/en/p/mullfjaellet-conference-chair-with-castors-naggen-beige-00472491/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/mullfjaellet-conference-chair-with-castors-naggen-beige__0955958_pe804390_s5.jpg?f=xxs",
+        "category": "Home Office",
+        "subcategory": "Chair"
+    },
+    {
         "item_id": 129,
-        "item_number": "s39481381",
-        "item_name": "LIDÅS",
-        "item_price": "35",
-        "item_url": "https://www.ikea.com/pt/en/p/lidas-chair-white-sefast-white-s39481381/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/lidas-chair-white-sefast-white__1106351_pe868690_s5.jpg?f=xxs",
+        "item_number": "90571528",
+        "item_name": "MATCHSPEL",
+        "item_price": "189",
+        "item_url": "https://www.ikea.com/pt/en/p/matchspel-gaming-chair-bomstad-light-grey-90571528/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/matchspel-gaming-chair-bomstad-light-grey__1248931_pe923288_s5.jpg?f=xxs",
         "category": "Home Office",
         "subcategory": "Chair"
     },
     {
         "item_id": 130,
-        "item_number": "90533174",
-        "item_name": "EKENÄSET",
-        "item_price": "159",
-        "item_url": "https://www.ikea.com/pt/en/p/ekenaeset-armchair-kilanda-light-beige-90533174/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekenaeset-armchair-kilanda-light-beige__1109687_pe870153_s5.jpg?f=xxs",
+        "item_number": "90350937",
+        "item_name": "TEODORES",
+        "item_price": "25",
+        "item_url": "https://www.ikea.com/pt/en/p/teodores-chair-white-90350937/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/teodores-chair-white__0727344_pe735616_s5.jpg?f=xxs",
         "category": "Home Office",
         "subcategory": "Chair"
     },
@@ -1311,21 +1311,21 @@
     },
     {
         "item_id": 132,
-        "item_number": "60566745",
-        "item_name": "KRYLBO",
-        "item_price": "65",
-        "item_url": "https://www.ikea.com/pt/en/p/krylbo-chair-tonerud-dark-beige-60566745/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/krylbo-chair-tonerud-dark-beige__1208495_pe908606_s5.jpg?f=xxs",
+        "item_number": "60500325",
+        "item_name": "KÄTTIL",
+        "item_price": "55",
+        "item_url": "https://www.ikea.com/pt/en/p/kaettil-chair-white-knisa-light-grey-60500325/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/kaettil-chair-white-knisa-light-grey__1016338_pe830329_s5.jpg?f=xxs",
         "category": "Home Office",
         "subcategory": "Chair"
     },
     {
         "item_id": 133,
-        "item_number": "60416925",
-        "item_name": "KYRRE",
-        "item_price": "15",
-        "item_url": "https://www.ikea.com/pt/en/p/kyrre-stool-birch-60416925/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/kyrre-stool-birch__0714153_pe729952_s5.jpg?f=xxs",
+        "item_number": "s39481381",
+        "item_name": "LIDÅS",
+        "item_price": "35",
+        "item_url": "https://www.ikea.com/pt/en/p/lidas-chair-white-sefast-white-s39481381/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/lidas-chair-white-sefast-white__1106351_pe868690_s5.jpg?f=xxs",
         "category": "Home Office",
         "subcategory": "Chair"
     },
@@ -1411,21 +1411,21 @@
     },
     {
         "item_id": 142,
-        "item_number": "40239721",
-        "item_name": "STOCKHOLM",
-        "item_price": "499",
-        "item_url": "https://www.ikea.com/pt/en/p/stockholm-sideboard-walnut-veneer-40239721/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/stockholm-sideboard-walnut-veneer__0625359_pe692210_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Sideboard"
-    },
-    {
-        "item_id": 143,
         "item_number": "s59412594",
         "item_name": "BESTÅ",
         "item_price": "180",
         "item_url": "https://www.ikea.com/pt/en/p/besta-storage-combination-w-doors-drawers-white-lappviken-stubbarp-white-s59412594/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/besta-storage-combination-w-doors-drawers-white-lappviken-stubbarp-white__0349566_pe538387_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Sideboard"
+    },
+    {
+        "item_id": 143,
+        "item_number": "40239721",
+        "item_name": "STOCKHOLM",
+        "item_price": "499",
+        "item_url": "https://www.ikea.com/pt/en/p/stockholm-sideboard-walnut-veneer-40239721/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/stockholm-sideboard-walnut-veneer__0625359_pe692210_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Sideboard"
     },
@@ -1481,16 +1481,6 @@
     },
     {
         "item_id": 149,
-        "item_number": "10581994",
-        "item_name": "MAMMUT",
-        "item_price": "32",
-        "item_url": "https://www.ikea.com/pt/en/p/mammut-childrens-table-in-outdoor-light-blue-10581994/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/mammut-childrens-table-in-outdoor-light-blue__1255341_pe924524_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Children"
-    },
-    {
-        "item_id": 150,
         "item_number": "30472499",
         "item_name": "DUNDRA",
         "item_price": "159",
@@ -1500,12 +1490,22 @@
         "subcategory": "Children"
     },
     {
-        "item_id": 151,
-        "item_number": "60581996",
+        "item_id": 150,
+        "item_number": "10581994",
         "item_name": "MAMMUT",
-        "item_price": "7.99",
-        "item_url": "https://www.ikea.com/pt/en/p/mammut-childrens-stool-in-outdoor-pink-60581996/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/mammut-childrens-stool-in-outdoor-pink__1255333_pe924514_s5.jpg?f=xxs",
+        "item_price": "32",
+        "item_url": "https://www.ikea.com/pt/en/p/mammut-childrens-table-in-outdoor-light-blue-10581994/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/mammut-childrens-table-in-outdoor-light-blue__1255341_pe924524_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Children"
+    },
+    {
+        "item_id": 151,
+        "item_number": "10362963",
+        "item_name": "SLÄKT",
+        "item_price": "29.99",
+        "item_url": "https://www.ikea.com/pt/en/p/slaekt-pouffe-mattress-foldable-10362963/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/slaekt-pouffe-mattress-foldable__0636227_pe697740_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Children"
     },
@@ -1521,31 +1521,31 @@
     },
     {
         "item_id": 153,
-        "item_number": "10362963",
+        "item_number": "80362974",
         "item_name": "SLÄKT",
-        "item_price": "29.99",
-        "item_url": "https://www.ikea.com/pt/en/p/slaekt-pouffe-mattress-foldable-10362963/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/slaekt-pouffe-mattress-foldable__0636227_pe697740_s5.jpg?f=xxs",
+        "item_price": "79",
+        "item_url": "https://www.ikea.com/pt/en/p/slaekt-storage-box-with-castors-white-80362974/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/slaekt-storage-box-with-castors-white__0636230_pe697739_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Children"
     },
     {
         "item_id": 154,
-        "item_number": "40578283",
-        "item_name": "SKOGSDUVA",
-        "item_price": "4.99",
-        "item_url": "https://www.ikea.com/pt/en/p/skogsduva-stool-cover-toadstool-shaped-red-white-40578283/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/skogsduva-stool-cover-toadstool-shaped-red-white__1294236_pe935375_s5.jpg?f=xxs",
+        "item_number": "60581996",
+        "item_name": "MAMMUT",
+        "item_price": "7.99",
+        "item_url": "https://www.ikea.com/pt/en/p/mammut-childrens-stool-in-outdoor-pink-60581996/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/mammut-childrens-stool-in-outdoor-pink__1255333_pe924514_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Children"
     },
     {
         "item_id": 155,
-        "item_number": "40201737",
-        "item_name": "SUNDVIK",
-        "item_price": "65",
-        "item_url": "https://www.ikea.com/pt/en/p/sundvik-childrens-desk-white-40201737/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/sundvik-childrens-desk-white__0735858_pe740221_s5.jpg?f=xxs",
+        "item_number": "40365371",
+        "item_name": "MAMMUT",
+        "item_price": "15",
+        "item_url": "https://www.ikea.com/pt/en/p/mammut-childrens-chair-in-outdoor-white-40365371/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/mammut-childrens-chair-in-outdoor-white__0727925_pe735934_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Children"
     },
@@ -1581,21 +1581,21 @@
     },
     {
         "item_id": 159,
-        "item_number": "s19506033",
-        "item_name": "SMÅGÖRA",
-        "item_price": "347",
-        "item_url": "https://www.ikea.com/pt/en/p/smagoera-3-piece-baby-furniture-set-white-s19506033/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/smagoera-3-piece-baby-furniture-set-white__1191139_pe900489_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Nursery"
-    },
-    {
-        "item_id": 160,
         "item_number": "s69556006",
         "item_name": "ÄLSKVÄRD",
         "item_price": "128",
         "item_url": "https://www.ikea.com/pt/en/p/aelskvaerd-bassinet-with-mattress-birch-s69556006/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/aelskvaerd-bassinet-with-mattress-birch__1054794_pe847842_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Nursery"
+    },
+    {
+        "item_id": 160,
+        "item_number": "s19506033",
+        "item_name": "SMÅGÖRA",
+        "item_price": "347",
+        "item_url": "https://www.ikea.com/pt/en/p/smagoera-3-piece-baby-furniture-set-white-s19506033/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/smagoera-3-piece-baby-furniture-set-white__1191139_pe900489_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Nursery"
     },
@@ -1611,16 +1611,6 @@
     },
     {
         "item_id": 162,
-        "item_number": "20307037",
-        "item_name": "GULLIVER",
-        "item_price": "69",
-        "item_url": "https://www.ikea.com/pt/en/p/gulliver-changing-table-white-20307037/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/gulliver-changing-table-white__0627301_pe693285_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Nursery"
-    },
-    {
-        "item_id": 163,
         "item_number": "s29582856",
         "item_name": "SMÅSTAD",
         "item_price": "198",
@@ -1630,12 +1620,22 @@
         "subcategory": "Nursery"
     },
     {
+        "item_id": 163,
+        "item_number": "20307037",
+        "item_name": "GULLIVER",
+        "item_price": "69",
+        "item_url": "https://www.ikea.com/pt/en/p/gulliver-changing-table-white-20307037/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/gulliver-changing-table-white__0627301_pe693285_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Nursery"
+    },
+    {
         "item_id": 164,
-        "item_number": "50422494",
-        "item_name": "GODISHUS",
+        "item_number": "10248519",
+        "item_name": "GULLIVER",
         "item_price": "99",
-        "item_url": "https://www.ikea.com/pt/en/p/godishus-wardrobe-white-50422494/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/godishus-wardrobe-white__0721180_pe735622_s5.jpg?f=xxs",
+        "item_url": "https://www.ikea.com/pt/en/p/gulliver-cot-white-10248519/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/gulliver-cot-white__0637927_pe698612_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Nursery"
     },
@@ -1651,11 +1651,11 @@
     },
     {
         "item_id": 166,
-        "item_number": "s99390316",
-        "item_name": "SMÅSTAD",
-        "item_price": "127",
-        "item_url": "https://www.ikea.com/pt/en/p/smastad-wardrobe-white-white-s99390316/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/smastad-wardrobe-white-white__0922429_pe788173_s5.jpg?f=xxs",
+        "item_number": "50422494",
+        "item_name": "GODISHUS",
+        "item_price": "99",
+        "item_url": "https://www.ikea.com/pt/en/p/godishus-wardrobe-white-50422494/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/godishus-wardrobe-white__0721180_pe735622_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Nursery"
     },
@@ -1701,16 +1701,6 @@
     },
     {
         "item_id": 171,
-        "item_number": "10570226",
-        "item_name": "GRÅFJÄLLET",
-        "item_price": "49",
-        "item_url": "https://www.ikea.com/pt/en/p/grafjaellet-room-divider-anthracite-10570226/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/grafjaellet-room-divider-anthracite__1327695_pe944553_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Divider"
-    },
-    {
-        "item_id": 172,
         "item_number": "80515509",
         "item_name": "LUNGÖN",
         "item_price": "90",
@@ -1720,7 +1710,7 @@
         "subcategory": "Divider"
     },
     {
-        "item_id": 173,
+        "item_id": 172,
         "item_number": "60512663",
         "item_name": "TOLKNING",
         "item_price": "125",
@@ -1730,17 +1720,17 @@
         "subcategory": "Divider"
     },
     {
-        "item_id": 174,
-        "item_number": "s09197605",
-        "item_name": "KALLAX",
-        "item_price": "323.95",
-        "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-with-10-inserts-white-stained-oak-effect-s09197605/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-with-10-inserts-white-stained-oak-effect__0480309_pe618893_s5.jpg?f=xxs",
+        "item_id": 173,
+        "item_number": "10570226",
+        "item_name": "GRÅFJÄLLET",
+        "item_price": "49",
+        "item_url": "https://www.ikea.com/pt/en/p/grafjaellet-room-divider-anthracite-10570226/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/grafjaellet-room-divider-anthracite__1327695_pe944553_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Divider"
     },
     {
-        "item_id": 175,
+        "item_id": 174,
         "item_number": "70301537",
         "item_name": "KALLAX",
         "item_price": "199",
@@ -1750,12 +1740,22 @@
         "subcategory": "Divider"
     },
     {
-        "item_id": 176,
+        "item_id": 175,
         "item_number": "30275861",
         "item_name": "KALLAX",
         "item_price": "139",
         "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-white-30275861/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-white__0644546_pe702768_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Divider"
+    },
+    {
+        "item_id": 176,
+        "item_number": "s09197605",
+        "item_name": "KALLAX",
+        "item_price": "323.95",
+        "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-with-10-inserts-white-stained-oak-effect-s09197605/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-with-10-inserts-white-stained-oak-effect__0480309_pe618893_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Divider"
     },
@@ -1771,21 +1771,21 @@
     },
     {
         "item_id": 178,
-        "item_number": "s09573198",
-        "item_name": "KALLAX",
-        "item_price": "219",
-        "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-with-4-inserts-white-glass-s09573198/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-with-4-inserts-white-glass__1089513_pe861592_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Divider"
-    },
-    {
-        "item_id": 179,
         "item_number": "s69227671",
         "item_name": "KALLAX",
         "item_price": "178.96",
         "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-with-4-inserts-white-white-stained-oak-effect-s69227671/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-with-4-inserts-white-white-stained-oak-effect__0754644_pe748001_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Divider"
+    },
+    {
+        "item_id": 179,
+        "item_number": "s09573198",
+        "item_name": "KALLAX",
+        "item_price": "219",
+        "item_url": "https://www.ikea.com/pt/en/p/kallax-shelving-unit-with-4-inserts-white-glass-s09573198/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallax-shelving-unit-with-4-inserts-white-glass__1089513_pe861592_s5.jpg?f=xxs",
         "category": "Bedroom ",
         "subcategory": "Divider"
     },
@@ -1811,21 +1811,21 @@
     },
     {
         "item_id": 182,
-        "item_number": "00471222",
-        "item_name": "VESKEN",
-        "item_price": "11.99",
-        "item_url": "https://www.ikea.com/pt/en/p/vesken-trolley-white-00471222/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/vesken-trolley-white__0832009_pe777548_s5.jpg?f=xxs",
-        "category": "Kitchen",
-        "subcategory": "Trolley"
-    },
-    {
-        "item_id": 183,
         "item_number": "10591766",
         "item_name": "RÅSKOG",
         "item_price": "29",
         "item_url": "https://www.ikea.com/pt/en/p/raskog-trolley-grey-blue-10591766/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/raskog-trolley-grey-blue__1366913_pe957202_s5.jpg?f=xxs",
+        "category": "Kitchen",
+        "subcategory": "Trolley"
+    },
+    {
+        "item_id": 183,
+        "item_number": "00471222",
+        "item_name": "VESKEN",
+        "item_price": "11.99",
+        "item_url": "https://www.ikea.com/pt/en/p/vesken-trolley-white-00471222/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/vesken-trolley-white__0832009_pe777548_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Trolley"
     },
@@ -1841,11 +1841,11 @@
     },
     {
         "item_id": 185,
-        "item_number": "80486724",
-        "item_name": "FÖRHÖJA",
-        "item_price": "129",
-        "item_url": "https://www.ikea.com/pt/en/p/foerhoeja-kitchen-trolley-birch-white-80486724/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/foerhoeja-kitchen-trolley-birch-white__1057905_pe849059_s5.jpg?f=xxs",
+        "item_number": "70243873",
+        "item_name": "HORNAVAN",
+        "item_price": "19.99",
+        "item_url": "https://www.ikea.com/pt/en/p/hornavan-trolley-white-70243873/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/hornavan-trolley-white__0169887_pe325984_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Trolley"
     },
@@ -1861,11 +1861,11 @@
     },
     {
         "item_id": 187,
-        "item_number": "70243873",
-        "item_name": "HORNAVAN",
-        "item_price": "19.99",
-        "item_url": "https://www.ikea.com/pt/en/p/hornavan-trolley-white-70243873/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/hornavan-trolley-white__0169887_pe325984_s5.jpg?f=xxs",
+        "item_number": "80486724",
+        "item_name": "FÖRHÖJA",
+        "item_price": "129",
+        "item_url": "https://www.ikea.com/pt/en/p/foerhoeja-kitchen-trolley-birch-white-80486724/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/foerhoeja-kitchen-trolley-birch-white__1057905_pe849059_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Trolley"
     },
@@ -1881,16 +1881,6 @@
     },
     {
         "item_id": 189,
-        "item_number": "30240348",
-        "item_name": "BEKVÄM",
-        "item_price": "49",
-        "item_url": "https://www.ikea.com/pt/en/p/bekvaem-kitchen-trolley-birch-30240348/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/bekvaem-kitchen-trolley-birch__0736862_pe740777_s5.jpg?f=xxs",
-        "category": "Kitchen",
-        "subcategory": "Trolley"
-    },
-    {
-        "item_id": 190,
         "item_number": "20533337",
         "item_name": "RESARÖ",
         "item_price": "189",
@@ -1900,22 +1890,32 @@
         "subcategory": "Trolley"
     },
     {
-        "item_id": 191,
-        "item_number": "50507488",
-        "item_name": "RÖNNINGE",
-        "item_price": "189",
-        "item_url": "https://www.ikea.com/pt/en/p/roenninge-trolley-birch-50507488/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/roenninge-trolley-birch__1061668_pe850529_s5.jpg?f=xxs",
+        "item_id": 190,
+        "item_number": "30240348",
+        "item_name": "BEKVÄM",
+        "item_price": "49",
+        "item_url": "https://www.ikea.com/pt/en/p/bekvaem-kitchen-trolley-birch-30240348/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/bekvaem-kitchen-trolley-birch__0736862_pe740777_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Trolley"
     },
     {
-        "item_id": 192,
+        "item_id": 191,
         "item_number": "40391657",
         "item_name": "TORNVIKEN",
         "item_price": "429",
         "item_url": "https://www.ikea.com/pt/en/p/tornviken-kitchen-island-off-white-oak-40391657/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/tornviken-kitchen-island-off-white-oak__0736817_pe740760_s5.jpg?f=xxs",
+        "category": "Kitchen",
+        "subcategory": "Trolley"
+    },
+    {
+        "item_id": 192,
+        "item_number": "50507488",
+        "item_name": "RÖNNINGE",
+        "item_price": "189",
+        "item_url": "https://www.ikea.com/pt/en/p/roenninge-trolley-birch-50507488/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/roenninge-trolley-birch__1061668_pe850529_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Trolley"
     },
@@ -1951,11 +1951,11 @@
     },
     {
         "item_id": 196,
-        "item_number": "10462123",
-        "item_name": "NILSOLLE",
-        "item_price": "55",
-        "item_url": "https://www.ikea.com/pt/en/p/nilsolle-bar-stool-birch-10462123/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/nilsolle-bar-stool-birch__45919_pe142507_s5.jpg?f=xxs",
+        "item_number": "90400517",
+        "item_name": "EKEDALEN",
+        "item_price": "229",
+        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-bar-table-dark-brown-90400517/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-bar-table-dark-brown__0657903_pe710032_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Bar"
     },
@@ -1991,6 +1991,16 @@
     },
     {
         "item_id": 200,
+        "item_number": "10462123",
+        "item_name": "NILSOLLE",
+        "item_price": "55",
+        "item_url": "https://www.ikea.com/pt/en/p/nilsolle-bar-stool-birch-10462123/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/nilsolle-bar-stool-birch__45919_pe142507_s5.jpg?f=xxs",
+        "category": "Kitchen",
+        "subcategory": "Bar"
+    },
+    {
+        "item_id": 201,
         "item_number": "s69442331",
         "item_name": "RÖNNINGE / RÖNNINGE",
         "item_price": "359",
@@ -2000,7 +2010,7 @@
         "subcategory": "Bar"
     },
     {
-        "item_id": 201,
+        "item_id": 202,
         "item_number": "s19333527",
         "item_name": "NORDVIKEN / NORDVIKEN",
         "item_price": "589",
@@ -2010,32 +2020,22 @@
         "subcategory": "Bar"
     },
     {
-        "item_id": 202,
-        "item_number": "90400517",
-        "item_name": "EKEDALEN",
-        "item_price": "229",
-        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-bar-table-dark-brown-90400517/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-bar-table-dark-brown__0657903_pe710032_s5.jpg?f=xxs",
-        "category": "Kitchen",
-        "subcategory": "Bar"
-    },
-    {
         "item_id": 203,
-        "item_number": "20497928",
-        "item_name": "NORBERG",
-        "item_price": "89",
-        "item_url": "https://www.ikea.com/pt/en/p/norberg-wall-mount-drop-leaf-tbl-w-storage-white-20497928/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/norberg-wall-mount-drop-leaf-tbl-w-storage-white__1060307_pe849893_s5.jpg?f=xxs",
-        "category": "Kitchen",
-        "subcategory": "Bar"
-    },
-    {
-        "item_id": 204,
         "item_number": "s09288224",
         "item_name": "STENSELE",
         "item_price": "145",
         "item_url": "https://www.ikea.com/pt/en/p/stensele-bar-table-anthracite-anthracite-s09288224/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/stensele-bar-table-anthracite-anthracite__0662006_pe711686_s5.jpg?f=xxs",
+        "category": "Kitchen",
+        "subcategory": "Bar"
+    },
+    {
+        "item_id": 204,
+        "item_number": "20497928",
+        "item_name": "NORBERG",
+        "item_price": "89",
+        "item_url": "https://www.ikea.com/pt/en/p/norberg-wall-mount-drop-leaf-tbl-w-storage-white-20497928/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/norberg-wall-mount-drop-leaf-tbl-w-storage-white__1060307_pe849893_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Bar"
     },
@@ -2061,6 +2061,16 @@
     },
     {
         "item_id": 207,
+        "item_number": "10122647",
+        "item_name": "INGOLF",
+        "item_price": "60",
+        "item_url": "https://www.ikea.com/pt/en/p/ingolf-bar-stool-with-backrest-white-10122647/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ingolf-bar-stool-with-backrest-white__0728062_pe736035_s5.jpg?f=xxs",
+        "category": "Kitchen",
+        "subcategory": "Bar"
+    },
+    {
+        "item_id": 208,
         "item_number": "s19428907",
         "item_name": "HÅVERUD / DALFRED",
         "item_price": "239",
@@ -2070,22 +2080,12 @@
         "subcategory": "Bar"
     },
     {
-        "item_id": 208,
+        "item_id": 209,
         "item_number": "60155602",
         "item_name": "DALFRED",
         "item_price": "45",
         "item_url": "https://www.ikea.com/pt/en/p/dalfred-bar-stool-black-60155602/",
         "item_image_url": "https://www.ikea.com/pt/en/images/products/dalfred-bar-stool-black__0727486_pe735711_s5.jpg?f=xxs",
-        "category": "Kitchen",
-        "subcategory": "Bar"
-    },
-    {
-        "item_id": 209,
-        "item_number": "60369113",
-        "item_name": "NORDVIKEN",
-        "item_price": "75",
-        "item_url": "https://www.ikea.com/pt/en/p/nordviken-bar-stool-with-backrest-white-60369113/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/nordviken-bar-stool-with-backrest-white__0714193_pe729960_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Bar"
     },
@@ -2121,41 +2121,41 @@
     },
     {
         "item_id": 213,
-        "item_number": "10122647",
-        "item_name": "INGOLF",
-        "item_price": "60",
-        "item_url": "https://www.ikea.com/pt/en/p/ingolf-bar-stool-with-backrest-white-10122647/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ingolf-bar-stool-with-backrest-white__0728062_pe736035_s5.jpg?f=xxs",
+        "item_number": "90511233",
+        "item_name": "RÖNNINGE",
+        "item_price": "80",
+        "item_url": "https://www.ikea.com/pt/en/p/roenninge-bar-stool-birch-90511233/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/roenninge-bar-stool-birch__1044548_pe842221_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Bar"
     },
     {
         "item_id": 214,
-        "item_number": "30554635",
-        "item_name": "GRÖNSTA",
-        "item_price": "80",
-        "item_url": "https://www.ikea.com/pt/en/p/groensta-bar-stool-white-in-outdoor-30554635/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/groensta-bar-stool-white-in-outdoor__1335567_pe947092_s5.jpg?f=xxs",
+        "item_number": "60369113",
+        "item_name": "NORDVIKEN",
+        "item_price": "75",
+        "item_url": "https://www.ikea.com/pt/en/p/nordviken-bar-stool-with-backrest-white-60369113/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/nordviken-bar-stool-with-backrest-white__0714193_pe729960_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Bar"
     },
     {
         "item_id": 215,
-        "item_number": "s39408994",
-        "item_name": "EKEDALEN / BERGMUND",
-        "item_price": "869",
-        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-bergmund-bar-table-and-4-bar-stools-dark-brown-glose-black-s39408994/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-bergmund-bar-table-and-4-bar-stools-dark-brown-glose-black__0954375_pe803246_s5.jpg?f=xxs",
+        "item_number": "80451989",
+        "item_name": "BERGMUND",
+        "item_price": "150",
+        "item_url": "https://www.ikea.com/pt/en/p/bergmund-bar-stool-with-backrest-black-glose-black-80451989/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/bergmund-bar-stool-with-backrest-black-glose-black__0928322_pe789788_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Bar"
     },
     {
         "item_id": 216,
-        "item_number": "40504254",
-        "item_name": "HÅVERUD",
-        "item_price": "149",
-        "item_url": "https://www.ikea.com/pt/en/p/haverud-table-with-storage-ladder-black-40504254/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/haverud-table-with-storage-ladder-black__1016082_pe830209_s5.jpg?f=xxs",
+        "item_number": "30554635",
+        "item_name": "GRÖNSTA",
+        "item_price": "80",
+        "item_url": "https://www.ikea.com/pt/en/p/groensta-bar-stool-white-in-outdoor-30554635/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/groensta-bar-stool-white-in-outdoor__1335567_pe947092_s5.jpg?f=xxs",
         "category": "Kitchen",
         "subcategory": "Bar"
     },
@@ -2171,6 +2171,16 @@
     },
     {
         "item_id": 218,
+        "item_number": "10507621",
+        "item_name": "UTESPELARE",
+        "item_price": "119",
+        "item_url": "https://www.ikea.com/pt/en/p/utespelare-gaming-chair-bomstad-grey-10507621/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/utespelare-gaming-chair-bomstad-grey__0985643_pe816715_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Gaming"
+    },
+    {
+        "item_id": 219,
         "item_number": "50219044",
         "item_name": "FREDDE",
         "item_price": "229",
@@ -2180,7 +2190,7 @@
         "subcategory": "Gaming"
     },
     {
-        "item_id": 219,
+        "item_id": 220,
         "item_number": "40586527",
         "item_name": "BRÄNNBOLL",
         "item_price": "25",
@@ -2190,22 +2200,12 @@
         "subcategory": "Gaming"
     },
     {
-        "item_id": 220,
-        "item_number": "s89571732",
-        "item_name": "UTMANING",
-        "item_price": "249",
-        "item_url": "https://www.ikea.com/pt/en/p/utmaning-gaming-desk-black-s89571732/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/utmaning-gaming-desk-black__1373988_pe960074_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Gaming"
-    },
-    {
         "item_id": 221,
-        "item_number": "10507621",
-        "item_name": "UTESPELARE",
-        "item_price": "119",
-        "item_url": "https://www.ikea.com/pt/en/p/utespelare-gaming-chair-bomstad-grey-10507621/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/utespelare-gaming-chair-bomstad-grey__0985643_pe816715_s5.jpg?f=xxs",
+        "item_number": "60586258",
+        "item_name": "BRÄNNBOLL",
+        "item_price": "59",
+        "item_url": "https://www.ikea.com/pt/en/p/braennboll-shelving-unit-on-castors-white-60586258/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/braennboll-shelving-unit-on-castors-white__1336717_pe947454_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Gaming"
     },
@@ -2231,16 +2231,6 @@
     },
     {
         "item_id": 224,
-        "item_number": "60586258",
-        "item_name": "BRÄNNBOLL",
-        "item_price": "59",
-        "item_url": "https://www.ikea.com/pt/en/p/braennboll-shelving-unit-on-castors-white-60586258/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/braennboll-shelving-unit-on-castors-white__1336717_pe947454_s5.jpg?f=xxs",
-        "category": "Living Room",
-        "subcategory": "Gaming"
-    },
-    {
-        "item_id": 225,
         "item_number": "60586611",
         "item_name": "BRÄNNBOLL",
         "item_price": "179",
@@ -2250,12 +2240,22 @@
         "subcategory": "Gaming"
     },
     {
+        "item_id": 225,
+        "item_number": "60586324",
+        "item_name": "LÖPARBANA",
+        "item_price": "99",
+        "item_url": "https://www.ikea.com/pt/en/p/loeparbana-gaming-chair-vissle-dark-grey-60586324/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/loeparbana-gaming-chair-vissle-dark-grey__1368691_pe957864_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Gaming"
+    },
+    {
         "item_id": 226,
-        "item_number": "20584746",
-        "item_name": "BRÄNNBOLL",
-        "item_price": "59",
-        "item_url": "https://www.ikea.com/pt/en/p/braennboll-inflatable-gaming-lounge-chair-bright-green-20584746/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/braennboll-inflatable-gaming-lounge-chair-bright-green__1358992_pe954033_s5.jpg?f=xxs",
+        "item_number": "s89571732",
+        "item_name": "UTMANING",
+        "item_price": "249",
+        "item_url": "https://www.ikea.com/pt/en/p/utmaning-gaming-desk-black-s89571732/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/utmaning-gaming-desk-black__1373988_pe960074_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Gaming"
     },
@@ -2271,11 +2271,11 @@
     },
     {
         "item_id": 228,
-        "item_number": "60507586",
-        "item_name": "GRUPPSPEL",
-        "item_price": "269",
-        "item_url": "https://www.ikea.com/pt/en/p/gruppspel-gaming-chair-gunnared-beige-60507586/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/gruppspel-gaming-chair-gunnared-beige__1036734_pe838521_s5.jpg?f=xxs",
+        "item_number": "30591765",
+        "item_name": "STUBBERGET",
+        "item_price": "39",
+        "item_url": "https://www.ikea.com/pt/en/p/stubberget-bracket-for-2-monitors-white-30591765/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/stubberget-bracket-for-2-monitors-white__1377041_pe960696_s5.jpg?f=xxs",
         "category": "Living Room",
         "subcategory": "Gaming"
     },
@@ -2361,6 +2361,16 @@
     },
     {
         "item_id": 237,
+        "item_number": "s09436366",
+        "item_name": "VEBJÖRN/MULLFJÄLLET / BILLY/OXBERG",
+        "item_price": "523",
+        "item_url": "https://www.ikea.com/pt/en/p/vebjoern-mullfjaellet-billy-oxberg-desk-and-storage-combination-and-swivel-chair-beige-grey-white-s09436366/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/vebjoern-mullfjaellet-billy-oxberg-desk-and-storage-combination-and-swivel-chair-beige-grey-white__1030307_pe836203_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 238,
         "item_number": "s49483412",
         "item_name": "MALM",
         "item_price": "179",
@@ -2370,47 +2380,7 @@
         "subcategory": "Sets"
     },
     {
-        "item_id": 238,
-        "item_number": "s29483427",
-        "item_name": "HEMNES",
-        "item_price": "777",
-        "item_url": "https://www.ikea.com/pt/en/p/hemnes-bedroom-furniture-set-of-3-white-stain-s29483427/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/hemnes-bedroom-furniture-set-of-3-white-stain__1101634_pe866474_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
         "item_id": 239,
-        "item_number": "s39483403",
-        "item_name": "MALM",
-        "item_price": "488",
-        "item_url": "https://www.ikea.com/pt/en/p/malm-bedroom-furniture-set-of-4-white-s39483403/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/malm-bedroom-furniture-set-of-4-white__1101637_pe866490_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 240,
-        "item_number": "s69483393",
-        "item_name": "BRIMNES",
-        "item_price": "567",
-        "item_url": "https://www.ikea.com/pt/en/p/brimnes-bedroom-furniture-set-of-3-white-s69483393/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/brimnes-bedroom-furniture-set-of-3-white__1119592_pe873541_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 241,
-        "item_number": "s29482729",
-        "item_name": "EKEDALEN / EKEDALEN",
-        "item_price": "459",
-        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-6-chairs-white-white-orrsta-light-grey-s29482729/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-6-chairs-white-white-orrsta-light-grey__1117948_pe872846_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 242,
         "item_number": "s09388638",
         "item_name": "HAUGA",
         "item_price": "358",
@@ -2420,127 +2390,7 @@
         "subcategory": "Sets"
     },
     {
-        "item_id": 243,
-        "item_number": "s79568829",
-        "item_name": "NORDEN / KYRRE",
-        "item_price": "289",
-        "item_url": "https://www.ikea.com/pt/en/p/norden-kyrre-table-and-4-stools-white-birch-s79568829/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/norden-kyrre-table-and-4-stools-white-birch__1328454_pe944789_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 244,
-        "item_number": "s49483308",
-        "item_name": "INGATORP / INGOLF",
-        "item_price": "679",
-        "item_url": "https://www.ikea.com/pt/en/p/ingatorp-ingolf-table-and-6-chairs-black-brown-black-s49483308/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ingatorp-ingolf-table-and-6-chairs-black-brown-black__1099598_pe865803_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 245,
-        "item_number": "s29574917",
-        "item_name": "HAUGA / STEFAN",
-        "item_price": "369",
-        "item_url": "https://www.ikea.com/pt/en/p/hauga-stefan-table-and-6-chairs-grey-grey-s29574917/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-stefan-table-and-6-chairs-grey-grey__1351889_pe952027_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 246,
-        "item_number": "s99501423",
-        "item_name": "TROTTEN / NILSERIK",
-        "item_price": "250",
-        "item_url": "https://www.ikea.com/pt/en/p/trotten-nilserik-desk-sit-stand-support-white-dark-blue-s99501423/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/trotten-nilserik-desk-sit-stand-support-white-dark-blue__1155540_pe886657_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 247,
-        "item_number": "s49388679",
-        "item_name": "VOXLÖV / ODGER",
-        "item_price": "589",
-        "item_url": "https://www.ikea.com/pt/en/p/voxloev-odger-table-and-4-chairs-bamboo-anthracite-s49388679/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/voxloev-odger-table-and-4-chairs-bamboo-anthracite__0997402_pe822662_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 248,
-        "item_number": "s29574903",
-        "item_name": "HAUGA / HAUGA",
-        "item_price": "149",
-        "item_url": "https://www.ikea.com/pt/en/p/hauga-hauga-table-and-2-stools-white-white-s29574903/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-hauga-table-and-2-stools-white-white__1351887_pe952026_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 249,
-        "item_number": "s19544624",
-        "item_name": "REVSKÄR",
-        "item_price": "514",
-        "item_url": "https://www.ikea.com/pt/en/p/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-grey-s19544624/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-grey__1240165_pe919197_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 250,
-        "item_number": "s59554932",
-        "item_name": "PINNTORP / STEFAN",
-        "item_price": "279",
-        "item_url": "https://www.ikea.com/pt/en/p/pinntorp-stefan-table-and-4-chairs-light-brown-stained-white-stained-white-s59554932/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/pinntorp-stefan-table-and-4-chairs-light-brown-stained-white-stained-white__1258465_pe926338_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 251,
-        "item_number": "s29482852",
-        "item_name": "EKEDALEN / EKEDALEN",
-        "item_price": "629",
-        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-8-chairs-white-white-orrsta-light-grey-s29482852/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-8-chairs-white-white-orrsta-light-grey__1097694_pe865081_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 252,
-        "item_number": "s49388636",
-        "item_name": "HAUGA",
-        "item_price": "348",
-        "item_url": "https://www.ikea.com/pt/en/p/hauga-storage-combination-white-s49388636/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-storage-combination-white__0917806_pe785993_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 253,
-        "item_number": "s09561633",
-        "item_name": "SKANSNÄS / SKANSNÄS",
-        "item_price": "869",
-        "item_url": "https://www.ikea.com/pt/en/p/skansnaes-skansnaes-table-and-4-chairs-brown-beech-brown-beech-s09561633/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/skansnaes-skansnaes-table-and-4-chairs-brown-beech-brown-beech__1291659_pe934959_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 254,
-        "item_number": "s29388232",
-        "item_name": "HAUGA",
-        "item_price": "737",
-        "item_url": "https://www.ikea.com/pt/en/p/hauga-wardrobe-combination-grey-s29388232/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-wardrobe-combination-grey__0914347_pe783956_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 255,
+        "item_id": 240,
         "item_number": "s89305074",
         "item_name": "NORDVIKEN / NORDVIKEN",
         "item_price": "249",
@@ -2550,7 +2400,177 @@
         "subcategory": "Sets"
     },
     {
+        "item_id": 241,
+        "item_number": "s29483427",
+        "item_name": "HEMNES",
+        "item_price": "777",
+        "item_url": "https://www.ikea.com/pt/en/p/hemnes-bedroom-furniture-set-of-3-white-stain-s29483427/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/hemnes-bedroom-furniture-set-of-3-white-stain__1101634_pe866474_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 242,
+        "item_number": "s79483383",
+        "item_name": "HAUGA",
+        "item_price": "188",
+        "item_url": "https://www.ikea.com/pt/en/p/hauga-bedroom-furniture-set-of-2-white-s79483383/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-bedroom-furniture-set-of-2-white__1102078_pe866513_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 243,
+        "item_number": "s39483403",
+        "item_name": "MALM",
+        "item_price": "488",
+        "item_url": "https://www.ikea.com/pt/en/p/malm-bedroom-furniture-set-of-4-white-s39483403/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/malm-bedroom-furniture-set-of-4-white__1101637_pe866490_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 244,
+        "item_number": "s69483393",
+        "item_name": "BRIMNES",
+        "item_price": "567",
+        "item_url": "https://www.ikea.com/pt/en/p/brimnes-bedroom-furniture-set-of-3-white-s69483393/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/brimnes-bedroom-furniture-set-of-3-white__1119592_pe873541_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 245,
+        "item_number": "s29482729",
+        "item_name": "EKEDALEN / EKEDALEN",
+        "item_price": "459",
+        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-6-chairs-white-white-orrsta-light-grey-s29482729/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-6-chairs-white-white-orrsta-light-grey__1117948_pe872846_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 246,
+        "item_number": "s49483308",
+        "item_name": "INGATORP / INGOLF",
+        "item_price": "679",
+        "item_url": "https://www.ikea.com/pt/en/p/ingatorp-ingolf-table-and-6-chairs-black-brown-black-s49483308/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ingatorp-ingolf-table-and-6-chairs-black-brown-black__1099598_pe865803_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 247,
+        "item_number": "s79568829",
+        "item_name": "NORDEN / KYRRE",
+        "item_price": "289",
+        "item_url": "https://www.ikea.com/pt/en/p/norden-kyrre-table-and-4-stools-white-birch-s79568829/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/norden-kyrre-table-and-4-stools-white-birch__1328454_pe944789_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 248,
+        "item_number": "s19574866",
+        "item_name": "HAUGA / STEFAN",
+        "item_price": "429",
+        "item_url": "https://www.ikea.com/pt/en/p/hauga-stefan-table-and-6-chairs-white-white-knisa-grey-beige-s19574866/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-stefan-table-and-6-chairs-white-white-knisa-grey-beige__1351881_pe952022_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 249,
+        "item_number": "s99501423",
+        "item_name": "TROTTEN / NILSERIK",
+        "item_price": "250",
+        "item_url": "https://www.ikea.com/pt/en/p/trotten-nilserik-desk-sit-stand-support-white-dark-blue-s99501423/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/trotten-nilserik-desk-sit-stand-support-white-dark-blue__1155540_pe886657_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 250,
+        "item_number": "s29574903",
+        "item_name": "HAUGA / HAUGA",
+        "item_price": "149",
+        "item_url": "https://www.ikea.com/pt/en/p/hauga-hauga-table-and-2-stools-white-white-s29574903/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-hauga-table-and-2-stools-white-white__1351887_pe952026_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 251,
+        "item_number": "s49388679",
+        "item_name": "VOXLÖV / ODGER",
+        "item_price": "589",
+        "item_url": "https://www.ikea.com/pt/en/p/voxloev-odger-table-and-4-chairs-bamboo-anthracite-s49388679/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/voxloev-odger-table-and-4-chairs-bamboo-anthracite__0997402_pe822662_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 252,
+        "item_number": "s19544624",
+        "item_name": "REVSKÄR",
+        "item_price": "514",
+        "item_url": "https://www.ikea.com/pt/en/p/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-grey-s19544624/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-grey__1240165_pe919197_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 253,
+        "item_number": "s59554932",
+        "item_name": "PINNTORP / STEFAN",
+        "item_price": "279",
+        "item_url": "https://www.ikea.com/pt/en/p/pinntorp-stefan-table-and-4-chairs-light-brown-stained-white-stained-white-s59554932/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/pinntorp-stefan-table-and-4-chairs-light-brown-stained-white-stained-white__1258465_pe926338_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 254,
+        "item_number": "s29482852",
+        "item_name": "EKEDALEN / EKEDALEN",
+        "item_price": "629",
+        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-8-chairs-white-white-orrsta-light-grey-s29482852/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-8-chairs-white-white-orrsta-light-grey__1097694_pe865081_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 255,
+        "item_number": "s49388636",
+        "item_name": "HAUGA",
+        "item_price": "348",
+        "item_url": "https://www.ikea.com/pt/en/p/hauga-storage-combination-white-s49388636/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-storage-combination-white__0917806_pe785993_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
         "item_id": 256,
+        "item_number": "s09561633",
+        "item_name": "SKANSNÄS / SKANSNÄS",
+        "item_price": "869",
+        "item_url": "https://www.ikea.com/pt/en/p/skansnaes-skansnaes-table-and-4-chairs-brown-beech-brown-beech-s09561633/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/skansnaes-skansnaes-table-and-4-chairs-brown-beech-brown-beech__1291659_pe934959_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 257,
+        "item_number": "s29388232",
+        "item_name": "HAUGA",
+        "item_price": "737",
+        "item_url": "https://www.ikea.com/pt/en/p/hauga-wardrobe-combination-grey-s29388232/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-wardrobe-combination-grey__0914347_pe783956_s5.jpg?f=xxs",
+        "category": "Bedroom ",
+        "subcategory": "Sets"
+    },
+    {
+        "item_id": 258,
         "item_number": "s49097350",
         "item_name": "INGO / IVAR",
         "item_price": "179",
@@ -2560,37 +2580,7 @@
         "subcategory": "Sets"
     },
     {
-        "item_id": 257,
-        "item_number": "s09536337",
-        "item_name": "EKEDALEN / KRYLBO",
-        "item_price": "459",
-        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-krylbo-table-and-4-chairs-oak-tonerud-dark-beige-s09536337/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-krylbo-table-and-4-chairs-oak-tonerud-dark-beige__1232016_pe916333_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
-        "item_id": 258,
-        "item_number": "s19221351",
-        "item_name": "EKEDALEN / EKEDALEN",
-        "item_price": "539",
-        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-6-chairs-white-orrsta-light-grey-s19221351/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-6-chairs-white-orrsta-light-grey__0737437_pe741049_s5.jpg?f=xxs",
-        "category": "Bedroom ",
-        "subcategory": "Sets"
-    },
-    {
         "item_id": 259,
-        "item_number": "70575947",
-        "item_name": "HÄGERNÄS",
-        "item_price": "149",
-        "item_url": "https://www.ikea.com/pt/en/p/haegernaes-table-and-4-chairs-antique-stain-pine-70575947/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/haegernaes-table-and-4-chairs-antique-stain-pine__1350925_pe951817_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 260,
         "item_number": "70340765",
         "item_name": "EKEDALEN",
         "item_price": "269",
@@ -2600,12 +2590,22 @@
         "subcategory": "Dining"
     },
     {
+        "item_id": 260,
+        "item_number": "70575947",
+        "item_name": "HÄGERNÄS",
+        "item_price": "149",
+        "item_url": "https://www.ikea.com/pt/en/p/haegernaes-table-and-4-chairs-antique-stain-pine-70575947/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/haegernaes-table-and-4-chairs-antique-stain-pine__1350925_pe951817_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
         "item_id": 261,
-        "item_number": "s59429194",
-        "item_name": "SANDSBERG / ADDE",
-        "item_price": "87",
-        "item_url": "https://www.ikea.com/pt/en/p/sandsberg-adde-table-and-4-chairs-black-black-s59429194/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/sandsberg-adde-table-and-4-chairs-black-black__1016431_pe830392_s5.jpg?f=xxs",
+        "item_number": "70504276",
+        "item_name": "FRIDNÄS",
+        "item_price": "99",
+        "item_url": "https://www.ikea.com/pt/en/p/fridnaes-nesting-tables-with-stools-set-of-4-black-birch-effect-70504276/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/fridnaes-nesting-tables-with-stools-set-of-4-black-birch-effect__1038547_pe839730_s5.jpg?f=xxs",
         "category": "Dining Room",
         "subcategory": "Dining"
     },
@@ -2621,76 +2621,6 @@
     },
     {
         "item_id": 263,
-        "item_number": "30491718",
-        "item_name": "VIHALS",
-        "item_price": "149",
-        "item_url": "https://www.ikea.com/pt/en/p/vihals-sideboard-white-30491718/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/vihals-sideboard-white__1035578_pe838113_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 264,
-        "item_number": "s39440258",
-        "item_name": "BESTÅ",
-        "item_price": "345",
-        "item_url": "https://www.ikea.com/pt/en/p/besta-storage-combination-with-drawers-white-hedeviken-stubbarp-oak-veneer-s39440258/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/besta-storage-combination-with-drawers-white-hedeviken-stubbarp-oak-veneer__0996763_pe822508_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 265,
-        "item_number": "50576721",
-        "item_name": "HAUGA",
-        "item_price": "129",
-        "item_url": "https://www.ikea.com/pt/en/p/hauga-table-grey-birch-veneer-50576721/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-table-grey-birch-veneer__1350924_pe951820_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 266,
-        "item_number": "70504276",
-        "item_name": "FRIDNÄS",
-        "item_price": "99",
-        "item_url": "https://www.ikea.com/pt/en/p/fridnaes-nesting-tables-with-stools-set-of-4-black-birch-effect-70504276/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/fridnaes-nesting-tables-with-stools-set-of-4-black-birch-effect__1038547_pe839730_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 267,
-        "item_number": "s29482729",
-        "item_name": "EKEDALEN / EKEDALEN",
-        "item_price": "459",
-        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-6-chairs-white-white-orrsta-light-grey-s29482729/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-6-chairs-white-white-orrsta-light-grey__1117948_pe872846_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 268,
-        "item_number": "s19221351",
-        "item_name": "EKEDALEN / EKEDALEN",
-        "item_price": "539",
-        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-6-chairs-white-orrsta-light-grey-s19221351/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-6-chairs-white-orrsta-light-grey__0737437_pe741049_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 269,
-        "item_number": "s99482962",
-        "item_name": "EKEDALEN / EKEDALEN",
-        "item_price": "329",
-        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-4-chairs-white-white-orrsta-light-grey-s99482962/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-4-chairs-white-white-orrsta-light-grey__1111893_pe871008_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 270,
         "item_number": "s29420393",
         "item_name": "SANDSBERG",
         "item_price": "39",
@@ -2700,7 +2630,17 @@
         "subcategory": "Dining"
     },
     {
-        "item_id": 271,
+        "item_id": 264,
+        "item_number": "s59429194",
+        "item_name": "SANDSBERG / ADDE",
+        "item_price": "87",
+        "item_url": "https://www.ikea.com/pt/en/p/sandsberg-adde-table-and-4-chairs-black-black-s59429194/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/sandsberg-adde-table-and-4-chairs-black-black__1016431_pe830392_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 265,
         "item_number": "70340812",
         "item_name": "EKEDALEN",
         "item_price": "199",
@@ -2710,67 +2650,27 @@
         "subcategory": "Dining"
     },
     {
-        "item_id": 272,
-        "item_number": "40416498",
-        "item_name": "LISABO",
+        "item_id": 266,
+        "item_number": "s29482729",
+        "item_name": "EKEDALEN / EKEDALEN",
+        "item_price": "459",
+        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-6-chairs-white-white-orrsta-light-grey-s29482729/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-6-chairs-white-white-orrsta-light-grey__1117948_pe872846_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 267,
+        "item_number": "30491718",
+        "item_name": "VIHALS",
         "item_price": "149",
-        "item_url": "https://www.ikea.com/pt/en/p/lisabo-table-ash-veneer-40416498/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/lisabo-table-ash-veneer__0631745_pe695175_s5.jpg?f=xxs",
+        "item_url": "https://www.ikea.com/pt/en/p/vihals-sideboard-white-30491718/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/vihals-sideboard-white__1035578_pe838113_s5.jpg?f=xxs",
         "category": "Dining Room",
         "subcategory": "Dining"
     },
     {
-        "item_id": 273,
-        "item_number": "70563237",
-        "item_name": "SKANSNÄS",
-        "item_price": "549",
-        "item_url": "https://www.ikea.com/pt/en/p/skansnaes-extendable-table-brown-beech-veneer-70563237/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/skansnaes-extendable-table-brown-beech-veneer__1262371_pe927057_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 274,
-        "item_number": "40487278",
-        "item_name": "STRANDTORP",
-        "item_price": "499",
-        "item_url": "https://www.ikea.com/pt/en/p/strandtorp-extendable-table-white-40487278/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/strandtorp-extendable-table-white__0926904_pe789587_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 275,
-        "item_number": "s69569315",
-        "item_name": "MÖRBYLÅNGA / TOSSBERG",
-        "item_price": "1115",
-        "item_url": "https://www.ikea.com/pt/en/p/moerbylanga-tossberg-table-and-4-chairs-oak-veneer-brown-stained-gunnared-dark-grey-black-s69569315/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/moerbylanga-tossberg-table-and-4-chairs-oak-veneer-brown-stained-gunnared-dark-grey-black__1361241_pe954605_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 276,
-        "item_number": "s69392538",
-        "item_name": "DANDERYD / INGOLF",
-        "item_price": "399",
-        "item_url": "https://www.ikea.com/pt/en/p/danderyd-ingolf-table-and-4-chairs-oak-veneer-white-white-s69392538/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/danderyd-ingolf-table-and-4-chairs-oak-veneer-white-white__0926682_pe789463_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 277,
-        "item_number": "20586000",
-        "item_name": "HAUGA",
-        "item_price": "119",
-        "item_url": "https://www.ikea.com/pt/en/p/hauga-drop-leaf-table-white-birch-veneer-20586000/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-drop-leaf-table-white-birch-veneer__1351982_pe952096_s5.jpg?f=xxs",
-        "category": "Dining Room",
-        "subcategory": "Dining"
-    },
-    {
-        "item_id": 278,
+        "item_id": 268,
         "item_number": "20497928",
         "item_name": "NORBERG",
         "item_price": "89",
@@ -2780,32 +2680,132 @@
         "subcategory": "Dining"
     },
     {
+        "item_id": 269,
+        "item_number": "s39440258",
+        "item_name": "BESTÅ",
+        "item_price": "345",
+        "item_url": "https://www.ikea.com/pt/en/p/besta-storage-combination-with-drawers-white-hedeviken-stubbarp-oak-veneer-s39440258/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/besta-storage-combination-with-drawers-white-hedeviken-stubbarp-oak-veneer__0996763_pe822508_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 270,
+        "item_number": "50576721",
+        "item_name": "HAUGA",
+        "item_price": "129",
+        "item_url": "https://www.ikea.com/pt/en/p/hauga-table-grey-birch-veneer-50576721/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/hauga-table-grey-birch-veneer__1350924_pe951820_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 271,
+        "item_number": "s19221351",
+        "item_name": "EKEDALEN / EKEDALEN",
+        "item_price": "539",
+        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-6-chairs-white-orrsta-light-grey-s19221351/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-6-chairs-white-orrsta-light-grey__0737437_pe741049_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 272,
+        "item_number": "s99482962",
+        "item_name": "EKEDALEN / EKEDALEN",
+        "item_price": "329",
+        "item_url": "https://www.ikea.com/pt/en/p/ekedalen-ekedalen-table-and-4-chairs-white-white-orrsta-light-grey-s99482962/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/ekedalen-ekedalen-table-and-4-chairs-white-white-orrsta-light-grey__1111893_pe871008_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 273,
+        "item_number": "40416498",
+        "item_name": "LISABO",
+        "item_price": "149",
+        "item_url": "https://www.ikea.com/pt/en/p/lisabo-table-ash-veneer-40416498/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/lisabo-table-ash-veneer__0631745_pe695175_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 274,
+        "item_number": "70419264",
+        "item_name": "SKOGSTA",
+        "item_price": "499",
+        "item_url": "https://www.ikea.com/pt/en/p/skogsta-dining-table-acacia-black-70419264/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/skogsta-dining-table-acacia-black__0546603_pe656255_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 275,
+        "item_number": "00488543",
+        "item_name": "NORDVIKEN",
+        "item_price": "499",
+        "item_url": "https://www.ikea.com/pt/en/p/nordviken-extendable-table-antique-stain-00488543/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/nordviken-extendable-table-antique-stain__0832852_pe777856_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 276,
+        "item_number": "s69569315",
+        "item_name": "MÖRBYLÅNGA / TOSSBERG",
+        "item_price": "1115",
+        "item_url": "https://www.ikea.com/pt/en/p/moerbylanga-tossberg-table-and-4-chairs-oak-veneer-brown-stained-gunnared-dark-grey-black-s69569315/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/moerbylanga-tossberg-table-and-4-chairs-oak-veneer-brown-stained-gunnared-dark-grey-black__1361241_pe954605_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 277,
+        "item_number": "00529459",
+        "item_name": "PINNTORP",
+        "item_price": "149",
+        "item_url": "https://www.ikea.com/pt/en/p/pinntorp-table-light-brown-stained-white-stained-00529459/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/pinntorp-table-light-brown-stained-white-stained__1118111_pe872933_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
+        "item_id": 278,
+        "item_number": "80496025",
+        "item_name": "IDANÄS",
+        "item_price": "299",
+        "item_url": "https://www.ikea.com/pt/en/p/idanaes-sideboard-white-80496025/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/idanaes-sideboard-white__1009040_pe827429_s5.jpg?f=xxs",
+        "category": "Dining Room",
+        "subcategory": "Dining"
+    },
+    {
         "item_id": 279,
-        "item_number": "s49569321",
-        "item_name": "MÖRBYLÅNGA / GRÖNSTA",
-        "item_price": "1069",
-        "item_url": "https://www.ikea.com/pt/en/p/moerbylanga-groensta-table-and-6-armchairs-oak-veneer-brown-stained-white-s49569321/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/moerbylanga-groensta-table-and-6-armchairs-oak-veneer-brown-stained-white__1328445_pe944782_s5.jpg?f=xxs",
+        "item_number": "20533337",
+        "item_name": "RESARÖ",
+        "item_price": "189",
+        "item_url": "https://www.ikea.com/pt/en/p/resaroe-mobile-drop-leaf-table-w-storage-pine-20533337/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/resaroe-mobile-drop-leaf-table-w-storage-pine__1323608_pe942782_s5.jpg?f=xxs",
         "category": "Dining Room",
         "subcategory": "Dining"
     },
     {
         "item_id": 280,
-        "item_number": "90350937",
-        "item_name": "TEODORES",
-        "item_price": "25",
-        "item_url": "https://www.ikea.com/pt/en/p/teodores-chair-white-90350937/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/teodores-chair-white__0727344_pe735616_s5.jpg?f=xxs",
+        "item_number": "00511223",
+        "item_name": "KALLHÄLL",
+        "item_price": "189",
+        "item_url": "https://www.ikea.com/pt/en/p/kallhaell-gateleg-table-with-storage-white-light-grey-00511223/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/kallhaell-gateleg-table-with-storage-white-light-grey__1015317_pe829990_s5.jpg?f=xxs",
         "category": "Dining Room",
         "subcategory": "Dining"
     },
     {
         "item_id": 281,
-        "item_number": "s29564452",
-        "item_name": "PINNTORP / PINNTORP",
-        "item_price": "359",
-        "item_url": "https://www.ikea.com/pt/en/p/pinntorp-pinntorp-table-and-6-chairs-light-brown-stained-white-stained-light-brown-stained-s29564452/",
-        "item_image_url": "https://www.ikea.com/pt/en/images/products/pinntorp-pinntorp-table-and-6-chairs-light-brown-stained-white-stained-light-brown-stained__1301600_pe937491_s5.jpg?f=xxs",
+        "item_number": "s49569321",
+        "item_name": "MÖRBYLÅNGA / GRÖNSTA",
+        "item_price": "1069",
+        "item_url": "https://www.ikea.com/pt/en/p/moerbylanga-groensta-table-and-6-armchairs-oak-veneer-brown-stained-white-s49569321/",
+        "item_image_url": "https://www.ikea.com/pt/en/images/products/moerbylanga-groensta-table-and-6-armchairs-oak-veneer-brown-stained-white__1328445_pe944782_s5.jpg?f=xxs",
         "category": "Dining Room",
         "subcategory": "Dining"
     }

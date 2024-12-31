@@ -12,11 +12,14 @@ import ComponentSettings from './component/ComponentSettings';
 import ComponentHeader from './component/ComponentHeader';
 import ComponentSidebar from './component/ComponentSidebar';
 import ComponentFooter from './component/ComponentFooter';
+import ComponentLoading from './component/ComponentLoading';
 
 // Pages
 import PageHome from './page/PageHome';
 import PageNotFound from './page/PageNotFound';
-import PageTest from './page/PageTest';
+import PageFolder from './page/PageFolder';
+import PageJson from './page/PageJson';
+import PageScripts from './page/PageScripts';
 
 function App() {
 
@@ -30,6 +33,9 @@ function App() {
 
   return (
     <>
+      
+      <ComponentLoading />
+
       <ComponentSettings />
       
       <div style={{ display: "flex", height: "100vh", flexDirection: "column" }}>
@@ -43,7 +49,9 @@ function App() {
           <Suspense>
             <Routes>
               <Route exact path="/" element={<PageHome />} />
-              <Route exact path="/pagetest" element={<PageTest />} />
+              <Route exact path="/pagefolder" element={<PageFolder />} />
+              <Route exact path="/pagejson" element={<PageJson />} />
+              <Route exact path="/pagescripts" element={<PageScripts />} />
               <Route exact path="/pagenotfound" element={<PageNotFound />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>

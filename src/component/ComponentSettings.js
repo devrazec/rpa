@@ -40,6 +40,7 @@ const ComponentSettings = () => {
 
         // Visible
         hookSettingsVisible, setHookSettingsVisible,
+        hookLoadingVisible, setHookLoadingVisible,
 
     } = useContext(DataContext);
 
@@ -259,7 +260,7 @@ const ComponentSettings = () => {
                                 />
                                 <label className="form-check-label" htmlFor="switchSidebar">Enable Sidebar</label>
                             </div>
-                            
+
                             <div className="form-check form-switch mb-4">
                                 <input className="form-check-input"
                                     type="checkbox"
@@ -285,7 +286,7 @@ const ComponentSettings = () => {
                         </MDBSideNavMenu>
                     </MDBSideNav>
 
-                    <div
+                    {/* <div
                         style={{
                             position: 'relative'
                         }}>
@@ -295,9 +296,7 @@ const ComponentSettings = () => {
                                 position: "fixed",
                                 top: "50%",
                                 right: "0",
-                                transform: "translateY(-50%)",
-                                //backgroundColor: hookDarkModeEnable ? '#DADEE3' : '#121212',
-                                //color: hookDarkModeEnable ? '#121212' : '#DADEE3',
+                                transform: "translateY(-50%)",                                
                                 border: "none",
                                 borderRadius: "5px 0 0 5px",
                                 width: "50px",
@@ -307,7 +306,7 @@ const ComponentSettings = () => {
                         >
                             <MDBIcon className='d-flex justify-content-center' fas icon='cog' size='2x' />
                         </MDBBtn>
-                    </div>
+                    </div> */}
                 </>
             )}
         </>
