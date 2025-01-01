@@ -37,8 +37,8 @@ const DataProvider = (props) => {
   const [dataSubcategoryOption, setDataSubcategoryOption] = useState(null);
   const [dataSourceJson, setDataSourceJson] = useState(null);
   const [dataSourceTable, setDataSourceTable] = useState({
-    columns: [      
-      {        
+    columns: [
+      {
         sort: true,
         inputType: "number",
         label: "ID",
@@ -51,14 +51,14 @@ const DataProvider = (props) => {
         field: "source",
       },
       {
-        sort: true,        
+        sort: true,
         options: [],
         inputType: "select",
         label: "Category",
         field: "category",
       },
       {
-        sort: true,        
+        sort: true,
         options: [],
         inputType: "select",
         label: "Subcategory",
@@ -70,18 +70,64 @@ const DataProvider = (props) => {
         label: "URL",
         field: "url",
       },
-      {        
+      {
         sort: true,
         inputType: "number",
         label: "Image",
         field: "image",
       },
-      {        
+      {
         sort: true,
         inputType: "checkbox",
         label: "Enable",
         field: "enable",
       }
+    ],
+    rows: []
+  });
+  const [dataSourceScrappingJson, setDataSourceScrappingJson] = useState(null);
+  const [dataSourceScrappingTable, setDataSourceScrappingTable] = useState({
+    columns: [
+      {
+        sort: true,
+        label: "ID",
+        field: "id",
+      },
+      {
+        sort: false,
+        label: "Number",
+        field: "number",
+      },
+      {
+        sort: true,
+        label: "Name",
+        field: "name",
+      },
+      {
+        sort: false,
+        label: "Price",
+        field: "price",
+      },
+      {
+        sort: true,
+        label: "Category",
+        field: "category",
+      },
+      {
+        sort: true,
+        label: "Subcategory",
+        field: "subcategory",
+      },
+      {
+        sort: false,
+        label: "URL",
+        field: "url",
+      },
+      {
+        sort: false,
+        label: "Image Url",
+        field: "image_url",
+      }     
     ],
     rows: [],
   });
@@ -116,6 +162,8 @@ const DataProvider = (props) => {
       dataSubcategoryOption, setDataSubcategoryOption,
       dataSourceJson, setDataSourceJson,
       dataSourceTable, setDataSourceTable,
+      dataSourceScrappingJson, setDataSourceScrappingJson,
+      dataSourceScrappingTable, setDataSourceScrappingTable,
 
     }}>
       {props.children}

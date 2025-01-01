@@ -15,15 +15,18 @@ async function handleHtmlItems(htmlItems, category, subcategory) {
 
     let arrayItems = await htmlItems?.evaluate(() => {
         let elements = Array.from(document.querySelectorAll('.plp-mastercard'), (e, k) => ({
-            item_id: '',
-            item_number: e?.getAttribute('data-product-number') || '',
-            item_name: e?.getAttribute('data-product-name') || '',
-            item_price: e?.getAttribute('data-price') || '',
-            item_url: e?.querySelector('.plp-product__image-link').href || '',
-            item_image_url: e?.querySelector('.plp-mastercard__image img').src || '',
+            id: '',
+            number: e?.getAttribute('data-product-number') || '',
+            name: e?.getAttribute('data-product-name') || '',
+            price: e?.getAttribute('data-price') || '',
+            url: e?.querySelector('.plp-product__image-link').href || '',
+            //url: e?.querySelector('.plp-product__image-link').href ? "<a href='" + e?.querySelector('.plp-mastercard__image img').src + "' target='_blank' rel='noopener noreferrer'>Link</a>" : '',
+            image_url: e?.querySelector('.plp-mastercard__image img').src || '',
             category: '',
             subcategory: ''
         }));
+
+        // url: '<a href=' + e?.querySelector('.plp-mastercard__image img').src 'target="_blank" rel="noopener noreferrer">Link</a>'
 
         return elements;
     });
@@ -48,7 +51,7 @@ async function writeJsonFile(arrayItems) {
 
         fs.appendFileSync(filename, json);
 
-        console.log('Updated json file data_ikea.json!');
+        console.log('Updated json file data_ikea.json!');        
     };
 };
 
@@ -160,7 +163,7 @@ const scrapping_ikea = {
             const json_parse = JSON.parse(modifiedData);
 
             for (let i = 0; i < json_parse.length; i++) {
-                json_parse[i].item_id = i + 1;
+                json_parse[i].id = i + 1;
             }
 
             fs.writeFileSync(filename, JSON.stringify(json_parse), 'utf8', (err) => {

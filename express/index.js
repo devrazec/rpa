@@ -49,7 +49,19 @@ app.post('/post_scrapping_ikea', async (req, res) => {
         await scrapping_ikea.initialize();
         await scrapping_ikea.scrapping(data);
         console.log('Script executed successfully!');
-        res.status(200).send('Script executed successfully!');
+
+        const filePath = path.join(__dirname, './data_ikea.json');
+        fs.readFile(filePath, 'utf8', (err, data) => {
+            if (err) {
+                console.error('Error reading file:', err);
+                return res.status(500).send('Error reading file');
+            } else {
+                console.log('File has been read!');
+                setTimeout(() => {
+                    res.status(200).send(data);
+                }, 2000);
+            }
+        });
     } catch (error) {
         console.error('Error running scrapping_ikea:', error);
         res.status(500).send('Failed to execute scrapping_ikea script!');
@@ -80,6 +92,21 @@ app.get('/get_clean_ikea', async (req, res) => {
         console.error('Error running clean_json_ikea:', error);
         res.status(500).send('Failed to execute clean_json_ikea script!');
     }
+});
+
+app.get('/get_source_scrapping_ikea', async (req, res) => {
+    const filePath = path.join(__dirname, './data_ikea.json');
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return res.status(500).send('Error reading file');
+        } else {
+            console.log('File has been read!');
+            setTimeout(() => {
+                res.status(200).send(data);
+            }, 2000);
+        }
+    });
 });
 
 app.listen(port, () => {

@@ -13,6 +13,7 @@ import {
     MDBTabsContent,
     MDBTabsPane,
     MDBBtn,
+    MDBDatatable,
 
 } from 'mdb-react-ui-kit';
 
@@ -28,9 +29,10 @@ import { DataContext } from '../data/DataContext';
 import {
     getSource,
     postSource,
-    postScrapping,
-    getFormatJson,
-    getCleanJson,
+    postScrappingData,    
+    getFormatScrappingData,
+    getCleanScrappingData,
+    getSourceScrappingData,
 } from '../api/ApiScrapping';
 
 const PageHome = () => {
@@ -65,6 +67,8 @@ const PageHome = () => {
         dataSubcategoryOption, setDataSubcategoryOption,
         dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
+        dataSourceScrappingJson, setDataSourceScrappingJson,
+        dataSourceScrappingTable, setDataSourceScrappingTable,
 
     } = useContext(DataContext);
 
@@ -99,7 +103,7 @@ const PageHome = () => {
                     //console.log(response);
                 }
             }
-        );        
+        );
     };
 
     return (
@@ -112,7 +116,6 @@ const PageHome = () => {
                     //backgroundColor: '#e3f2fd'
                 }}
             >
-
                 <MDBTabs className='mb-3 mt-3'>
                     <MDBTabsItem>
                         <MDBTabsLink onClick={() => handleIconsClick('Source')} active={iconsActive === 'Source'}>
@@ -138,6 +141,9 @@ const PageHome = () => {
                             <MDBCardBody>
                                 <MDBTableEditor
                                     modal
+                                    sm
+                                    striped
+                                    dark={hookTheme === 'dark'}
                                     data={dataSourceTable}
                                     entriesOptions={[5, 10, 15]}
                                     onAdd={(newRow) => setDataSourceTable({ ...dataSourceTable, rows: [...dataSourceTable.rows, newRow] })}
@@ -150,7 +156,7 @@ const PageHome = () => {
 
                     </MDBTabsPane>
                     <MDBTabsPane open={iconsActive === 'Data'}>
-
+                        <MDBDatatable maxWidth='1080px' sm fixedHeader striped data={dataSourceScrappingTable} />
                     </MDBTabsPane>
                     <MDBTabsPane open={iconsActive === 'Images'}>
 

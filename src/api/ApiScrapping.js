@@ -61,10 +61,22 @@ async function getCleanScrappingData(data) {
     }
 }
 
+async function getSourceScrappingData(data) {
+    try {
+        return await axios.get(
+            `http://localhost:3003/get_source_scrapping_` + data
+        ).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
 export {
     getSource,
     postSource,
     postScrappingData,
     getFormatScrappingData,
     getCleanScrappingData,
+    getSourceScrappingData
 };

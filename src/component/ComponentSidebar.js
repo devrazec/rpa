@@ -23,6 +23,7 @@ import {
     postScrappingData,
     getFormatScrappingData,
     getCleanScrappingData,
+    getSourceScrappingData,
 } from '../api/ApiScrapping';
 
 const ComponentSidebar = () => {
@@ -57,10 +58,17 @@ const ComponentSidebar = () => {
         dataSubcategoryOption, setDataSubcategoryOption,
         dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
+        dataSourceScrappingJson, setDataSourceScrappingJson,
+        dataSourceScrappingTable, setDataSourceScrappingTable,
 
     } = useContext(DataContext);
 
     const sidebarRef = useRef(null);
+
+    const extractUrl = (input) => {
+        const match = input.match(/href=['"]([^'"]*)['"]/);
+        return match ? match[1] : input;
+    };
 
     useEffect(() => {
         setDataSourceSelected('ikea');
@@ -127,6 +135,8 @@ const ComponentSidebar = () => {
                 }
             }
         );
+
+        onLoadingScrappingData(data);
     };
 
     const onScrappingData = (source) => {
@@ -137,6 +147,7 @@ const ComponentSidebar = () => {
             (response) => {
                 if (response) {
                     setHookLoadingVisible(false);
+                    setDataSourceScrappingJson(response);
                 }
             }
         );
@@ -157,15 +168,49 @@ const ComponentSidebar = () => {
 
     const onLoadingScrappingData = (data) => {
 
-        //setHookLoadingVisible(true);
+        setHookLoadingVisible(true);
 
-        /* getCleanJson(data).then(
+        getSourceScrappingData(data).then(
             (response) => {
                 if (response) {
+
                     setHookLoadingVisible(false);
+
+                    setDataSourceScrappingJson(response);
+
+                    setDataSourceScrappingTable({
+                        columns: dataSourceScrappingTable.columns,
+                        rows: response.map((item) => ({
+                            ...item,
+                            id: item.id,
+                            number: item.number,
+                            name: item.name,
+                            price: item.price,
+                            category: item.category.trim(),
+                            subcategory: item.subcategory.trim(),
+                            url: (
+                                <a
+                                    href={extractUrl(item.url).startsWith("http") ? extractUrl(item.url) : `https://${extractUrl(item.url)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Open Link
+                                </a>
+                            ),
+                            image_url: (
+                                <a
+                                    href={item.image_url.startsWith("http") ? item.image_url : `https://${item.image_url}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Open Link
+                                </a>
+                            )
+                        }))
+                    });
                 }
             }
-        ); */
+        );
     };
 
     const onCleanScrappingData = (data) => {
@@ -176,6 +221,7 @@ const ComponentSidebar = () => {
             (response) => {
                 if (response) {
                     setHookLoadingVisible(false);
+                    setDataSourceScrappingJson(null);
                 }
             }
         );
@@ -258,7 +304,7 @@ const ComponentSidebar = () => {
                                 size="sm"
                                 color='secondary'
                                 onClick={() => onFormatScrappingData(dataSourceSelected)}
-                                disabled={dataSourceSelected && dataSourceJson ? (false) : (true)}
+                                disabled={dataSourceSelected && dataSourceScrappingJson ? (false) : (true)}
                                 style={{
                                 }}
                             >
@@ -270,7 +316,7 @@ const ComponentSidebar = () => {
                                 size="sm"
                                 color='success'
                                 onClick={() => onLoadingScrappingData(dataSourceSelected)}
-                                disabled={dataSourceSelected ? (false) : (true)}
+                                disabled={dataSourceSelected && dataSourceScrappingJson ? (false) : (true)}
                                 style={{
                                 }}
                             >
