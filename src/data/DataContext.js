@@ -125,11 +125,44 @@ const DataProvider = (props) => {
       },
       {
         sort: false,
-        label: "Image Url",
+        label: "Image",
         field: "image_url",
-      }     
+      }
     ],
     rows: [],
+  });
+
+  const [dataSourceCategoryJson, setDataSourceCategoryJson] = useState(null);
+  const [dataSourceSubcategoryJson, setDataSourceSubcategoryJson] = useState(null);
+  const [dataSourceCategoryTable, setDataSourceCategoryTable] = useState({
+    columns: [
+      {
+        sort: true,
+        label: "ID",
+        field: "id",
+      },
+      {
+        sort: true,
+        label: "Name",
+        field: "name",
+      }
+    ],
+    rows: []
+  });
+  const [dataSourceSubcategoryTable, setDataSourceSubcategoryTable] = useState({
+    columns: [
+      {
+        sort: true,
+        label: "ID",
+        field: "id",
+      },
+      {
+        sort: true,
+        label: "Name",
+        field: "name",
+      }
+    ],
+    rows: []
   });
 
   return (
@@ -164,7 +197,10 @@ const DataProvider = (props) => {
       dataSourceTable, setDataSourceTable,
       dataSourceScrappingJson, setDataSourceScrappingJson,
       dataSourceScrappingTable, setDataSourceScrappingTable,
-
+      dataSourceCategoryJson, setDataSourceCategoryJson,
+      dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
+      dataSourceCategoryTable, setDataSourceCategoryTable,
+      dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
     }}>
       {props.children}
     </DataContext.Provider>

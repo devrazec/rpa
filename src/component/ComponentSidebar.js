@@ -60,6 +60,10 @@ const ComponentSidebar = () => {
         dataSourceTable, setDataSourceTable,
         dataSourceScrappingJson, setDataSourceScrappingJson,
         dataSourceScrappingTable, setDataSourceScrappingTable,
+        dataSourceCategoryJson, setDataSourceCategoryJson,
+        dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
+        dataSourceCategoryTable, setDataSourceCategoryTable,
+        dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
 
     } = useContext(DataContext);
 
@@ -127,7 +131,7 @@ const ComponentSidebar = () => {
                             subcategory: item.subcategory.trim(),
                             url: item.url,
                             image: item.image,
-                            enable: item.enable
+                            enable: item.enable 
                         })),
                     });
 
@@ -193,8 +197,9 @@ const ComponentSidebar = () => {
                                     href={extractUrl(item.url).startsWith("http") ? extractUrl(item.url) : `https://${extractUrl(item.url)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    style={{ pointerEvents: "auto" }}
                                 >
-                                    Open Link
+                                    Link
                                 </a>
                             ),
                             image_url: (
@@ -203,7 +208,11 @@ const ComponentSidebar = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    Open Link
+                                    <img
+                                        src={item.image_url}
+                                        alt={item.number}
+                                        style={{ width: "50px", height: "50px", objectFit: "cover", cursor: "pointer" }}
+                                    />
                                 </a>
                             )
                         }))

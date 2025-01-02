@@ -111,10 +111,10 @@ const ComponentHeader = () => {
                                     <MDBNavbarLink onClick={() => navigate('/pagefolder')}>Folder</MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
-                                    <MDBNavbarLink onClick={() => navigate('/pagejson')}>Json</MDBNavbarLink>
+                                    <MDBNavbarLink onClick={() => navigate('/pagecategory')}>Category</MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
-                                    <MDBNavbarLink onClick={() => navigate('/pagescripts')}>Scripts</MDBNavbarLink>
+                                    <MDBNavbarLink onClick={() => navigate('/pagesubcategory')}>Subcategory</MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
                                     <MDBNavbarLink onClick={() => setHookSettingsVisible(true)}>

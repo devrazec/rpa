@@ -8,7 +8,7 @@ import {
 // Data Provider
 import { DataContext } from '../data/DataContext';
 
-const PageJson = () => {
+const PageSubcategory = () => {
 
     // Global Data Context
     const {
@@ -38,7 +38,14 @@ const PageJson = () => {
         dataSourceSelected, setDataSourceSelected,
         dataCategoryOption, setDataCategoryOption,
         dataSubcategoryOption, setDataSubcategoryOption,
+        dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
+        dataSourceScrappingJson, setDataSourceScrappingJson,
+        dataSourceScrappingTable, setDataSourceScrappingTable,
+        dataSourceCategoryJson, setDataSourceCategoryJson,
+        dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
+        dataSourceCategoryTable, setDataSourceCategoryTable,
+        dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
 
     } = useContext(DataContext);
 
@@ -52,7 +59,7 @@ const PageJson = () => {
                     //backgroundColor: '#e3f2fd'
                 }}
             >
-                <h1 className="h5 text-center py-3 mb-0">Json Management</h1>
+                <h1 className="h5 text-center py-3 mb-0">Subcategory Management</h1>
 
                 <div>
 
@@ -63,4 +70,4 @@ const PageJson = () => {
     );
 };
 
-export default React.memo(PageJson);
+export default React.memo(PageSubcategory);

@@ -8,7 +8,7 @@ import {
 // Data Provider
 import { DataContext } from '../data/DataContext';
 
-const PageScripts = () => {
+const PageCategory = () => {
 
     // Global Data Context
     const {
@@ -38,7 +38,14 @@ const PageScripts = () => {
         dataSourceSelected, setDataSourceSelected,
         dataCategoryOption, setDataCategoryOption,
         dataSubcategoryOption, setDataSubcategoryOption,
+        dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
+        dataSourceScrappingJson, setDataSourceScrappingJson,
+        dataSourceScrappingTable, setDataSourceScrappingTable,
+        dataSourceCategoryJson, setDataSourceCategoryJson,
+        dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
+        dataSourceCategoryTable, setDataSourceCategoryTable,
+        dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
 
     } = useContext(DataContext);
 
@@ -52,7 +59,7 @@ const PageScripts = () => {
                     //backgroundColor: '#e3f2fd'
                 }}
             >
-                <h1 className="h5 text-center py-3 mb-0">Scripts Management</h1>
+                <h1 className="h5 text-center py-3 mb-0">Category Management</h1>
 
                 <div>
 
@@ -63,4 +70,4 @@ const PageScripts = () => {
     );
 };
 
-export default React.memo(PageScripts);
+export default React.memo(PageCategory);
