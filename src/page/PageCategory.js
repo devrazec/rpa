@@ -106,6 +106,20 @@ const PageCategory = () => {
         }));
     }
 
+    const handleRowAdd = (newRow) => {
+        const modifiedData = [...dataSourceCategoryTable.rows, newRow];
+        setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: modifiedData });
+        const jsonOutput = convertRowsToJson(modifiedData);
+        setDataSourceCategoryJson(jsonOutput);
+        postCategoryData(jsonOutput).then(
+            (response) => {
+                if (response) {
+                    //console.log(response);
+                }
+            }
+        );
+    };
+
     const handleRowEdit = (modifiedData) => {
         setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
@@ -154,7 +168,7 @@ const PageCategory = () => {
                             dark={hookTheme === 'dark'}
                             data={dataSourceCategoryTable}
                             entriesOptions={[5, 10, 15]}
-                            onAdd={(newRow) => setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: [...dataSourceCategoryTable.rows, newRow] })}
+                            onAdd={(newRow) => handleRowAdd(newRow)}
                             onModify={handleRowEdit}
                             onDelete={(rowToDelete) => {
                                 const rowIndex = dataSourceCategoryTable.rows.findIndex(

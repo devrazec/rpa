@@ -106,6 +106,20 @@ const PageSubcategory = () => {
         }));
     }
 
+    const handleRowAdd = (newRow) => {
+        const modifiedData = [...dataSourceSubcategoryTable.rows, newRow];
+        setDataSourceSubcategoryTable({ ...dataSourceSubcategoryTable, rows: modifiedData });
+        const jsonOutput = convertRowsToJson(modifiedData);
+        setDataSourceSubcategoryJson(jsonOutput);
+        postSubcategoryData(jsonOutput).then(
+            (response) => {
+                if (response) {
+                    //console.log(response);
+                }
+            }
+        );
+    };
+
     const handleRowEdit = (modifiedData) => {
         setDataSourceSubcategoryTable({ ...dataSourceSubcategoryTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
@@ -154,7 +168,7 @@ const PageSubcategory = () => {
                             dark={hookTheme === 'dark'}
                             data={dataSourceSubcategoryTable}
                             entriesOptions={[5, 10, 15]}
-                            onAdd={(newRow) => setDataSourceSubcategoryTable({ ...dataSourceSubcategoryTable, rows: [...dataSourceSubcategoryTable.rows, newRow] })}
+                            onAdd={(newRow) => handleRowAdd(newRow)}
                             onModify={handleRowEdit}
                             onDelete={(rowToDelete) => {
                                 const rowIndex = dataSourceSubcategoryTable.rows.findIndex(

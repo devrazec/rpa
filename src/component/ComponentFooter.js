@@ -49,8 +49,8 @@ const ComponentFooter = () => {
                     <MDBContainer fluid>
                         <div className='text-center p-3' style={{}}>
                             &copy; {new Date().getFullYear()} Copyright:{' '}
-                            <a className='' href='https://test.com/'>
-                                test.com
+                            <a className='' href='https://www.desion.de/'>
+                                www.desion.de
                             </a>
                         </div>
                     </MDBContainer>
