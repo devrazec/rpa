@@ -1,12 +1,33 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 
 // MD BootStrap Component
 import {
     MDBContainer,
+    MDBFooter,
+    MDBCard,
+    MDBCardBody,
+    MDBTabs,
+    MDBTabsItem,
+    MDBTabsLink,
+    MDBIcon,
+    MDBTabsContent,
+    MDBTabsPane,
+    MDBBtn,
+    MDBDatatable,
 } from 'mdb-react-ui-kit';
+
+import { MDBTableEditor } from "mdb-react-table-editor";
 
 // Data Provider
 import { DataContext } from '../data/DataContext';
+
+// Api
+import {
+    postCategoryData,
+    postSubcategoryData,
+    getCategoryData,
+    getSubcategoryData,
+} from '../api/ApiScrapping';
 
 const PageCategory = () => {
 
@@ -49,6 +70,69 @@ const PageCategory = () => {
 
     } = useContext(DataContext);
 
+    useEffect(() => {
+        onGetCategory();
+    }, []);
+
+    const onGetCategory = () => {
+
+        setHookLoadingVisible(true);
+
+        getCategoryData().then(
+            (response) => {
+                if (response) {
+
+                    setDataSourceCategoryJson(response);
+
+                    setDataSourceCategoryTable({
+                        columns: dataSourceCategoryTable.columns,
+                        rows: response.map((item) => ({
+                            ...item,
+                            id: item.id,
+                            name: item.name.trim()
+                        })),
+                    });
+
+                    setHookLoadingVisible(false);
+                }
+            }
+        );
+    };
+
+    function convertRowsToJson(rows) {
+        return rows.map(row => ({
+            id: row.id,
+            name: row.name
+        }));
+    }
+
+    const handleRowEdit = (modifiedData) => {
+        setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: modifiedData });
+        const jsonOutput = convertRowsToJson(modifiedData);
+        setDataSourceCategoryJson(jsonOutput);
+        postCategoryData(jsonOutput).then(
+            (response) => {
+                if (response) {
+                    //console.log(response);
+                }
+            }
+        );
+    };
+
+    const handleRowDelete = (id) => {
+        const modifiedData = dataSourceCategoryTable.rows.filter((row, index) => index !== id);
+        setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: modifiedData });
+        const jsonOutput = convertRowsToJson(modifiedData);
+        setDataSourceCategoryJson(jsonOutput);
+        postCategoryData(jsonOutput).then(
+            (response) => {
+                if (response) {
+                    //console.log(response);
+                }
+            }
+        );
+    };
+
     return (
         <>
             <MDBContainer fluid
@@ -61,9 +145,27 @@ const PageCategory = () => {
             >
                 <h1 className="h5 text-center py-3 mb-0">Category Management</h1>
 
-                <div>
-
-                </div>
+                <MDBCard>
+                    <MDBCardBody>
+                        <MDBTableEditor
+                            //modal
+                            sm
+                            striped
+                            dark={hookTheme === 'dark'}
+                            data={dataSourceCategoryTable}
+                            entriesOptions={[5, 10, 15]}
+                            onAdd={(newRow) => setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: [...dataSourceCategoryTable.rows, newRow] })}
+                            onModify={handleRowEdit}
+                            onDelete={(rowToDelete) => {
+                                const rowIndex = dataSourceCategoryTable.rows.findIndex(
+                                    (row) => row.id === rowToDelete.id
+                                );
+                                handleRowDelete(rowToDelete);
+                            }}
+                            setData={(e) => setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: e })}
+                        />
+                    </MDBCardBody>
+                </MDBCard>
 
             </MDBContainer>
         </>

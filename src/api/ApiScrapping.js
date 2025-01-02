@@ -72,11 +72,65 @@ async function getSourceScrappingData(data) {
     }
 }
 
+async function postCategoryData(data) {
+    try {
+        return await axios.post(
+            `http://localhost:3003/post_category`, {
+            params: {
+                data: data,
+            }           
+        }).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function postSubcategoryData(data) {
+    try {
+        return await axios.post(
+            `http://localhost:3003/post_subcategory`, {
+            params: {
+                data: data,
+            }           
+        }).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function getCategoryData() {
+    try {
+        return await axios.get(
+            `http://localhost:3003/get_category`
+        ).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function getSubcategoryData() {
+    try {
+        return await axios.get(
+            `http://localhost:3003/get_subcategory`
+        ).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
 export {
     getSource,
     postSource,
     postScrappingData,
     getFormatScrappingData,
     getCleanScrappingData,
-    getSourceScrappingData
+    getSourceScrappingData,
+    postCategoryData,
+    postSubcategoryData,
+    getCategoryData,
+    getSubcategoryData,
 };

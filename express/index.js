@@ -109,6 +109,68 @@ app.get('/get_source_scrapping_ikea', async (req, res) => {
     });
 });
 
+app.get('/get_category', async (req, res) => {
+    const filePath = path.join(__dirname, './data_category.json');
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return res.status(500).send('Error reading file');
+        } else {
+            console.log('File has been read!');
+            setTimeout(() => {
+                res.status(200).send(data);
+            }, 2000);
+        }
+    });
+});
+
+app.get('/get_subcategory', async (req, res) => {
+    const filePath = path.join(__dirname, './data_subcategory.json');
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return res.status(500).send('Error reading file');
+        } else {
+            console.log('File has been read!');
+            setTimeout(() => {
+                res.status(200).send(data);
+            }, 2000);
+        }
+    });
+});
+
+app.post('/post_category', async (req, res) => {
+    const body = req.body;
+    const filePath = path.join(__dirname, './data_category.json');
+    fs.writeFile(filePath, JSON.stringify(body.params.data), 'utf8', (err) => {
+        if (err) {
+            console.error('Error writing file:', err);
+            return res.status(500).send('Error writing file');
+        } else {
+            console.log('File has been saved!');
+            setTimeout(() => {
+                res.status(200).send('File has been saved!');
+            }, 2000);
+        }
+    });
+});
+
+app.post('/post_subcategory', async (req, res) => {
+    const body = req.body;
+    const filePath = path.join(__dirname, './data_subcategory.json');
+    fs.writeFile(filePath, JSON.stringify(body.params.data), 'utf8', (err) => {
+        if (err) {
+            console.error('Error writing file:', err);
+            return res.status(500).send('Error writing file');
+        } else {
+            console.log('File has been saved!');
+            setTimeout(() => {
+                res.status(200).send('File has been saved!');
+            }, 2000);
+        }
+    });
+});
+
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 });

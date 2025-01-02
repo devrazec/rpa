@@ -1,0 +1,34 @@
+[
+	{
+		"id": "1",
+		"name": "Sofa"
+	},
+	{
+		"id": "2",
+		"name": "Armchair"
+	},
+	{
+		"id": "3",
+		"name": "Bed"
+	},
+	{
+		"id": "4",
+		"name": "Shelve"
+	},
+	{
+		"id": "5",
+		"name": "Table"
+	},
+	{
+		"id": "6",
+		"name": "Cabinet"
+	},
+	{
+		"id": "7",
+		"name": "TV Stand"
+	},
+	{
+		"id": "8",
+		"name": "Outdoor"
+	}
+]
