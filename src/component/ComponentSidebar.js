@@ -227,6 +227,20 @@ const ComponentSidebar = () => {
         );
     };
 
+    const onScrappingImage = (data) => {
+
+        setHookLoadingVisible(true);
+
+        /* postScrappingImage(data).then(
+            (response) => {
+                if (response) {
+                    setHookLoadingVisible(false);
+                    setDataSourceScrappingImageJson(null);
+                }
+            }
+        ); */
+    };
+
     return (
         <>
             {hookSidebarEnable && (
@@ -256,7 +270,7 @@ const ComponentSidebar = () => {
 
                         <MDBSideNavMenu>
 
-                            <p className="mb-1">Source</p>
+                            <p className="mb-1">Scrapping Data</p>
                             <MDBSelect
                                 className="mb-4"
                                 size="lg"
@@ -270,7 +284,7 @@ const ComponentSidebar = () => {
                             />
 
                             <MDBBtn
-                                className="w-100"
+                                className="w-100 mb-4"
                                 size="sm"
                                 color='success'
                                 onClick={() => onGetSource(dataSourceSelected)}
@@ -281,8 +295,6 @@ const ComponentSidebar = () => {
                                 <MDBIcon className='me-4' fas icon='redo' size='1x' />
                                 Loading
                             </MDBBtn>
-                            <hr />
-                            <p className="mb-3">Scrapping</p>
                             <MDBBtn
                                 className="w-100"
                                 size="sm"
@@ -335,6 +347,21 @@ const ComponentSidebar = () => {
                                 <MDBIcon className='me-4' fas icon='trash-alt' size='1x' />
                                 Clean
                             </MDBBtn>
+                            <hr />
+                            <p className="mb-3">Scrapping Image</p>
+                            <MDBBtn
+                                className="w-100"
+                                size="sm"
+                                color='success'
+                                onClick={() => onScrappingImage(dataSourceScrappingJson)}
+                                disabled={dataSourceSelected && dataSourceScrappingJson ? (false) : (true)}
+                                style={{
+                                }}
+                            >
+                                <MDBIcon className='me-3' fas icon='play' size='1x' />
+                                Start
+                            </MDBBtn>
+
                         </MDBSideNavMenu>
                     </MDBSideNav>
                 </div>

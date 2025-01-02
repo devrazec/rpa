@@ -51,7 +51,7 @@ async function writeJsonFile(arrayItems) {
     };
 };
 
-const scrapping_ikea = {
+const scrapping_image = {
 
     initialize: async () => {
 
@@ -182,4 +182,4 @@ const scrapping_ikea = {
     }
 };
 
-module.exports = scrapping_ikea;
+module.exports = scrapping_image;
