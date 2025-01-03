@@ -33,6 +33,8 @@ import {
     getFormatScrappingData,
     getCleanScrappingData,
     getSourceScrappingData,
+    getCategoryData,
+    getSubcategoryData,
 } from '../api/ApiScrapping';
 
 const PageHome = () => {
@@ -69,6 +71,10 @@ const PageHome = () => {
         dataSourceTable, setDataSourceTable,
         dataSourceScrappingJson, setDataSourceScrappingJson,
         dataSourceScrappingTable, setDataSourceScrappingTable,
+        dataSourceCategoryJson, setDataSourceCategoryJson,
+        dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
+        dataSourceCategoryTable, setDataSourceCategoryTable,
+        dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
 
     } = useContext(DataContext);
 

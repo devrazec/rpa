@@ -32,6 +32,9 @@ const DataProvider = (props) => {
     { text: 'Online Furniture', value: 'onlinefurniture' },
     { text: 'Bed Bath and Beyond', value: 'bedbathandbeyond' },
   ]);
+  const [dataSourceCategoryJson, setDataSourceCategoryJson] = useState(null);
+  const [dataSourceSubcategoryJson, setDataSourceSubcategoryJson] = useState(null);
+
   const [dataSourceSelected, setDataSourceSelected] = useState(null);
   const [dataCategoryOption, setDataCategoryOption] = useState(null);
   const [dataSubcategoryOption, setDataSubcategoryOption] = useState(null);
@@ -132,8 +135,7 @@ const DataProvider = (props) => {
     rows: [],
   });
 
-  const [dataSourceCategoryJson, setDataSourceCategoryJson] = useState(null);
-  const [dataSourceSubcategoryJson, setDataSourceSubcategoryJson] = useState(null);
+ 
   const [dataSourceCategoryTable, setDataSourceCategoryTable] = useState({
     columns: [
       {
@@ -163,9 +165,10 @@ const DataProvider = (props) => {
       }
     ],
     rows: []
-  });
+  });  
 
   return (
+
     <DataContext.Provider value={{
 
       // Hooks

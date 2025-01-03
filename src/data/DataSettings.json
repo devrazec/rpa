@@ -1,6 +1,6 @@
 {
   "settings": {
-    "hookTheme": "dark",
+    "hookTheme": "light",
     "hookHeaderEnable": true,
     "hookSidebarEnable": true,
     "hookFooterEnable": true,

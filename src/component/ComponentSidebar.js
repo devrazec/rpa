@@ -24,6 +24,8 @@ import {
     getFormatScrappingData,
     getCleanScrappingData,
     getSourceScrappingData,
+    getCategoryData,
+    getSubcategoryData,
 } from '../api/ApiScrapping';
 
 const ComponentSidebar = () => {
@@ -79,6 +81,26 @@ const ComponentSidebar = () => {
     }, []);
 
     useEffect(() => {
+
+        getCategoryData().then(
+            (response) => {
+                if (response) {
+                    setDataSourceCategoryJson(response);                    
+                }
+            }
+        );
+
+        getSubcategoryData().then(
+            (response) => {
+                if (response) {
+                    setDataSourceSubcategoryJson(response);                   
+                }
+            }
+        );                   
+
+    }, []);
+
+    useEffect(() => {
         if (sidebarRef.current) {
             const handleSidebarResize = () => {
                 if (sidebarRef.current) {
@@ -104,8 +126,8 @@ const ComponentSidebar = () => {
 
                     setDataSourceJson(response);
 
-                    const dataCategories = [...new Set(response.map(item => item.category.trim()))];
-                    const dataSubcategories = [...new Set(response.map(item => item.subcategory.trim()))];
+                    const dataCategories = [...new Set(dataSourceCategoryJson?.map(item => item.name))];
+                    const dataSubcategories = [...new Set(dataSourceSubcategoryJson?.map(item => item.name))];
 
                     setDataSourceTable({
                         columns: dataSourceTable.columns.map((column) => {
@@ -131,7 +153,7 @@ const ComponentSidebar = () => {
                             subcategory: item.subcategory.trim(),
                             url: item.url,
                             image: item.image,
-                            enable: item.enable 
+                            enable: item.enable
                         })),
                     });
 
@@ -152,6 +174,8 @@ const ComponentSidebar = () => {
                 if (response) {
                     setHookLoadingVisible(false);
                     setDataSourceScrappingJson(response);
+                    onFormatScrappingData(source);
+                    onLoadingScrappingData(source);
                 }
             }
         );
@@ -159,12 +183,12 @@ const ComponentSidebar = () => {
 
     const onFormatScrappingData = (data) => {
 
-        setHookLoadingVisible(true);
+        //setHookLoadingVisible(true);
 
         getFormatScrappingData(data).then(
             (response) => {
                 if (response) {
-                    setHookLoadingVisible(false);
+                    //setHookLoadingVisible(false);
                 }
             }
         );
@@ -324,18 +348,6 @@ const ComponentSidebar = () => {
                             <hr />
 
                             <p className="mb-3">Data</p>
-                            <MDBBtn
-                                className="w-100 mb-4"
-                                size="sm"
-                                color='secondary'
-                                onClick={() => onFormatScrappingData(dataSourceSelected)}
-                                disabled={dataSourceSelected && dataSourceScrappingJson ? (false) : (true)}
-                                style={{
-                                }}
-                            >
-                                <MDBIcon className='me-1' fas icon='align-justify' size='1x' />
-                                Format
-                            </MDBBtn>
                             <MDBBtn
                                 className="w-100 mb-4"
                                 size="sm"
