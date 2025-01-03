@@ -231,6 +231,10 @@ const ComponentSidebar = () => {
                 if (response) {
                     setHookLoadingVisible(false);
                     setDataSourceScrappingJson(null);
+                    setDataSourceScrappingTable({
+                        columns: dataSourceScrappingTable.columns,
+                        rows: []
+                    });
                 }
             }
         );
