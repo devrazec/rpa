@@ -90,6 +90,7 @@ const ComponentHeader = () => {
                     }}
                 >
                     <MDBContainer fluid>
+                        <MDBNavbarBrand href='#'>RPA App</MDBNavbarBrand>
                         <MDBNavbarToggler
                             type="button"
                             aria-controls="navbarMenu"

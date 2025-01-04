@@ -20,10 +20,10 @@ import { DataContext } from '../data/DataContext';
 import {
     getSource,
     postSource,
-    postScrappingData,
-    getFormatScrappingData,
-    getCleanScrappingData,
-    getSourceScrappingData,
+    postScrappingDataUrl,
+    getCleanDataUrl,
+    getCleanDataImage,
+    getSourceData,
     getCategoryData,
     getSubcategoryData,
 } from '../api/ApiScrapping';
@@ -60,12 +60,14 @@ const ComponentSidebar = () => {
         dataSubcategoryOption, setDataSubcategoryOption,
         dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
-        dataSourceScrappingJson, setDataSourceScrappingJson,
-        dataSourceScrappingTable, setDataSourceScrappingTable,
+        dataSourceUrlJson, setDataSourceUrlJson,
+        dataSourceUrlTable, setDataSourceUrlTable,
         dataSourceCategoryJson, setDataSourceCategoryJson,
         dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
         dataSourceCategoryTable, setDataSourceCategoryTable,
         dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
+        dataSourceImageJson, setDataSourceImageJson,
+        dataSourceImageTable, setDataSourceImageTable,
 
     } = useContext(DataContext);
 
@@ -77,7 +79,8 @@ const ComponentSidebar = () => {
     };
 
     useEffect(() => {
-        setDataSourceSelected('ikea');
+        const source = 'ikea';
+        setDataSourceSelected(source);
     }, []);
 
     useEffect(() => {
@@ -85,7 +88,7 @@ const ComponentSidebar = () => {
         getCategoryData().then(
             (response) => {
                 if (response) {
-                    setDataSourceCategoryJson(response);                    
+                    setDataSourceCategoryJson(response);
                 }
             }
         );
@@ -93,10 +96,10 @@ const ComponentSidebar = () => {
         getSubcategoryData().then(
             (response) => {
                 if (response) {
-                    setDataSourceSubcategoryJson(response);                   
+                    setDataSourceSubcategoryJson(response);
                 }
             }
-        );                   
+        );
 
     }, []);
 
@@ -116,11 +119,11 @@ const ComponentSidebar = () => {
         }
     }, []);
 
-    const onGetSource = (data) => {
+    const onGetSource = (source) => {
 
         setHookLoadingVisible(true);
 
-        getSource(data).then(
+        getSource(source).then(
             (response) => {
                 if (response) {
 
@@ -162,52 +165,43 @@ const ComponentSidebar = () => {
             }
         );
 
-        onLoadingScrappingData(data);
+        onLoadingDataUrl(source);
     };
 
-    const onScrappingData = (source) => {
+    const onScrappingDataUrl = (source, data) => {
 
         setHookLoadingVisible(true);
 
-        postScrappingData(source, dataSourceJson).then(
+        postScrappingDataUrl(source, data).then(
             (response) => {
                 if (response) {
                     setHookLoadingVisible(false);
-                    setDataSourceScrappingJson(response);
-                    onFormatScrappingData(source);
-                    onLoadingScrappingData(source);
+                    setDataSourceUrlJson(response);
+                    onLoadingDataUrl(source);
                 }
             }
         );
     };
 
-    const onFormatScrappingData = (data) => {
-
-        //setHookLoadingVisible(true);
-
-        getFormatScrappingData(data).then(
-            (response) => {
-                if (response) {
-                    //setHookLoadingVisible(false);
-                }
-            }
-        );
+    const getTextBySource = (source) => {
+        const matchedItem = dataSourceOption.find((item) => item.value === source);
+        return matchedItem ? matchedItem.text : '';
     };
 
-    const onLoadingScrappingData = (data) => {
+    const onLoadingDataUrl = (source) => {
 
         setHookLoadingVisible(true);
 
-        getSourceScrappingData(data).then(
+        getSourceData(source).then(
             (response) => {
                 if (response) {
 
                     setHookLoadingVisible(false);
 
-                    setDataSourceScrappingJson(response);
+                    setDataSourceUrlJson(response);
 
-                    setDataSourceScrappingTable({
-                        columns: dataSourceScrappingTable.columns,
+                    setDataSourceUrlTable({
+                        columns: dataSourceUrlTable.columns,
                         rows: response.map((item) => ({
                             ...item,
                             id: item.id,
@@ -238,7 +232,8 @@ const ComponentSidebar = () => {
                                         style={{ width: "50px", height: "50px", objectFit: "cover", cursor: "pointer" }}
                                     />
                                 </a>
-                            )
+                            ),
+                            source: getTextBySource(item.source)
                         }))
                     });
                 }
@@ -246,17 +241,17 @@ const ComponentSidebar = () => {
         );
     };
 
-    const onCleanScrappingData = (data) => {
+    const onCleanDataUrl = (source) => {
 
         setHookLoadingVisible(true);
 
-        getCleanScrappingData(data).then(
+        getCleanDataUrl(source).then(
             (response) => {
                 if (response) {
                     setHookLoadingVisible(false);
-                    setDataSourceScrappingJson(null);
-                    setDataSourceScrappingTable({
-                        columns: dataSourceScrappingTable.columns,
+                    setDataSourceUrlJson(null);
+                    setDataSourceUrlTable({
+                        columns: dataSourceUrlTable.columns,
                         rows: []
                     });
                 }
@@ -264,18 +259,28 @@ const ComponentSidebar = () => {
         );
     };
 
-    const onScrappingImage = (data) => {
+    const onScrappingDataImage = (source, data) => {
 
         setHookLoadingVisible(true);
 
-        /* postScrappingImage(data).then(
+    };
+
+    const onCleanDataImage = (source) => {
+
+        setHookLoadingVisible(true);
+
+        getCleanDataImage(source).then(
             (response) => {
                 if (response) {
                     setHookLoadingVisible(false);
-                    setDataSourceScrappingImageJson(null);
+                    setDataSourceImageJson(null);
+                    setDataSourceImageTable({
+                        columns: dataSourceImageTable.columns,
+                        rows: []
+                    });
                 }
             }
-        ); */
+        );
     };
 
     return (
@@ -300,14 +305,13 @@ const ComponentSidebar = () => {
                                 width="150px"
                                 draggable="false"
                             />
-
                         </MDBRipple>
 
                         <hr />
 
                         <MDBSideNavMenu>
 
-                            <p className="mb-1">Scrapping Data</p>
+                            <p className="mb-1">Data Source</p>
                             <MDBSelect
                                 className="mb-4"
                                 size="lg"
@@ -336,36 +340,24 @@ const ComponentSidebar = () => {
                                 className="w-100"
                                 size="sm"
                                 color='success'
-                                onClick={() => onScrappingData(dataSourceSelected)}
+                                onClick={() => onScrappingDataUrl(dataSourceSelected, dataSourceJson)}
                                 disabled={dataSourceSelected && dataSourceJson ? (false) : (true)}
                                 style={{
                                 }}
                             >
                                 <MDBIcon className='me-3' fas icon='play' size='1x' />
-                                Start
+                                Scrapping
                             </MDBBtn>
 
                             <hr />
 
-                            <p className="mb-3">Data</p>
-                            <MDBBtn
-                                className="w-100 mb-4"
-                                size="sm"
-                                color='success'
-                                onClick={() => onLoadingScrappingData(dataSourceSelected)}
-                                disabled={dataSourceSelected && dataSourceScrappingJson ? (false) : (true)}
-                                style={{
-                                }}
-                            >
-                                <MDBIcon className='me-4' fas icon='redo' size='1x' />
-                                Loading
-                            </MDBBtn>
+                            <p className="mb-3">Data Url</p>
                             <MDBBtn
                                 className="w-100"
                                 size="sm"
                                 color='danger'
-                                onClick={() => onCleanScrappingData(dataSourceSelected)}
-                                disabled={dataSourceSelected ? (false) : (true)}
+                                onClick={() => onCleanDataUrl(dataSourceSelected)}
+                                disabled={dataSourceSelected && dataSourceUrlJson ? (false) : (true)}
                                 style={{
                                 }}
                             >
@@ -373,18 +365,30 @@ const ComponentSidebar = () => {
                                 Clean
                             </MDBBtn>
                             <hr />
-                            <p className="mb-3">Scrapping Image</p>
+                            <p className="mb-3">Data Image</p>
                             <MDBBtn
-                                className="w-100"
+                                className="w-100 mb-4"
                                 size="sm"
                                 color='success'
-                                onClick={() => onScrappingImage(dataSourceScrappingJson)}
-                                disabled={dataSourceSelected && dataSourceScrappingJson ? (false) : (true)}
+                                onClick={() => onScrappingDataImage(dataSourceUrlJson)}
+                                disabled={dataSourceSelected && dataSourceUrlJson ? (false) : (true)}
                                 style={{
                                 }}
                             >
                                 <MDBIcon className='me-3' fas icon='play' size='1x' />
-                                Start
+                                Scrapping
+                            </MDBBtn>
+                            <MDBBtn
+                                className="w-100"
+                                size="sm"
+                                color='danger'
+                                onClick={() => onCleanDataImage(dataSourceSelected)}
+                                disabled={dataSourceSelected && dataSourceUrlJson ? (false) : (true)}
+                                style={{
+                                }}
+                            >
+                                <MDBIcon className='me-4' fas icon='trash-alt' size='1x' />
+                                Clean
                             </MDBBtn>
 
                         </MDBSideNavMenu>

@@ -61,12 +61,14 @@ const PageCategory = () => {
         dataSubcategoryOption, setDataSubcategoryOption,
         dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
-        dataSourceScrappingJson, setDataSourceScrappingJson,
-        dataSourceScrappingTable, setDataSourceScrappingTable,
+        dataSourceUrlJson, setDataSourceUrlJson,
+        dataSourceUrlTable, setDataSourceUrlTable,
         dataSourceCategoryJson, setDataSourceCategoryJson,
         dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
         dataSourceCategoryTable, setDataSourceCategoryTable,
         dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
+        dataSourceImageJson, setDataSourceImageJson,
+        dataSourceImageTable, setDataSourceImageTable,
 
     } = useContext(DataContext);
 

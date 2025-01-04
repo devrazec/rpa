@@ -32,7 +32,7 @@ import {
     postScrappingData,    
     getFormatScrappingData,
     getCleanScrappingData,
-    getSourceScrappingData,
+    getSourceData,
     getCategoryData,
     getSubcategoryData,
 } from '../api/ApiScrapping';
@@ -69,12 +69,14 @@ const PageHome = () => {
         dataSubcategoryOption, setDataSubcategoryOption,
         dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
-        dataSourceScrappingJson, setDataSourceScrappingJson,
-        dataSourceScrappingTable, setDataSourceScrappingTable,
+        dataSourceUrlJson, setDataSourceUrlJson,
+        dataSourceUrlTable, setDataSourceUrlTable,
         dataSourceCategoryJson, setDataSourceCategoryJson,
         dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
         dataSourceCategoryTable, setDataSourceCategoryTable,
         dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
+        dataSourceImageJson, setDataSourceImageJson,
+        dataSourceImageTable, setDataSourceImageTable,
 
     } = useContext(DataContext);
 
@@ -124,25 +126,30 @@ const PageHome = () => {
             >
                 <MDBTabs className='mb-3 mt-3'>
                     <MDBTabsItem>
-                        <MDBTabsLink onClick={() => handleIconsClick('Source')} active={iconsActive === 'Source'}>
-                            <MDBIcon fas icon='table' className='me-2' /> Source
+                        <MDBTabsLink onClick={() => handleIconsClick('Datasource')} active={iconsActive === 'Datasource'}>
+                            <MDBIcon fas icon='table' className='me-2' /> Data Source
                         </MDBTabsLink>
                     </MDBTabsItem>
                     <MDBTabsItem>
-                        <MDBTabsLink onClick={() => handleIconsClick('Data')} active={iconsActive === 'Data'}>
-                            <MDBIcon fas icon='database' className='me-2' /> Data
+                        <MDBTabsLink onClick={() => handleIconsClick('Dataurl')} active={iconsActive === 'Dataurl'}>
+                            <MDBIcon fas icon='table' className='me-2' /> Data Url
                         </MDBTabsLink>
                     </MDBTabsItem>
                     <MDBTabsItem>
-                        <MDBTabsLink onClick={() => handleIconsClick('Images')} active={iconsActive === 'Images'}>
-                            <MDBIcon fas icon='images' className='me-2' /> Images
+                        <MDBTabsLink onClick={() => handleIconsClick('Dataimage')} active={iconsActive === 'Dataimage'}>
+                            <MDBIcon fas icon='table' className='me-2' /> Data Image
+                        </MDBTabsLink>
+                    </MDBTabsItem>
+                    <MDBTabsItem>
+                        <MDBTabsLink onClick={() => handleIconsClick('Image')} active={iconsActive === 'Image'}>
+                            <MDBIcon fas icon='images' className='me-2' /> Image
                         </MDBTabsLink>
                     </MDBTabsItem>
                 </MDBTabs>
 
                 <MDBTabsContent>
 
-                    <MDBTabsPane open={iconsActive === 'Source'}>
+                    <MDBTabsPane open={iconsActive === 'Datasource'}>
                         <MDBCard>
                             <MDBCardBody>
                                 <MDBTableEditor
@@ -161,14 +168,17 @@ const PageHome = () => {
                         </MDBCard>
 
                     </MDBTabsPane>
-                    <MDBTabsPane open={iconsActive === 'Data'}>
-                        <MDBDatatable maxWidth='1080px' sm fixedHeader striped data={dataSourceScrappingTable} />
+                    <MDBTabsPane open={iconsActive === 'Dataurl'}>
+                        <MDBDatatable maxWidth='1080px' sm fixedHeader striped data={dataSourceUrlTable} />
                     </MDBTabsPane>
-                    <MDBTabsPane open={iconsActive === 'Images'}>
 
+                    <MDBTabsPane open={iconsActive === 'Dataimage'}>
                     </MDBTabsPane>
+
+                    <MDBTabsPane open={iconsActive === 'Image'}>
+                    </MDBTabsPane>
+
                 </MDBTabsContent>
-
             </MDBContainer>
         </>
     );

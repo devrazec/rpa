@@ -38,7 +38,16 @@ const PageFolder = () => {
         dataSourceSelected, setDataSourceSelected,
         dataCategoryOption, setDataCategoryOption,
         dataSubcategoryOption, setDataSubcategoryOption,
+        dataSourceJson, setDataSourceJson,
         dataSourceTable, setDataSourceTable,
+        dataSourceUrlJson, setDataSourceUrlJson,
+        dataSourceUrlTable, setDataSourceUrlTable,
+        dataSourceCategoryJson, setDataSourceCategoryJson,
+        dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
+        dataSourceCategoryTable, setDataSourceCategoryTable,
+        dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
+        dataSourceImageJson, setDataSourceImageJson,
+        dataSourceImageTable, setDataSourceImageTable,
 
     } = useContext(DataContext);
 

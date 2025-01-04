@@ -5,32 +5,37 @@ const pluginAnonymize = require('puppeteer-extra-plugin-anonymize-ua');
 const pluginPreferences = require('puppeteer-extra-plugin-user-preferences');
 const fs = require('node:fs');
 const path = require('path');
+const { v4: uuidv4, v1: uuidv1 } = require('uuid');
 const setTimeout = require('node:timers/promises');
 const exec = require('node:child_process');
 
 let browser = null;
 let page = null;
 
-async function handleHtmlItems(htmlItems, category, subcategory) {
+async function handleJsonField(filename, number, name, price, category, subcategory, source) {
 
     let arrayItems = await htmlItems?.evaluate(() => {
         let elements = Array.from(document.querySelectorAll('.plp-mastercard'), (e, k) => ({
             id: '',
-            number: e?.getAttribute('data-product-number') || '',
-            name: e?.getAttribute('data-product-name') || '',
-            price: e?.getAttribute('data-price') || '',
-            url: e?.querySelector('.plp-product__image-link').href || '',
-            image_url: e?.querySelector('.plp-mastercard__image img').src || '',
+            number: '',
+            name: '',
+            price: '',            
+            filename: '',
             category: '',
-            subcategory: ''
+            subcategory: '',
+            source: ''
         }));
         return elements;
     });
 
     if (arrayItems) {
         for (let i = 0; i < arrayItems.length; i++) {
+            arrayItems[i]['number'] = number;
+            arrayItems[i]['name'] = name;
+            arrayItems[i]['price'] = price;
             arrayItems[i]['category'] = category;
             arrayItems[i]['subcategory'] = subcategory;
+            arrayItems[i]['source'] = source;
         }
 
         writeJsonFile(arrayItems);
@@ -41,13 +46,13 @@ async function writeJsonFile(arrayItems) {
 
     if (arrayItems) {
 
-        const filename = path.join(__dirname, './data_ikea.json');
+        const filename = path.join(__dirname, './data_image.json');
 
         let json = JSON.stringify(arrayItems);
 
         fs.appendFileSync(filename, json);
 
-        console.log('Updated json file data_ikea.json!');        
+        console.log('Updated json file data_image.json!');        
     };
 };
 
@@ -104,22 +109,16 @@ const scrapping_image = {
         console.log('03 - Creating a Browser Context!');
     },
 
-    scrapping: async (data) => {
+    scrapping: async (source, data) => {
 
-        //const filePath = path.join(__dirname, './source_ikea.json');
-        //const json_url = fs.readFileSync(filePath, 'utf8');
         const array_url = JSON.parse(data);
-        //const array_url = JSON.parse(json_url);
 
-        //console.log(array_url1);
-        //console.log(array_url);
-
-        console.log('04 - Loading Url from json File: source_ikea.json');
+        console.log('04 - Loading Url from json File: data_url.json');
 
         for (let i = 0; i < array_url.length; i++) {
 
             if (array_url[i].enable) {
-                await page.goto(array_url[i].url, {
+                await page.goto(array_url[i].image_url, {
                     timeout: 0,
                     waitUntil: [
                         'load',
@@ -128,10 +127,11 @@ const scrapping_image = {
                         'networkidle2'
                     ]
                 });
-                console.log('05 - Opening the url: ' + array_url[i].url);
+                console.log('05 - Opening the url: ' + array_url[i].image_url);
 
-                let htmlItems = await page.$('#product-list');
-                await handleHtmlItems(htmlItems, array_url[i].category, array_url[i].subcategory);
+                const filename = uuidv4() + '.jpg';
+
+                await handleJsonField(filename, array_url[i].number, array_url[i].name, array_url[i].price, array_url[i].category, array_url[i].subcategory, source);
                 console.log('06 - Starting Scrapping!');
             }
         }
@@ -145,7 +145,7 @@ const scrapping_image = {
 
     formatJson: async () => {
 
-        const filename = path.join(__dirname, './data_ikea.json');
+        const filename = path.join(__dirname, './data_image.json');
 
         fs.readFile(filename, 'utf8', (err, data) => {
             if (err) {
@@ -167,14 +167,14 @@ const scrapping_image = {
                     console.error('Error writing the file: ', err);
                     return;
                 }
-                console.log('Json file data_ikea.json format completed!');
+                console.log('Json file data_image.json format completed!');
             });
         });
     },
 
     cleanJson: async () => {
 
-        const filename = path.join(__dirname, './data_ikea.json');
+        const filename = path.join(__dirname, './data_image.json');
 
         fs.writeFileSync(filename, '');
 

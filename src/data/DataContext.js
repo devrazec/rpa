@@ -88,8 +88,8 @@ const DataProvider = (props) => {
     ],
     rows: []
   });
-  const [dataSourceScrappingJson, setDataSourceScrappingJson] = useState(null);
-  const [dataSourceScrappingTable, setDataSourceScrappingTable] = useState({
+  const [dataSourceUrlJson, setDataSourceUrlJson] = useState(null);
+  const [dataSourceUrlTable, setDataSourceUrlTable] = useState({
     columns: [
       {
         sort: true,
@@ -130,12 +130,15 @@ const DataProvider = (props) => {
         sort: false,
         label: "Image",
         field: "image_url",
+      },
+      {
+        sort: true,
+        label: "Source",
+        field: "source",
       }
     ],
     rows: [],
-  });
-
- 
+  }); 
   const [dataSourceCategoryTable, setDataSourceCategoryTable] = useState({
     columns: [
       {
@@ -166,6 +169,58 @@ const DataProvider = (props) => {
     ],
     rows: []
   });  
+
+  const [dataSourceImageJson, setDataSourceImageJson] = useState(null);
+  const [dataSourceImageTable, setDataSourceImageTable] = useState({
+    columns: [
+      {
+        sort: true,
+        label: "ID",
+        field: "id",
+      },
+      {
+        sort: false,
+        label: "Number",
+        field: "number",
+      },
+      {
+        sort: true,
+        label: "Name",
+        field: "name",
+      },
+      {
+        sort: false,
+        label: "Price",
+        field: "price",
+      },
+      {
+        sort: true,
+        label: "Category",
+        field: "category",
+      },
+      {
+        sort: true,
+        label: "Subcategory",
+        field: "subcategory",
+      },
+      {
+        sort: false,
+        label: "URL",
+        field: "url",
+      },
+      {
+        sort: false,
+        label: "Image",
+        field: "image_url",
+      },
+      {
+        sort: true,
+        label: "Source",
+        field: "source",
+      }
+    ],
+    rows: [],
+  });
 
   return (
 
@@ -198,12 +253,14 @@ const DataProvider = (props) => {
       dataSubcategoryOption, setDataSubcategoryOption,
       dataSourceJson, setDataSourceJson,
       dataSourceTable, setDataSourceTable,
-      dataSourceScrappingJson, setDataSourceScrappingJson,
-      dataSourceScrappingTable, setDataSourceScrappingTable,
+      dataSourceUrlJson, setDataSourceUrlJson,
+      dataSourceUrlTable, setDataSourceUrlTable,
       dataSourceCategoryJson, setDataSourceCategoryJson,
       dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
       dataSourceCategoryTable, setDataSourceCategoryTable,
       dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
+      dataSourceImageJson, setDataSourceImageJson,
+      dataSourceImageTable, setDataSourceImageTable,
     }}>
       {props.children}
     </DataContext.Provider>
