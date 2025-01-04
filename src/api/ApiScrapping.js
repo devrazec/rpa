@@ -1,20 +1,23 @@
 import axios from "axios";
 
-async function getSource(source) {
+async function postReadDataSource(source) {
     try {
-        return await axios.get(
-            `http://localhost:3003/get_source_` + source
-        ).then((response) => response.data);
+        return await axios.post(
+            `http://localhost:3003/post_read_data_source`, {
+            params: {
+                source: source
+            }
+        }).then((response) => response.data);
     } catch (error) {
         console.log(error);
         return error;
     }
 }
 
-async function postSource(source, data) {
+async function postWriteDataSource(source, data) {
     try {
         return await axios.post(
-            `http://localhost:3003/post_source_` + source, {
+            `http://localhost:3003/post_write_data_source`, {
             params: {
                 source: source,
                 data: data,
@@ -26,14 +29,25 @@ async function postSource(source, data) {
     }
 }
 
-async function postScrappingDataUrl(source, data) {
+async function getDataImage() {
+    try {
+        return await axios.get(
+            `http://localhost:3003/get_data_image`
+        ).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function postDataImage(source, data) {
     try {
         return await axios.post(
-            `http://localhost:3003/post_scrapping_data_url`, {
+            `http://localhost:3003/post_data_image`, {
             params: {
                 source: source,
                 data: data,
-            }           
+            }
         }).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -41,11 +55,26 @@ async function postScrappingDataUrl(source, data) {
     }
 }
 
-async function getCleanDataUrl() {
+async function getDataUrl() {
     try {
         return await axios.get(
-            `http://localhost:3003/get_clean_data_url`
+            `http://localhost:3003/get_data_url`
         ).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function postDataUrl(source, data) {
+    try {
+        return await axios.post(
+            `http://localhost:3003/post_data_url`, {
+            params: {
+                source: source,
+                data: data,
+            }
+        }).then((response) => response.data);
     } catch (error) {
         console.log(error);
         return error;
@@ -63,10 +92,10 @@ async function getCleanDataImage() {
     }
 }
 
-async function getSourceData(source) {
+async function getCleanDataUrl() {
     try {
         return await axios.get(
-            `http://localhost:3003/get_source_data_` + source
+            `http://localhost:3003/get_clean_data_url`
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -74,13 +103,24 @@ async function getSourceData(source) {
     }
 }
 
-async function postCategoryData(data) {
+async function getDataCategory() {
+    try {
+        return await axios.get(
+            `http://localhost:3003/get_data_category`
+        ).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function postDataCategory(data) {
     try {
         return await axios.post(
-            `http://localhost:3003/post_category`, {
+            `http://localhost:3003/post_data_category`, {
             params: {
                 data: data,
-            }           
+            }
         }).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -88,36 +128,25 @@ async function postCategoryData(data) {
     }
 }
 
-async function postSubcategoryData(data) {
+async function getDataSubcategory() {
+    try {
+        return await axios.get(
+            `http://localhost:3003/get_data_subcategory`
+        ).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function postDataSubcategory(data) {
     try {
         return await axios.post(
-            `http://localhost:3003/post_subcategory`, {
+            `http://localhost:3003/post_data_subcategory`, {
             params: {
                 data: data,
-            }           
+            }
         }).then((response) => response.data);
-    } catch (error) {
-        console.log(error);
-        return error;
-    }
-}
-
-async function getCategoryData() {
-    try {
-        return await axios.get(
-            `http://localhost:3003/get_category`
-        ).then((response) => response.data);
-    } catch (error) {
-        console.log(error);
-        return error;
-    }
-}
-
-async function getSubcategoryData() {
-    try {
-        return await axios.get(
-            `http://localhost:3003/get_subcategory`
-        ).then((response) => response.data);
     } catch (error) {
         console.log(error);
         return error;
@@ -125,14 +154,16 @@ async function getSubcategoryData() {
 }
 
 export {
-    getSource,
-    postSource,
-    postScrappingDataUrl,
+    postReadDataSource,
+    postWriteDataSource,
+    getDataUrl,
+    postDataUrl,
+    getDataImage,
+    postDataImage,
     getCleanDataUrl,
     getCleanDataImage,
-    getSourceData,
-    postCategoryData,
-    postSubcategoryData,
-    getCategoryData,
-    getSubcategoryData,
+    postDataCategory,
+    getDataCategory,
+    getDataSubcategory,
+    postDataSubcategory,
 };

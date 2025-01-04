@@ -11,14 +11,16 @@ const scrapping_ikea = require('./scrapping_ikea.js');
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get('/get_source_ikea', async (req, res) => {
-    const filePath = path.join(__dirname, './source_ikea.json');
+app.post('/post_read_data_source', async (req, res) => {
+    const body = req.body;
+    const source = body.params.source;    
+    const filePath = path.join(__dirname, './source_' + source + '.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
-            console.error('Error reading source_ikea.json file:', err);
-            return res.status(500).send('Error reading file source_ikea.json!');
+            console.error('Error reading source_' + source + '.json file:', err);
+            return res.status(500).send('Error reading file source_' + source + '.json!');
         } else {
-            console.log('File source_ikea.json has been read!');
+            console.log('File source_' + source + '.json has been read!');
             setTimeout(() => {
                 res.status(200).send(data);
             }, 2000);
@@ -26,23 +28,25 @@ app.get('/get_source_ikea', async (req, res) => {
     });
 });
 
-app.post('/post_source_ikea', async (req, res) => {
+app.post('/post_write_data_source', async (req, res) => {
     const body = req.body;
-    const filePath = path.join(__dirname, './source_ikea.json');
-    fs.writeFile(filePath, JSON.stringify(body.params.data), 'utf8', (err) => {
+    const source = body.params.source;
+    const data = JSON.stringify(body.params.data);
+    const filePath = path.join(__dirname, './source_' + source + '.json');
+    fs.writeFile(filePath, data, 'utf8', (err) => {
         if (err) {
-            console.error('Error writing source_ikea.json file:', err);
-            return res.status(500).send('Error writing file source_ikea.json!');
+            console.error('Error writing source_' + source + '.json file:', err);
+            return res.status(500).send('Error writing file source_' + source + '.json!');
         } else {
-            console.log('File source_ikea.json has been saved!');
+            console.log('File source_' + source + '.json has been saved!');
             setTimeout(() => {
-                res.status(200).send('File source_ikea.json has been saved!');
+                res.status(200).send('File source_' + source + '.json has been saved!');
             }, 2000);
         }
     });
 });
 
-app.post('/post_scrapping_data_url', async (req, res) => {
+app.post('/post_data_url', async (req, res) => {
     try {
         const body = req.body;
         const source = body.params.source;
@@ -51,7 +55,7 @@ app.post('/post_scrapping_data_url', async (req, res) => {
         await scrapping_ikea.scrapping(source, data);
         await scrapping_ikea.formatJson();
 
-        console.log('Script post_scrapping_data_url executed successfully!');
+        console.log('Script post_data_url executed successfully!');
 
         const filePath = path.join(__dirname, './data_url.json');
         fs.readFile(filePath, 'utf8', (err, data) => {
@@ -66,8 +70,8 @@ app.post('/post_scrapping_data_url', async (req, res) => {
             }
         });
     } catch (error) {
-        console.error('Error running post_scrapping_data_url:', error);
-        res.status(500).send('Failed to execute post_scrapping_data_url script!');
+        console.error('Error running post_data_url:', error);
+        res.status(500).send('Failed to execute post_data_url script!');
     }
 });
 
@@ -99,7 +103,7 @@ app.get('/get_clean_data_image', async (req, res) => {
     }
 });
 
-app.get('/get_source_data_ikea', async (req, res) => {
+app.get('/get_data_url', async (req, res) => {
     const filePath = path.join(__dirname, './data_url.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
@@ -114,7 +118,7 @@ app.get('/get_source_data_ikea', async (req, res) => {
     });
 });
 
-app.get('/get_category', async (req, res) => {
+app.get('/get_data_category', async (req, res) => {
     const filePath = path.join(__dirname, './data_category.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
@@ -129,7 +133,7 @@ app.get('/get_category', async (req, res) => {
     });
 });
 
-app.post('/post_category', async (req, res) => {
+app.post('/post_data_category', async (req, res) => {
     const body = req.body;
     const filePath = path.join(__dirname, './data_category.json');
     fs.writeFile(filePath, JSON.stringify(body.params.data), 'utf8', (err) => {
@@ -145,7 +149,7 @@ app.post('/post_category', async (req, res) => {
     });
 });
 
-app.get('/get_subcategory', async (req, res) => {
+app.get('/get_data_subcategory', async (req, res) => {
     const filePath = path.join(__dirname, './data_subcategory.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
@@ -160,7 +164,7 @@ app.get('/get_subcategory', async (req, res) => {
     });
 });
 
-app.post('/post_subcategory', async (req, res) => {
+app.post('/post_data_subcategory', async (req, res) => {
     const body = req.body;
     const filePath = path.join(__dirname, './data_subcategory.json');
     fs.writeFile(filePath, JSON.stringify(body.params.data), 'utf8', (err) => {

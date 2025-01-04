@@ -23,10 +23,18 @@ import { DataContext } from '../data/DataContext';
 
 // Api
 import {
-    postCategoryData,
-    postSubcategoryData,
-    getCategoryData,
-    getSubcategoryData,
+    postReadDataSource,
+    postWriteDataSource,    
+    getDataUrl,
+    postDataUrl,
+    getDataImage,
+    postDataImage,
+    getCleanDataUrl,
+    getCleanDataImage,
+    postDataCategory,
+    getDataCategory,
+    getDataSubcategory,
+    postDataSubcategory,
 } from '../api/ApiScrapping';
 
 const PageSubcategory = () => {
@@ -80,7 +88,7 @@ const PageSubcategory = () => {
 
         setHookLoadingVisible(true);
 
-        getSubcategoryData().then(
+        getDataSubcategory().then(
             (response) => {
                 if (response) {
 
@@ -113,7 +121,7 @@ const PageSubcategory = () => {
         setDataSourceSubcategoryTable({ ...dataSourceSubcategoryTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
         setDataSourceSubcategoryJson(jsonOutput);
-        postSubcategoryData(jsonOutput).then(
+        postDataSubcategory(jsonOutput).then(
             (response) => {
                 if (response) {
                     //console.log(response);
@@ -126,7 +134,7 @@ const PageSubcategory = () => {
         setDataSourceSubcategoryTable({ ...dataSourceSubcategoryTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
         setDataSourceSubcategoryJson(jsonOutput);
-        postSubcategoryData(jsonOutput).then(
+        postDataSubcategory(jsonOutput).then(
             (response) => {
                 if (response) {
                     //console.log(response);
@@ -140,7 +148,7 @@ const PageSubcategory = () => {
         setDataSourceSubcategoryTable({ ...dataSourceSubcategoryTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
         setDataSourceSubcategoryJson(jsonOutput);
-        postSubcategoryData(jsonOutput).then(
+        postDataSubcategory(jsonOutput).then(
             (response) => {
                 if (response) {
                     //console.log(response);

@@ -27,14 +27,18 @@ import { DataContext } from '../data/DataContext';
 
 // Api
 import {
-    getSource,
-    postSource,
-    postScrappingData,    
-    getFormatScrappingData,
-    getCleanScrappingData,
-    getSourceData,
-    getCategoryData,
-    getSubcategoryData,
+    postReadDataSource,
+    postWriteDataSource,    
+    getDataUrl,
+    postDataUrl,
+    getDataImage,
+    postDataImage,
+    getCleanDataUrl,
+    getCleanDataImage,
+    postDataCategory,
+    getDataCategory,
+    getDataSubcategory,
+    postDataSubcategory,
 } from '../api/ApiScrapping';
 
 const PageHome = () => {
@@ -105,7 +109,7 @@ const PageHome = () => {
         setDataSourceTable({ ...dataSourceTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
         setDataSourceJson(jsonOutput);
-        postSource(dataSourceSelected, jsonOutput).then(
+        postWriteDataSource(dataSourceSelected, jsonOutput).then(
             (response) => {
                 if (response) {
                     //console.log(response);

@@ -18,14 +18,18 @@ import { DataContext } from '../data/DataContext';
 
 // Api
 import {
-    getSource,
-    postSource,
-    postScrappingDataUrl,
+    postReadDataSource,
+    postWriteDataSource,    
+    getDataUrl,
+    postDataUrl,
+    getDataImage,
+    postDataImage,
     getCleanDataUrl,
     getCleanDataImage,
-    getSourceData,
-    getCategoryData,
-    getSubcategoryData,
+    postDataCategory,
+    getDataCategory,
+    getDataSubcategory,
+    postDataSubcategory,
 } from '../api/ApiScrapping';
 
 const ComponentSidebar = () => {
@@ -85,7 +89,7 @@ const ComponentSidebar = () => {
 
     useEffect(() => {
 
-        getCategoryData().then(
+        getDataCategory().then(
             (response) => {
                 if (response) {
                     setDataSourceCategoryJson(response);
@@ -93,7 +97,7 @@ const ComponentSidebar = () => {
             }
         );
 
-        getSubcategoryData().then(
+        getDataSubcategory().then(
             (response) => {
                 if (response) {
                     setDataSourceSubcategoryJson(response);
@@ -119,11 +123,11 @@ const ComponentSidebar = () => {
         }
     }, []);
 
-    const onGetSource = (source) => {
+    const onPostReadDataSource = (source) => {
 
         setHookLoadingVisible(true);
 
-        getSource(source).then(
+        postReadDataSource(source).then(
             (response) => {
                 if (response) {
 
@@ -168,11 +172,11 @@ const ComponentSidebar = () => {
         onLoadingDataUrl(source);
     };
 
-    const onScrappingDataUrl = (source, data) => {
+    const onPostDataUrl = (source, data) => {
 
         setHookLoadingVisible(true);
 
-        postScrappingDataUrl(source, data).then(
+        postDataUrl(source, data).then(
             (response) => {
                 if (response) {
                     setHookLoadingVisible(false);
@@ -192,7 +196,7 @@ const ComponentSidebar = () => {
 
         setHookLoadingVisible(true);
 
-        getSourceData(source).then(
+        getDataUrl(source).then(
             (response) => {
                 if (response) {
 
@@ -259,7 +263,7 @@ const ComponentSidebar = () => {
         );
     };
 
-    const onScrappingDataImage = (source, data) => {
+    const onDataImage = (source, data) => {
 
         setHookLoadingVisible(true);
 
@@ -328,7 +332,7 @@ const ComponentSidebar = () => {
                                 className="w-100 mb-4"
                                 size="sm"
                                 color='success'
-                                onClick={() => onGetSource(dataSourceSelected)}
+                                onClick={() => onPostReadDataSource(dataSourceSelected)}
                                 disabled={dataSourceSelected ? (false) : (true)}
                                 style={{
                                 }}
@@ -340,7 +344,7 @@ const ComponentSidebar = () => {
                                 className="w-100"
                                 size="sm"
                                 color='success'
-                                onClick={() => onScrappingDataUrl(dataSourceSelected, dataSourceJson)}
+                                onClick={() => onPostDataUrl(dataSourceSelected, dataSourceJson)}
                                 disabled={dataSourceSelected && dataSourceJson ? (false) : (true)}
                                 style={{
                                 }}
@@ -370,7 +374,7 @@ const ComponentSidebar = () => {
                                 className="w-100 mb-4"
                                 size="sm"
                                 color='success'
-                                onClick={() => onScrappingDataImage(dataSourceUrlJson)}
+                                onClick={() => onDataImage(dataSourceUrlJson)}
                                 disabled={dataSourceSelected && dataSourceUrlJson ? (false) : (true)}
                                 style={{
                                 }}
