@@ -78,6 +78,9 @@ const ComponentSidebar = () => {
         dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
         dataSourceImageJson, setDataSourceImageJson,
         dataSourceImageTable, setDataSourceImageTable,
+        dataImageGalleryArray, setDataImageGalleryArray,
+        dataImageGalleryTable, setDataImageGalleryTable,
+        dataImageGalleryColumn, setDataImageGalleryColumn,
 
     } = useContext(DataContext);
 
@@ -233,7 +236,7 @@ const ComponentSidebar = () => {
                             ),
                             source: getTextBySource(item.source)
                         }))
-                    });
+                    });                  
 
                     setHookLoadingVisible(false);
 
@@ -299,7 +302,7 @@ const ComponentSidebar = () => {
                 (response) => {
                     if (response) {
                         setHookLoadingVisible(false);
-                        setDataSourceUrlJson(response);                        
+                        setDataSourceUrlJson(response);
                     }
                 }
             );

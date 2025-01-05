@@ -95,7 +95,7 @@ const DataProvider = (props) => {
     ],
     rows: []
   });
-  const [dataSourceUrlJson, setDataSourceUrlJson] = useState(null);
+  const [dataSourceUrlJson, setDataSourceUrlJson] = useState([]);
   const [dataSourceUrlTable, setDataSourceUrlTable] = useState({
     columns: [
       {
@@ -145,7 +145,7 @@ const DataProvider = (props) => {
       }
     ],
     rows: [],
-  }); 
+  });
   const [dataSourceCategoryTable, setDataSourceCategoryTable] = useState({
     columns: [
       {
@@ -175,9 +175,9 @@ const DataProvider = (props) => {
       }
     ],
     rows: []
-  });  
+  });
 
-  const [dataSourceImageJson, setDataSourceImageJson] = useState(null);
+  const [dataSourceImageJson, setDataSourceImageJson] = useState([]);
   const [dataSourceImageTable, setDataSourceImageTable] = useState({
     columns: [
       {
@@ -193,7 +193,7 @@ const DataProvider = (props) => {
       {
         sort: false,
         label: "Number",
-        field: "number",
+        field: "number",       
       },
       {
         sort: true,
@@ -214,7 +214,7 @@ const DataProvider = (props) => {
         sort: true,
         label: "Subcategory",
         field: "subcategory",
-      },     
+      },
       {
         sort: true,
         label: "Source",
@@ -223,7 +223,13 @@ const DataProvider = (props) => {
     ],
     rows: [],
   });
-  const[dataSourceImageGallery, setDataSourceImageGallery] = useState(null);
+
+  const [dataImageGalleryArray, setDataImageGalleryArray] = useState(null);
+  const [dataImageGalleryTable, setDataImageGalleryTable] = useState({
+    columns: [],
+    rows: [],
+  });
+  const [dataImageGalleryColumn, setDataImageGalleryColumn] = useState(null);
 
   return (
 
@@ -243,7 +249,7 @@ const DataProvider = (props) => {
       hookHeaderEnable, setHookHeaderEnable,
       hookSidebarEnable, setHookSidebarEnable,
       hookFooterEnable, setHookFooterEnable,
-      hookSettingsEnable, setHookSettingsEnable,     
+      hookSettingsEnable, setHookSettingsEnable,
 
       // Visible
       hookSettingsVisible, setHookSettingsVisible,
@@ -271,7 +277,9 @@ const DataProvider = (props) => {
       dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
       dataSourceImageJson, setDataSourceImageJson,
       dataSourceImageTable, setDataSourceImageTable,
-      dataSourceImageGallery, setDataSourceImageGallery,
+      dataImageGalleryArray, setDataImageGalleryArray,
+      dataImageGalleryTable, setDataImageGalleryTable,
+      dataImageGalleryColumn, setDataImageGalleryColumn,
 
     }}>
       {props.children}

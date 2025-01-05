@@ -19,10 +19,8 @@ import {
 
 import { MDBTableEditor } from "mdb-react-table-editor";
 
-import { MDBEcommerceGallery } from 'mdb-react-ecommerce-gallery';
-
 // Component
-//import ComponentLayout from '../component/ComponentLayout';
+import ComponentGallery from '../component/ComponentGallery';
 
 // Data Provider
 import { DataContext } from '../data/DataContext';
@@ -90,13 +88,11 @@ const PageHome = () => {
         dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
         dataSourceImageJson, setDataSourceImageJson,
         dataSourceImageTable, setDataSourceImageTable,
-        dataSourceImageGallery, setDataSourceImageGallery,
+        dataImageGalleryArray, setDataImageGalleryArray,
+        dataImageGalleryTable, setDataImageGalleryTable,
+        dataImageGalleryColumn, setDataImageGalleryColumn,
 
     } = useContext(DataContext);
-
-    useEffect(() => {
-        handleImageGallery();
-    }, [dataSourceImageTable]);
 
     const handleTabActive = (value) => {
         if (value === hookTabHomeActive) {
@@ -128,22 +124,6 @@ const PageHome = () => {
                 }
             }
         );
-    };
-
-    const handleImageGallery = () => {        
-
-        if (dataSourceImageJson) {
-
-            const baseUrl = "http://localhost:3002/images";
-
-            const convetSourceImage = dataSourceImageJson.map(item => ({
-                thumbnail: `${baseUrl}/${item.category}/${item.subcategory}/${item.filename}`,
-                src: `${baseUrl}/${item.category}/${item.subcategory}/${item.filename}`,
-                alt: item.name
-            }));
-
-            setDataSourceImageGallery(convetSourceImage);
-        }
     };
 
     return (
@@ -209,7 +189,7 @@ const PageHome = () => {
                     </MDBTabsPane>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Image'}>
-                        <MDBEcommerceGallery imagesSrc={dataSourceImageGallery} autoHeight zoomEffect carousel />
+                        <ComponentGallery />
                     </MDBTabsPane>
 
                 </MDBTabsContent>
