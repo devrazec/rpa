@@ -24,6 +24,13 @@ const DataProvider = (props) => {
   const [hookSettingsVisible, setHookSettingsVisible] = useState(false);
   const [hookLoadingVisible, setHookLoadingVisible] = useState(false);
 
+  // Active
+  const [hookTabHomeActive, setHookTabHomeActive] = useState('Datasource');
+
+  // Toast
+  const [hookToastActive, setHookToastActive] = useState(false);
+  const [hookToastMessage, setHookToastMessage] = useState(null);
+
   // Data
   const [dataSourceOption, setDataSourceOption] = useState([
     { text: 'Ikea', value: 'ikea' },
@@ -180,6 +187,11 @@ const DataProvider = (props) => {
       },
       {
         sort: false,
+        label: "Filename",
+        field: "filename",
+      },
+      {
+        sort: false,
         label: "Number",
         field: "number",
       },
@@ -202,17 +214,7 @@ const DataProvider = (props) => {
         sort: true,
         label: "Subcategory",
         field: "subcategory",
-      },
-      {
-        sort: false,
-        label: "URL",
-        field: "url",
-      },
-      {
-        sort: false,
-        label: "Image",
-        field: "image_url",
-      },
+      },     
       {
         sort: true,
         label: "Source",
@@ -240,11 +242,18 @@ const DataProvider = (props) => {
       hookHeaderEnable, setHookHeaderEnable,
       hookSidebarEnable, setHookSidebarEnable,
       hookFooterEnable, setHookFooterEnable,
-      hookSettingsEnable, setHookSettingsEnable,
+      hookSettingsEnable, setHookSettingsEnable,     
 
       // Visible
       hookSettingsVisible, setHookSettingsVisible,
       hookLoadingVisible, setHookLoadingVisible,
+
+      // Active
+      hookTabHomeActive, setHookTabHomeActive,
+
+      // Toast
+      hookToastActive, setHookToastActive,
+      hookToastMessage, setHookToastMessage,
 
       // Data       
       dataSourceOption, setDataSourceOption,

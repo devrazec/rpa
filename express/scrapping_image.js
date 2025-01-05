@@ -14,32 +14,22 @@ let page = null;
 
 async function handleJsonField(filename, number, name, price, category, subcategory, source) {
 
-    let arrayItems = await htmlItems?.evaluate(() => {
-        let elements = Array.from(document.querySelectorAll('.plp-mastercard'), (e, k) => ({
+    let arrayItem = [
+        {
             id: '',
-            number: '',
-            name: '',
-            price: '',            
-            filename: '',
-            category: '',
-            subcategory: '',
-            source: ''
-        }));
-        return elements;
-    });
-
-    if (arrayItems) {
-        for (let i = 0; i < arrayItems.length; i++) {
-            arrayItems[i]['number'] = number;
-            arrayItems[i]['name'] = name;
-            arrayItems[i]['price'] = price;
-            arrayItems[i]['category'] = category;
-            arrayItems[i]['subcategory'] = subcategory;
-            arrayItems[i]['source'] = source;
+            filename: filename,
+            number: number,
+            name: name,
+            price: price,
+            category: category,
+            subcategory: subcategory,
+            source: source
         }
+    ]
 
-        writeJsonFile(arrayItems);
-    };
+    console.log('Created json array!');
+
+    writeJsonFile(arrayItem);
 };
 
 async function writeJsonFile(arrayItems) {
@@ -52,7 +42,7 @@ async function writeJsonFile(arrayItems) {
 
         fs.appendFileSync(filename, json);
 
-        console.log('Updated json file data_image.json!');        
+        console.log('Updated json file data_image.json!');
     };
 };
 
@@ -117,23 +107,46 @@ const scrapping_image = {
 
         for (let i = 0; i < array_url.length; i++) {
 
-            if (array_url[i].enable) {
-                await page.goto(array_url[i].image_url, {
-                    timeout: 0,
-                    waitUntil: [
-                        'load',
-                        'domcontentloaded',
-                        'networkidle0',
-                        'networkidle2'
-                    ]
-                });
-                console.log('05 - Opening the url: ' + array_url[i].image_url);
+            await page.goto(array_url[i].image_url, {
+                timeout: 0,
+                waitUntil: [
+                    'load',
+                    'domcontentloaded',
+                    'networkidle0',
+                    'networkidle2'
+                ]
+            });
+            console.log('05 - Opening the url: ' + array_url[i].image_url);
 
-                const filename = uuidv4() + '.jpg';
-
-                await handleJsonField(filename, array_url[i].number, array_url[i].name, array_url[i].price, array_url[i].category, array_url[i].subcategory, source);
-                console.log('06 - Starting Scrapping!');
+            if (!fs.existsSync('./images/' + array_url[i].category)) {
+                fs.mkdirSync('./images/' + array_url[i].category, { recursive: true });
             }
+            console.log('Creating category folder: ' + array_url[i].category);
+
+            if (!fs.existsSync('./images/' + array_url[i].category + '/' + array_url[i].subcategory )) {
+                fs.mkdirSync('images/' + array_url[i].category + '/' + array_url[i].subcategory, { recursive: true });
+            }
+            console.log('Creating subcategory folder: ' + array_url[i].subcategory);
+
+            /* await page.on('response', async response => {
+                const matches = /.*\.(jpg|png|svg|gif)$/.exec(response.url());
+                console.log(matches);
+                if (matches && (matches.length === 2)) {
+                    const extension = matches[1];
+                    const buffer = await response.buffer();
+                    //fs.writeFileSync(`images/image-${counter}.${extension}`, buffer, 'base64');
+                    fs.writeFileSync('images', buffer, 'base64');
+
+                   
+                };
+            })  */
+
+            const filename = uuidv4() + '.jpg';
+
+            //const filename = '*.jpg';
+
+            await handleJsonField(filename, array_url[i].number, array_url[i].name, array_url[i].price, array_url[i].category, array_url[i].subcategory, source);
+            console.log('06 - Starting Scrapping!');
         }
 
         // Close Chrome Testing Browser

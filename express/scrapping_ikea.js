@@ -49,7 +49,7 @@ async function writeJsonFile(arrayItems) {
 
         fs.appendFileSync(filename, json);
 
-        console.log('Updated json file data_url.json!');        
+        console.log('Updated json file data_url.json!');
     };
 };
 
@@ -144,7 +144,7 @@ const scrapping_ikea = {
         console.log('08 - Closing Chrome Browser!');
         console.log('');
     },
-    
+
     formatJson: async () => {
 
         const filename = path.join(__dirname, './data_url.json');
@@ -154,7 +154,6 @@ const scrapping_ikea = {
                 console.error('Error reading the file:', err);
                 return;
             }
-
             // Replace "][" with ","
             const modifiedData = data.replace(/\]\[/g, ',');
 

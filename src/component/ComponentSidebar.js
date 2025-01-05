@@ -10,7 +10,6 @@ import {
     MDBSelect,
     MDBBtn,
     MDBRipple,
-
 } from 'mdb-react-ui-kit';
 
 // Data Provider
@@ -19,7 +18,7 @@ import { DataContext } from '../data/DataContext';
 // Api
 import {
     postReadDataSource,
-    postWriteDataSource,    
+    postWriteDataSource,
     getDataUrl,
     postDataUrl,
     getDataImage,
@@ -57,6 +56,13 @@ const ComponentSidebar = () => {
         hookSettingsVisible, setHookSettingsVisible,
         hookLoadingVisible, setHookLoadingVisible,
 
+        // Active
+        hookTabHomeActive, setHookTabHomeActive,
+
+        // Toast
+        hookToastActive, setHookToastActive,
+        hookToastMessage, setHookToastMessage,
+
         // Data       
         dataSourceOption, setDataSourceOption,
         dataSourceSelected, setDataSourceSelected,
@@ -76,6 +82,8 @@ const ComponentSidebar = () => {
     } = useContext(DataContext);
 
     const sidebarRef = useRef(null);
+
+    const [showToast, setShowToast] = useState(false);
 
     const extractUrl = (input) => {
         const match = input.match(/href=['"]([^'"]*)['"]/);
@@ -123,6 +131,11 @@ const ComponentSidebar = () => {
         }
     }, []);
 
+    const getTextBySource = (source) => {
+        const matchedItem = dataSourceOption.find((item) => item.value === source);
+        return matchedItem ? matchedItem.text : '';
+    };
+
     const onPostReadDataSource = (source) => {
 
         setHookLoadingVisible(true);
@@ -165,42 +178,25 @@ const ComponentSidebar = () => {
                     });
 
                     setHookLoadingVisible(false);
+                } else {
+                    setHookLoadingVisible(false);
+                    setHookToastActive(true);
+                    setHookToastMessage('There is not Data Source!');
                 }
             }
         );
 
-        onLoadingDataUrl(source);
+        setHookTabHomeActive('Datasource');        
     };
 
-    const onPostDataUrl = (source, data) => {
+    const onLoadingDataUrl = () => {
 
         setHookLoadingVisible(true);
 
-        postDataUrl(source, data).then(
+        getDataUrl().then(
             (response) => {
+
                 if (response) {
-                    setHookLoadingVisible(false);
-                    setDataSourceUrlJson(response);
-                    onLoadingDataUrl(source);
-                }
-            }
-        );
-    };
-
-    const getTextBySource = (source) => {
-        const matchedItem = dataSourceOption.find((item) => item.value === source);
-        return matchedItem ? matchedItem.text : '';
-    };
-
-    const onLoadingDataUrl = (source) => {
-
-        setHookLoadingVisible(true);
-
-        getDataUrl(source).then(
-            (response) => {
-                if (response) {
-
-                    setHookLoadingVisible(false);
 
                     setDataSourceUrlJson(response);
 
@@ -240,9 +236,82 @@ const ComponentSidebar = () => {
                             source: getTextBySource(item.source)
                         }))
                     });
+
+                    setHookLoadingVisible(false);
+
+                } else {
+                    setHookLoadingVisible(false);
+                    setHookToastActive(true);
+                    setHookToastMessage('There is not Data Url!');
                 }
             }
         );
+
+        setHookTabHomeActive('Dataurl');
+    };
+
+    const onLoadingDataImage = () => {
+
+        setHookLoadingVisible(true);
+
+        getDataImage().then(
+            (response) => {
+
+                if (response) {
+
+                    setDataSourceImageJson(response);
+
+                    setDataSourceImageTable({
+                        columns: dataSourceImageTable.columns,
+                        rows: response.map((item) => ({
+                            ...item,
+                            id: item.id,
+                            filename: item.filename,
+                            number: item.number,
+                            name: item.name,
+                            price: item.price,
+                            category: item.category.trim(),
+                            subcategory: item.subcategory.trim(),
+                            source: getTextBySource(item.source)
+                        }))
+                    });
+
+                    setHookTabHomeActive('Dataimage');
+                    setHookLoadingVisible(false);
+
+                } else {
+                    setHookTabHomeActive('Dataimage');
+                    setHookLoadingVisible(false);
+                    setHookToastActive(true);
+                    setHookToastMessage('There is not Data Image!');
+                }
+            }
+        );
+    };
+
+    const onPostDataUrl = (source, data) => {
+
+        setHookLoadingVisible(true);
+
+        const dataEnable = data.filter((item) => item.enable === true);
+
+        if (dataEnable?.length > 0) {
+
+            postDataUrl(source, dataEnable).then(
+                (response) => {
+                    if (response) {
+                        setHookTabHomeActive('Dataurl');
+                        setHookLoadingVisible(false);
+                        setDataSourceUrlJson(response);
+                        onLoadingDataUrl(source);
+                    }
+                }
+            );
+        } else {
+            setHookLoadingVisible(false);
+            setHookToastActive(true);
+            setHookToastMessage('Enable Data Source!');
+        }
     };
 
     const onCleanDataUrl = (source) => {
@@ -252,6 +321,7 @@ const ComponentSidebar = () => {
         getCleanDataUrl(source).then(
             (response) => {
                 if (response) {
+                    setHookTabHomeActive('Dataurl');
                     setHookLoadingVisible(false);
                     setDataSourceUrlJson(null);
                     setDataSourceUrlTable({
@@ -263,10 +333,22 @@ const ComponentSidebar = () => {
         );
     };
 
-    const onDataImage = (source, data) => {
+    const onPostDataImage = (source, data) => {
 
         setHookLoadingVisible(true);
 
+        if (data) {
+            postDataImage(source, data).then(
+                (response) => {
+                    if (response) {
+                        setHookTabHomeActive('Dataimage');
+                        setHookLoadingVisible(false);
+                        setDataSourceImageJson(response);
+                        onLoadingDataImage(source);
+                    }
+                }
+            );
+        }
     };
 
     const onCleanDataImage = (source) => {
@@ -276,6 +358,7 @@ const ComponentSidebar = () => {
         getCleanDataImage(source).then(
             (response) => {
                 if (response) {
+                    setHookTabHomeActive('Dataimage');
                     setHookLoadingVisible(false);
                     setDataSourceImageJson(null);
                     setDataSourceImageTable({
@@ -357,11 +440,21 @@ const ComponentSidebar = () => {
 
                             <p className="mb-3">Data Url</p>
                             <MDBBtn
+                                className="w-100 mb-4"
+                                size="sm"
+                                color='success'
+                                onClick={() => onLoadingDataUrl()}
+                                style={{
+                                }}
+                            >
+                                <MDBIcon className='me-4' fas icon='redo' size='1x' />
+                                Loading
+                            </MDBBtn>
+                            <MDBBtn
                                 className="w-100"
                                 size="sm"
                                 color='danger'
-                                onClick={() => onCleanDataUrl(dataSourceSelected)}
-                                disabled={dataSourceSelected && dataSourceUrlJson ? (false) : (true)}
+                                onClick={() => onCleanDataUrl()}
                                 style={{
                                 }}
                             >
@@ -374,7 +467,18 @@ const ComponentSidebar = () => {
                                 className="w-100 mb-4"
                                 size="sm"
                                 color='success'
-                                onClick={() => onDataImage(dataSourceUrlJson)}
+                                onClick={() => onLoadingDataImage()}
+                                style={{
+                                }}
+                            >
+                                <MDBIcon className='me-4' fas icon='redo' size='1x' />
+                                Loading
+                            </MDBBtn>
+                            <MDBBtn
+                                className="w-100 mb-4"
+                                size="sm"
+                                color='success'
+                                onClick={() => onPostDataImage(dataSourceSelected, dataSourceUrlJson)}
                                 disabled={dataSourceSelected && dataSourceUrlJson ? (false) : (true)}
                                 style={{
                                 }}
@@ -386,8 +490,7 @@ const ComponentSidebar = () => {
                                 className="w-100"
                                 size="sm"
                                 color='danger'
-                                onClick={() => onCleanDataImage(dataSourceSelected)}
-                                disabled={dataSourceSelected && dataSourceUrlJson ? (false) : (true)}
+                                onClick={() => onCleanDataImage()}
                                 style={{
                                 }}
                             >

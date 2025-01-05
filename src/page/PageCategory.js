@@ -62,6 +62,10 @@ const PageCategory = () => {
         hookSettingsVisible, setHookSettingsVisible,
         hookLoadingVisible, setHookLoadingVisible,
 
+        // Toast
+        hookToastActive, setHookToastActive,
+        hookToastMessage, setHookToastMessage,
+
         // Data       
         dataSourceOption, setDataSourceOption,
         dataSourceSelected, setDataSourceSelected,
@@ -104,6 +108,10 @@ const PageCategory = () => {
                     });
 
                     setHookLoadingVisible(false);
+                } else {
+                    setHookLoadingVisible(false);
+                    setHookToastActive(true);
+                    setHookToastMessage('There is not Data Category!');
                 }
             }
         );

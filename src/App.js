@@ -13,6 +13,7 @@ import ComponentHeader from './component/ComponentHeader';
 import ComponentSidebar from './component/ComponentSidebar';
 import ComponentFooter from './component/ComponentFooter';
 import ComponentLoading from './component/ComponentLoading';
+import ComponentToast from './component/ComponentToast';
 
 // Pages
 import PageHome from './page/PageHome';
@@ -34,6 +35,8 @@ function App() {
   return (
     <>
       
+      <ComponentToast />
+
       <ComponentLoading />
 
       <ComponentSettings />
