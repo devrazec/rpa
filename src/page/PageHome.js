@@ -90,8 +90,13 @@ const PageHome = () => {
         dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
         dataSourceImageJson, setDataSourceImageJson,
         dataSourceImageTable, setDataSourceImageTable,
+        dataSourceImageGallery, setDataSourceImageGallery,
 
     } = useContext(DataContext);
+
+    useEffect(() => {
+        handleImageGallery();
+    }, [dataSourceImageTable]);
 
     const handleTabActive = (value) => {
         if (value === hookTabHomeActive) {
@@ -123,6 +128,22 @@ const PageHome = () => {
                 }
             }
         );
+    };
+
+    const handleImageGallery = () => {        
+
+        if (dataSourceImageJson) {
+
+            const baseUrl = "http://localhost:3002/images";
+
+            const convetSourceImage = dataSourceImageJson.map(item => ({
+                thumbnail: `${baseUrl}/${item.category}/${item.subcategory}/${item.filename}`,
+                src: `${baseUrl}/${item.category}/${item.subcategory}/${item.filename}`,
+                alt: item.name
+            }));
+
+            setDataSourceImageGallery(convetSourceImage);
+        }
     };
 
     return (
@@ -188,7 +209,7 @@ const PageHome = () => {
                     </MDBTabsPane>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Image'}>
-
+                        <MDBEcommerceGallery imagesSrc={dataSourceImageGallery} autoHeight zoomEffect carousel />
                     </MDBTabsPane>
 
                 </MDBTabsContent>

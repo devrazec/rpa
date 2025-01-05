@@ -223,6 +223,7 @@ const DataProvider = (props) => {
     ],
     rows: [],
   });
+  const[dataSourceImageGallery, setDataSourceImageGallery] = useState(null);
 
   return (
 
@@ -270,6 +271,8 @@ const DataProvider = (props) => {
       dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
       dataSourceImageJson, setDataSourceImageJson,
       dataSourceImageTable, setDataSourceImageTable,
+      dataSourceImageGallery, setDataSourceImageGallery,
+
     }}>
       {props.children}
     </DataContext.Provider>
