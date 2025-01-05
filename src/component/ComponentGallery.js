@@ -19,10 +19,28 @@ import {
     MDBSideNavItem,
     MDBSideNavLink,
     MDBSelect,
+    MDBInputGroup,
+    MDBNavbar,
 } from 'mdb-react-ui-kit';
 
 // Data Provider
 import { DataContext } from '../data/DataContext';
+
+// Api
+import {
+    postReadDataSource,
+    postWriteDataSource,    
+    getDataUrl,
+    postDataUrl,
+    getDataImage,
+    postDataImage,
+    getCleanDataUrl,
+    getCleanDataImage,
+    postDataCategory,
+    getDataCategory,
+    getDataSubcategory,
+    postDataSubcategory,
+} from '../api/ApiScrapping';
 
 const ComponentGallery = () => {
 
@@ -75,6 +93,7 @@ const ComponentGallery = () => {
 
     useEffect(() => {
         setDataImageGalleryColumn(6);
+        //onGetCategory();
     }, []);
 
     useEffect(() => {
@@ -85,6 +104,22 @@ const ComponentGallery = () => {
             });
         }
     }, [dataSourceImageJson]);
+
+    const onGetCategory = () => {       
+
+        getDataCategory().then(
+            (response) => {
+                if (response) {
+                    //setDataSourceCategoryJson(response);
+
+                    const transformedData = response.map(item => ({
+                        text: item.name,
+                        value: item.id
+                    }));
+                }                  
+            }
+        );
+    };
 
     const handleGalleryColumn = (numColumns) => {
         const columns = [];
@@ -103,14 +138,14 @@ const ComponentGallery = () => {
         if (dataSourceImageJson) {
 
             const imageArray = (Array.isArray(dataSourceImageJson) ? dataSourceImageJson : []).map(item => ({
-            //const imageArray = dataSourceImageJson?.map(item => ({
+                //const imageArray = dataSourceImageJson?.map(item => ({
                 filename: item.filename,
                 category: item.category,
                 subcategory: item.subcategory,
                 image_url: `http://localhost:3002/${item.category}/${item.subcategory}/${item.filename}`
-            }));            
+            }));
 
-            const rows = [];            
+            const rows = [];
 
             for (let i = 0; i < Math.ceil(imageArray.length / numColumns); i++) {
                 const row = [];
@@ -150,7 +185,16 @@ const ComponentGallery = () => {
 
     return (
         <>
-            <MDBDatatable maxWidth='1080px' entriesOptions={[2, 3, 4]} data={dataImageGalleryTable} />
+            <MDBNavbar light bgColor='light'>
+                <MDBContainer fluid>
+                    <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
+
+                        
+
+                    </MDBInputGroup>
+                </MDBContainer>
+            </MDBNavbar>
+            <MDBDatatable maxWidth='100%' entriesOptions={[2, 3, 4]} data={dataImageGalleryTable} />
         </>
     );
 };
