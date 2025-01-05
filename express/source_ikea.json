@@ -1,1 +1,191 @@
-[{"id":1,"source":"ikea","category":"Living Room","subcategory":"Sofa","url":"https://www.ikea.com/pt/en/cat/beds-bm003/","image":330,"enable":true},{"id":2,"source":"ikea","category":"Living Room","subcategory":"Sofa","url":"https://www.ikea.com/pt/en/cat/sofas-fu003/","image":330,"enable":false},{"id":3,"source":"ikea","category":"Living Room","subcategory":"Armchair","url":"https://www.ikea.com/pt/en/cat/living-room-chairs-footstools-fu006/","image":330,"enable":false},{"id":4,"source":"ikea","category":"Living Room","subcategory":"Shelve","url":"https://www.ikea.com/pt/en/cat/bookcases-shelving-units-st002/","image":330,"enable":false},{"id":5,"source":"ikea","category":"Living Room","subcategory":"Table","url":"https://www.ikea.com/pt/en/cat/tables-desks-fu004/","image":330,"enable":false},{"id":6,"source":"ikea","category":"Living Room","subcategory":"Cabinet","url":"https://www.ikea.com/pt/en/cat/cabinets-cupboards-st003/","image":330,"enable":false},{"id":7,"source":"ikea","category":"Living Room","subcategory":"TV Stand","url":"https://www.ikea.com/pt/en/cat/tv-media-furniture-10475/","image":330,"enable":false},{"id":8,"source":"ikea","category":"Garden","subcategory":"Outdoor","url":"https://www.ikea.com/pt/en/cat/garden-furniture-od003/","image":330,"enable":false},{"id":9,"source":"ikea","category":"Living Room","subcategory":"Drawer","url":"https://www.ikea.com/pt/en/cat/chest-of-drawers-drawer-units-st004/","image":330,"enable":false},{"id":10,"source":"ikea","category":"Bedroom","subcategory":"Wardrobe","url":"https://www.ikea.com/pt/en/cat/wardrobes-19053/","image":330,"enable":false},{"id":11,"source":"ikea","category":"Home Office","subcategory":"Chair","url":"https://www.ikea.com/pt/en/cat/chairs-fu002/","image":330,"enable":false},{"id":12,"source":"ikea","category":"Living Room","subcategory":"Sideboard","url":"https://www.ikea.com/pt/en/cat/sideboards-buffets-console-tables-30454/","image":330,"enable":false},{"id":13,"source":"ikea","category":"Bedroom","subcategory":"Children","url":"https://www.ikea.com/pt/en/cat/childrens-furniture-18767/","image":330,"enable":false},{"id":14,"source":"ikea","category":"Bedroom","subcategory":"Nursery","url":"https://www.ikea.com/pt/en/cat/nursery-furniture-45780/","image":330,"enable":false},{"id":15,"source":"ikea","category":"Bedroom","subcategory":"Divider","url":"https://www.ikea.com/pt/en/cat/room-dividers-46080/","image":330,"enable":false},{"id":16,"source":"ikea","category":"Kitchen","subcategory":"Trolley","url":"https://www.ikea.com/pt/en/cat/trolleys-fu005/","image":330,"enable":false},{"id":17,"source":"ikea","category":"Kitchen","subcategory":"Bar","url":"https://www.ikea.com/pt/en/cat/bar-furniture-16244/","image":330,"enable":false},{"id":18,"source":"ikea","category":"Living Room","subcategory":"Gaming","url":"https://www.ikea.com/pt/en/cat/gaming-furniture-55002/","image":330,"enable":false},{"id":19,"source":"ikea","category":"Kitchen","subcategory":"Cafe","url":"https://www.ikea.com/pt/en/cat/cafe-furniture-19141/","image":330,"enable":false},{"id":20,"source":"ikea","category":"Bedroom","subcategory":"Sets","url":"https://www.ikea.com/pt/en/cat/furniture-sets-55036/","image":330,"enable":false},{"id":21,"source":"ikea","category":"Dining Room","subcategory":"Dining","url":"https://www.ikea.com/pt/en/cat/dining-furniture-700417/","image":330,"enable":false}]
+[
+    {
+        "id": 1,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "Sofa",
+        "url": "https://www.ikea.com/pt/en/cat/beds-bm003/",
+        "image": 330,
+        "enable": true
+    },
+    {
+        "id": 2,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "Sofa",
+        "url": "https://www.ikea.com/pt/en/cat/sofas-fu003/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 3,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "Armchair",
+        "url": "https://www.ikea.com/pt/en/cat/living-room-chairs-footstools-fu006/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 4,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "Shelve",
+        "url": "https://www.ikea.com/pt/en/cat/bookcases-shelving-units-st002/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 5,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "Table",
+        "url": "https://www.ikea.com/pt/en/cat/tables-desks-fu004/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 6,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "Cabinet",
+        "url": "https://www.ikea.com/pt/en/cat/cabinets-cupboards-st003/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 7,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "TV Stand",
+        "url": "https://www.ikea.com/pt/en/cat/tv-media-furniture-10475/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 8,
+        "source": "ikea",
+        "category": "Garden",
+        "subcategory": "Outdoor",
+        "url": "https://www.ikea.com/pt/en/cat/garden-furniture-od003/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 9,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "Drawer",
+        "url": "https://www.ikea.com/pt/en/cat/chest-of-drawers-drawer-units-st004/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 10,
+        "source": "ikea",
+        "category": "Bedroom",
+        "subcategory": "Wardrobe",
+        "url": "https://www.ikea.com/pt/en/cat/wardrobes-19053/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 11,
+        "source": "ikea",
+        "category": "Home Office",
+        "subcategory": "Chair",
+        "url": "https://www.ikea.com/pt/en/cat/chairs-fu002/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 12,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "Sideboard",
+        "url": "https://www.ikea.com/pt/en/cat/sideboards-buffets-console-tables-30454/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 13,
+        "source": "ikea",
+        "category": "Bedroom",
+        "subcategory": "Children",
+        "url": "https://www.ikea.com/pt/en/cat/childrens-furniture-18767/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 14,
+        "source": "ikea",
+        "category": "Bedroom",
+        "subcategory": "Nursery",
+        "url": "https://www.ikea.com/pt/en/cat/nursery-furniture-45780/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 15,
+        "source": "ikea",
+        "category": "Bedroom",
+        "subcategory": "Divider",
+        "url": "https://www.ikea.com/pt/en/cat/room-dividers-46080/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 16,
+        "source": "ikea",
+        "category": "Kitchen",
+        "subcategory": "Trolley",
+        "url": "https://www.ikea.com/pt/en/cat/trolleys-fu005/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 17,
+        "source": "ikea",
+        "category": "Kitchen",
+        "subcategory": "Bar",
+        "url": "https://www.ikea.com/pt/en/cat/bar-furniture-16244/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 18,
+        "source": "ikea",
+        "category": "Living Room",
+        "subcategory": "Gaming",
+        "url": "https://www.ikea.com/pt/en/cat/gaming-furniture-55002/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 19,
+        "source": "ikea",
+        "category": "Kitchen",
+        "subcategory": "Cafe",
+        "url": "https://www.ikea.com/pt/en/cat/cafe-furniture-19141/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 20,
+        "source": "ikea",
+        "category": "Bedroom",
+        "subcategory": "Sets",
+        "url": "https://www.ikea.com/pt/en/cat/furniture-sets-55036/",
+        "image": 330,
+        "enable": false
+    },
+    {
+        "id": 21,
+        "source": "ikea",
+        "category": "Dining Room",
+        "subcategory": "Dining",
+        "url": "https://www.ikea.com/pt/en/cat/dining-furniture-700417/",
+        "image": 330,
+        "enable": false
+    }
+]

@@ -78,11 +78,10 @@ app.post('/post_data_url', async (req, res) => {
 
 app.post('/post_data_image', async (req, res) => {
     try {
-        const body = req.body;
-        const source = body.params.source;
+        const body = req.body;        
         const data = JSON.stringify(body.params.data);
         await scrapping_image.initialize();
-        await scrapping_image.scrapping(source, data);
+        await scrapping_image.scrapping(data);
         await scrapping_image.formatJson();
 
         console.log('Script post_data_image executed successfully!');
@@ -92,10 +91,15 @@ app.post('/post_data_image', async (req, res) => {
             if (err) {
                 console.error('Error reading data_image.json file:', err);
                 return res.status(500).send('Error reading file data_image.json!');
-            } else {
-                console.log('File data_image.json has been read!');
+            } else {                
                 setTimeout(() => {
-                    res.status(200).send(data);
+                    if (!data || data.trim() === '' || data === 'null' || data === '[]' || data === '{}') {
+                        console.log('File data_image.json is empty!');
+                        return res.status(200).send('');
+                    } else {
+                        console.log('File data_image.json has been read!');
+                        res.status(200).send(data);
+                    }
                 }, 1000);
             }
         });

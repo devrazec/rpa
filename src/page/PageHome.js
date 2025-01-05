@@ -19,6 +19,8 @@ import {
 
 import { MDBTableEditor } from "mdb-react-table-editor";
 
+import { MDBEcommerceGallery } from 'mdb-react-ecommerce-gallery';
+
 // Component
 //import ComponentLayout from '../component/ComponentLayout';
 
@@ -186,6 +188,7 @@ const PageHome = () => {
                     </MDBTabsPane>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Image'}>
+
                     </MDBTabsPane>
 
                 </MDBTabsContent>

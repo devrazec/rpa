@@ -99,11 +99,60 @@ const scrapping_image = {
         console.log('03 - Creating a Browser Context!');
     },
 
-    scrapping: async (source, data) => {
+    scrapping: async (data) => {
 
         const array_url = JSON.parse(data);
 
         console.log('04 - Loading Url from json File: data_url.json');
+
+        page.on('response', async (response) => {
+
+            const url = response.url();
+
+            console.log('Processing URL:', url);
+
+            const matches = /.*\.(jpg|png|svg|gif)(\?.*)?$/.exec(url);
+
+            if (matches) {
+
+                const extension = matches[1];
+
+                const buffer = await response.buffer();
+
+                const matchedItem = array_url.find(item => url.includes(item.image_url));
+
+                if (matchedItem) {
+
+                    const { category, subcategory } = matchedItem;
+                    const folderPath = `images/${category}/${subcategory}`;
+
+                    // Ensure folders exist
+                    if (!fs.existsSync(folderPath)) {
+                        fs.mkdirSync(folderPath, { recursive: true });
+                    }
+
+                    // Get the number of existing files in the folder
+                    const files = fs.readdirSync(folderPath);
+                    const nextNumber = files.length + 1;
+                    const filename = `${nextNumber}.${extension}`;
+                    const filePath = path.join(folderPath, filename);
+
+                    try {
+
+                        fs.writeFileSync(filePath, buffer);
+                        console.log('06 - Downloading the image!');
+
+
+                        await handleJsonField(filename, matchedItem.number, matchedItem.name, matchedItem.price, matchedItem.category, matchedItem.subcategory, matchedItem.source);
+
+                        console.log(`Image saved: ${filePath}`);
+
+                    } catch (error) {
+                        console.error(`Failed to save image from URL: ${url}`, error);
+                    }
+                }
+            };
+        });
 
         for (let i = 0; i < array_url.length; i++) {
 
@@ -117,36 +166,6 @@ const scrapping_image = {
                 ]
             });
             console.log('05 - Opening the url: ' + array_url[i].image_url);
-
-            if (!fs.existsSync('./images/' + array_url[i].category)) {
-                fs.mkdirSync('./images/' + array_url[i].category, { recursive: true });
-            }
-            console.log('Creating category folder: ' + array_url[i].category);
-
-            if (!fs.existsSync('./images/' + array_url[i].category + '/' + array_url[i].subcategory )) {
-                fs.mkdirSync('images/' + array_url[i].category + '/' + array_url[i].subcategory, { recursive: true });
-            }
-            console.log('Creating subcategory folder: ' + array_url[i].subcategory);
-
-            /* await page.on('response', async response => {
-                const matches = /.*\.(jpg|png|svg|gif)$/.exec(response.url());
-                console.log(matches);
-                if (matches && (matches.length === 2)) {
-                    const extension = matches[1];
-                    const buffer = await response.buffer();
-                    //fs.writeFileSync(`images/image-${counter}.${extension}`, buffer, 'base64');
-                    fs.writeFileSync('images', buffer, 'base64');
-
-                   
-                };
-            })  */
-
-            const filename = uuidv4() + '.jpg';
-
-            //const filename = '*.jpg';
-
-            await handleJsonField(filename, array_url[i].number, array_url[i].name, array_url[i].price, array_url[i].category, array_url[i].subcategory, source);
-            console.log('06 - Starting Scrapping!');
         }
 
         // Close Chrome Testing Browser

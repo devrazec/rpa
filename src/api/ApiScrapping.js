@@ -40,12 +40,11 @@ async function getDataImage() {
     }
 }
 
-async function postDataImage(source, data) {
+async function postDataImage(data) {
     try {
         return await axios.post(
             `http://localhost:3003/post_data_image`, {
-            params: {
-                source: source,
+            params: {                
                 data: data,
             }
         }).then((response) => response.data);

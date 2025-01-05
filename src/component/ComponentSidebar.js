@@ -83,8 +83,6 @@ const ComponentSidebar = () => {
 
     const sidebarRef = useRef(null);
 
-    const [showToast, setShowToast] = useState(false);
-
     const extractUrl = (input) => {
         const match = input.match(/href=['"]([^'"]*)['"]/);
         return match ? match[1] : input;
@@ -186,7 +184,7 @@ const ComponentSidebar = () => {
             }
         );
 
-        setHookTabHomeActive('Datasource');        
+        setHookTabHomeActive('Datasource');
     };
 
     const onLoadingDataUrl = () => {
@@ -300,10 +298,8 @@ const ComponentSidebar = () => {
             postDataUrl(source, dataEnable).then(
                 (response) => {
                     if (response) {
-                        setHookTabHomeActive('Dataurl');
                         setHookLoadingVisible(false);
-                        setDataSourceUrlJson(response);
-                        onLoadingDataUrl(source);
+                        setDataSourceUrlJson(response);                        
                     }
                 }
             );
@@ -312,6 +308,31 @@ const ComponentSidebar = () => {
             setHookToastActive(true);
             setHookToastMessage('Enable Data Source!');
         }
+
+        setHookTabHomeActive('Dataurl');
+    };
+
+    const onPostDataImage = (data) => {
+
+        setHookLoadingVisible(true);
+
+        if (data?.length > 0) {
+            postDataImage(data).then(
+                (response) => {
+                    if (response) {
+                        setHookLoadingVisible(false);
+                        setDataSourceImageJson(response);
+                        onLoadingDataImage();
+                    }
+                }
+            );
+        } else {
+            setHookLoadingVisible(false);
+            setHookToastActive(true);
+            setHookToastMessage('Data Url is empty!');
+        }
+
+        setHookTabHomeActive('Dataimage');
     };
 
     const onCleanDataUrl = (source) => {
@@ -321,7 +342,6 @@ const ComponentSidebar = () => {
         getCleanDataUrl(source).then(
             (response) => {
                 if (response) {
-                    setHookTabHomeActive('Dataurl');
                     setHookLoadingVisible(false);
                     setDataSourceUrlJson(null);
                     setDataSourceUrlTable({
@@ -331,24 +351,8 @@ const ComponentSidebar = () => {
                 }
             }
         );
-    };
 
-    const onPostDataImage = (source, data) => {
-
-        setHookLoadingVisible(true);
-
-        if (data) {
-            postDataImage(source, data).then(
-                (response) => {
-                    if (response) {
-                        setHookTabHomeActive('Dataimage');
-                        setHookLoadingVisible(false);
-                        setDataSourceImageJson(response);
-                        onLoadingDataImage(source);
-                    }
-                }
-            );
-        }
+        setHookTabHomeActive('Dataurl');
     };
 
     const onCleanDataImage = (source) => {
@@ -358,7 +362,6 @@ const ComponentSidebar = () => {
         getCleanDataImage(source).then(
             (response) => {
                 if (response) {
-                    setHookTabHomeActive('Dataimage');
                     setHookLoadingVisible(false);
                     setDataSourceImageJson(null);
                     setDataSourceImageTable({
@@ -368,6 +371,8 @@ const ComponentSidebar = () => {
                 }
             }
         );
+
+        setHookTabHomeActive('Dataimage');
     };
 
     return (
@@ -478,8 +483,8 @@ const ComponentSidebar = () => {
                                 className="w-100 mb-4"
                                 size="sm"
                                 color='success'
-                                onClick={() => onPostDataImage(dataSourceSelected, dataSourceUrlJson)}
-                                disabled={dataSourceSelected && dataSourceUrlJson ? (false) : (true)}
+                                onClick={() => onPostDataImage(dataSourceUrlJson)}
+                                disabled={dataSourceUrlJson ? (false) : (true)}
                                 style={{
                                 }}
                             >

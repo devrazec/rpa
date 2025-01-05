@@ -24,7 +24,7 @@
     "mdb-react-data-parser": "./plugins/data-parser.tgz",
     "mdb-react-drag-and-drop": "./plugins/drag-and-drop.tgz",
     "mdb-react-dummy": "./plugins/dummy.tgz",
-    "mdb-react-ecommerce-gallery.": "./plugins/ecommerce-gallery.tgz",
+    "mdb-react-ecommerce-gallery": "./plugins/ecommerce-gallery.tgz",
     "mdb-react-file-upload": "./plugins/file-upload.tgz",
     "mdb-react-filters": "./plugins/filters.tgz",
     "mdb-react-input-mask": "./plugins/input-mask.tgz",
@@ -55,7 +55,6 @@
     "react-scripts": "5.0.1",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
-    "uuid": "^11.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
