@@ -48,7 +48,7 @@ function App() {
         <div style={{ display: "flex", flex: 1 }}>
 
           <ComponentSidebar />
-
+          
           <Suspense>
             <Routes>
               <Route exact path="/" element={<PageHome />} />

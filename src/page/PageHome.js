@@ -181,11 +181,11 @@ const PageHome = () => {
 
                     </MDBTabsPane>
                     <MDBTabsPane open={hookTabHomeActive === 'Dataurl'}>
-                        <MDBDatatable maxWidth='1080px' sm fixedHeader striped data={dataSourceUrlTable} />
+                        <MDBDatatable maxWidth='100%' sm fixedHeader striped data={dataSourceUrlTable} />
                     </MDBTabsPane>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Dataimage'}>
-                        <MDBDatatable maxWidth='1080px' sm fixedHeader striped data={dataSourceImageTable} />
+                        <MDBDatatable maxWidth='100%' sm fixedHeader striped data={dataSourceImageTable} />
                     </MDBTabsPane>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Image'}>

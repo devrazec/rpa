@@ -229,7 +229,7 @@ const DataProvider = (props) => {
     columns: [],
     rows: [],
   });
-  const [dataImageGalleryColumn, setDataImageGalleryColumn] = useState(null);
+  const [dataImageGalleryColumn, setDataImageGalleryColumn] = useState(2);
 
   return (
 

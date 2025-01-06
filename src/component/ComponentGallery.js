@@ -21,7 +21,24 @@ import {
     MDBSelect,
     MDBInputGroup,
     MDBNavbar,
+    MDBNavbarBrand,
+    MDBLightbox,
+    MDBLightboxItem,
+    MDBRow,
+    MDBCol,
 } from 'mdb-react-ui-kit';
+
+// Icons
+import { LuColumns2 } from "react-icons/lu";
+import { LuColumns3 } from "react-icons/lu";
+import { LuColumns4 } from "react-icons/lu";
+
+import { TfiLayoutColumn2Alt } from "react-icons/tfi";
+import { TfiLayoutColumn3Alt } from "react-icons/tfi";
+import { TfiLayoutColumn4Alt } from "react-icons/tfi";
+
+import { BsFiletypeJson } from "react-icons/bs";
+import { BsFiletypeXlsx } from "react-icons/bs";
 
 // Data Provider
 import { DataContext } from '../data/DataContext';
@@ -29,7 +46,7 @@ import { DataContext } from '../data/DataContext';
 // Api
 import {
     postReadDataSource,
-    postWriteDataSource,    
+    postWriteDataSource,
     getDataUrl,
     postDataUrl,
     getDataImage,
@@ -92,20 +109,17 @@ const ComponentGallery = () => {
     } = useContext(DataContext);
 
     useEffect(() => {
-        setDataImageGalleryColumn(6);
-        //onGetCategory();
-    }, []);
-
-    useEffect(() => {
         if (dataSourceImageJson) {
+            handleGalleryColumn();
+            handleGalleryRow();
             setDataImageGalleryTable({
                 columns: handleGalleryColumn(dataImageGalleryColumn),
                 rows: handleGalleryRow(dataImageGalleryColumn),
             });
         }
-    }, [dataSourceImageJson]);
+    }, [dataSourceImageJson, dataImageGalleryColumn]);
 
-    const onGetCategory = () => {       
+    const onGetCategory = () => {
 
         getDataCategory().then(
             (response) => {
@@ -116,13 +130,16 @@ const ComponentGallery = () => {
                         text: item.name,
                         value: item.id
                     }));
-                }                  
+                }
             }
         );
     };
 
-    const handleGalleryColumn = (numColumns) => {
+    const handleGalleryColumn = () => {
+
+        const numColumns = dataImageGalleryColumn;
         const columns = [];
+
         for (let i = 1; i <= numColumns; i++) {
             columns.push({
                 sort: false,
@@ -133,9 +150,11 @@ const ComponentGallery = () => {
         return columns;
     };
 
-    const handleGalleryRow = (numColumns) => {
+    const handleGalleryRow = () => {
 
         if (dataSourceImageJson) {
+
+            const numColumns = dataImageGalleryColumn;
 
             const imageArray = (Array.isArray(dataSourceImageJson) ? dataSourceImageJson : []).map(item => ({
                 //const imageArray = dataSourceImageJson?.map(item => ({
@@ -154,22 +173,20 @@ const ComponentGallery = () => {
                     if (index < imageArray.length) {
                         const image = imageArray[index];
                         row.push(
-                            <a
-                                href={image.image_url.startsWith("http") ? image.image_url : `https://${image.image_url}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    src={image.image_url}
-                                    alt={`${image.subcategory}-${image.filename}`}
-                                    style={{
-                                        width: "200px",
-                                        //height: "50px",
-                                        objectFit: "cover",
-                                        cursor: "pointer"
-                                    }}
-                                />
-                            </a>
+                            <>
+                                <MDBLightbox>
+                                    <MDBLightboxItem
+                                        src={image.image_url.startsWith("http") ? image.image_url : `https://${image.image_url}`}
+                                        fullscreenSrc={image.image_url.startsWith("http") ? image.image_url : `https://${image.image_url}`}
+                                        className='w-100'
+                                        alt={`${image.subcategory}-${image.filename}`}
+                                        caption={image.category + '/' + image.subcategory}
+                                    />
+                                </MDBLightbox>
+                                <span style={{ marginTop: "8px", fontSize: "16px", color: "#555", textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column" }}>
+                                    {image.category} / {image.subcategory}
+                                </span>
+                            </>
                         );
                     } else {
                         row.push(null);
@@ -185,16 +202,103 @@ const ComponentGallery = () => {
 
     return (
         <>
-            <MDBNavbar light bgColor='light'>
+            <MDBNavbar>
                 <MDBContainer fluid>
-                    <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
+                    <MDBInputGroup className='d-flex w-100 justify-content-between'>
+                    <MDBSelect
+                            label='Source'
+                            size='lg'
+                            multiple
+                            data={[
+                                { text: 'Two' },
+                                { text: 'Three' },
+                                { text: 'Four' },
+                                { text: 'Five' },
+                                { text: 'Six' },
+                                { text: 'Seven' },
+                                { text: 'Eight' },
+                            ]}
+                            className="me-4"
+                        />
+                        <MDBSelect
+                            label='Category'
+                            size='lg'
+                            multiple
+                            data={[
+                                { text: 'Two' },
+                                { text: 'Three' },
+                                { text: 'Four' },
+                                { text: 'Five' },
+                                { text: 'Six' },
+                                { text: 'Seven' },
+                                { text: 'Eight' },
+                            ]}
+                            className="me-4"
+                        />
 
-                        
+                        <MDBSelect
+                            label='Subcategory'
+                            size='lg'
+                            multiple
+                            data={[
+                                { text: 'Two' },
+                                { text: 'Three' },
+                                { text: 'Four' },
+                                { text: 'Five' },
+                                { text: 'Six' },
+                                { text: 'Seven' },
+                                { text: 'Eight' },
+                            ]}
+                        />
+                        <div className="d-flex ms-auto">
 
+                        <div style={{ textAlign: "center", alignItems: "center", display: "flex"}}>
+                            <MDBBtn
+                                tag='a'
+                                color='none'
+                                className="me-2"
+                                onClick={() => setDataImageGalleryColumn(2)}
+                            >
+                                <BsFiletypeJson style={{ fontSize: '34px' }} />
+                            </MDBBtn>
+                            <MDBBtn
+                                tag='a'
+                                color='none'
+                                className="me-2"
+                                onClick={() => setDataImageGalleryColumn(2)}
+                            >
+                                <BsFiletypeXlsx style={{ fontSize: '34px' }} />
+                            </MDBBtn>
+                            <MDBBtn
+                                tag='a'
+                                color='none'
+                                className="me-2"
+                                onClick={() => setDataImageGalleryColumn(2)}
+                            >
+                                <TfiLayoutColumn2Alt style={{ fontSize: '34px' }} />
+                            </MDBBtn>
+                            <MDBBtn
+                                tag='a'
+                                color='none'
+                                className="me-2"
+                                onClick={() => setDataImageGalleryColumn(3)}
+                            >
+                                <TfiLayoutColumn3Alt style={{ fontSize: '34px' }} />
+                            </MDBBtn>
+                            <MDBBtn
+                                tag='a'
+                                color='none'
+                                className="me-2"
+                                onClick={() => setDataImageGalleryColumn(4)}
+                            >
+                                <TfiLayoutColumn4Alt style={{ fontSize: '34px' }} />
+                            </MDBBtn>
+                            </div>
+                        </div>
                     </MDBInputGroup>
                 </MDBContainer>
             </MDBNavbar>
-            <MDBDatatable maxWidth='100%' entriesOptions={[2, 3, 4]} data={dataImageGalleryTable} />
+            <MDBDatatable maxWidth='100%' striped hover entries={2} entriesOptions={[2, 3, 4]} data={dataImageGalleryTable} />
         </>
     );
 };
