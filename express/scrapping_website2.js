@@ -5,45 +5,52 @@ const pluginAnonymize = require('puppeteer-extra-plugin-anonymize-ua');
 const pluginPreferences = require('puppeteer-extra-plugin-user-preferences');
 const fs = require('node:fs');
 const path = require('path');
-const { v4: uuidv4, v1: uuidv1 } = require('uuid');
 const setTimeout = require('node:timers/promises');
 const exec = require('node:child_process');
 
 let browser = null;
 let page = null;
 
-async function handleJsonField(filename, category, subcategory, source) {
+async function handleHtmlItems(htmlItems, category, subcategory, source) {
 
-    let arrayItem = [
-        {
+    let arrayItems = await htmlItems?.evaluate(() => {
+        let elements = Array.from(document.querySelectorAll('.plp-mastercard'), (e, k) => ({
             id: '',
-            filename: filename,           
-            category: category,
-            subcategory: subcategory,
-            source: source
+            url: e?.querySelector('.plp-product__image-link').href || '',
+            image_url: e?.querySelector('.plp-mastercard__image img').src || '',
+            category: '',
+            subcategory: '',
+            source: ''
+        }));
+        return elements;
+    });
+
+    if (arrayItems) {
+        for (let i = 0; i < arrayItems.length; i++) {
+            arrayItems[i]['category'] = category;
+            arrayItems[i]['subcategory'] = subcategory;
+            arrayItems[i]['source'] = source;
         }
-    ]
 
-    console.log('Created json array!');
-
-    writeJsonFile(arrayItem);
+        writeJsonFile(arrayItems);
+    };
 };
 
 async function writeJsonFile(arrayItems) {
 
     if (arrayItems) {
 
-        const filename = path.join(__dirname, './data_image.json');
+        const filename = path.join(__dirname, './data_url.json');
 
         let json = JSON.stringify(arrayItems);
 
         fs.appendFileSync(filename, json);
 
-        console.log('Updated json file data_image.json!');
+        console.log('Updated json file data_url.json!');
     };
 };
 
-const scrapping_image = {
+const scrapping_website2 = {
 
     initialize: async () => {
 
@@ -96,73 +103,30 @@ const scrapping_image = {
         console.log('03 - Creating a Browser Context!');
     },
 
-    scrapping: async (data) => {
+    scrapping: async (source, data) => {
 
         const array_url = JSON.parse(data);
 
-        console.log('04 - Loading Url from json File: data_url.json');
-
-        page.on('response', async (response) => {
-
-            const url = response.url();
-
-            console.log('Processing URL:', url);
-
-            const matches = /.*\.(jpg|png|svg|gif)(\?.*)?$/.exec(url);
-
-            if (matches) {
-
-                const extension = matches[1];
-
-                const buffer = await response.buffer();
-
-                const matchedItem = array_url.find(item => url.includes(item.image_url));
-
-                if (matchedItem) {
-
-                    const { category, subcategory } = matchedItem;
-                    const folderPath = `images/${category}/${subcategory}`;
-
-                    // Ensure folders exist
-                    if (!fs.existsSync(folderPath)) {
-                        fs.mkdirSync(folderPath, { recursive: true });
-                    }
-
-                    // Get the number of existing files in the folder
-                    const files = fs.readdirSync(folderPath);
-                    const nextNumber = files.length + 1;
-                    const filename = `${nextNumber}.${extension}`;
-                    const filePath = path.join(folderPath, filename);
-
-                    try {
-
-                        fs.writeFileSync(filePath, buffer);
-                        console.log('06 - Downloading the image!');
-
-
-                        await handleJsonField(filename, matchedItem.category, matchedItem.subcategory, matchedItem.source);
-
-                        console.log(`Image saved: ${filePath}`);
-
-                    } catch (error) {
-                        console.error(`Failed to save image from URL: ${url}`, error);
-                    }
-                }
-            };
-        });
+        console.log('04 - Loading Url from json File: website_source.json');
 
         for (let i = 0; i < array_url.length; i++) {
 
-            await page.goto(array_url[i].image_url, {
-                timeout: 0,
-                waitUntil: [
-                    'load',
-                    'domcontentloaded',
-                    'networkidle0',
-                    'networkidle2'
-                ]
-            });
-            console.log('05 - Opening the url: ' + array_url[i].image_url);
+            if (array_url[i].enable) {
+                await page.goto(array_url[i].url, {
+                    timeout: 0,
+                    waitUntil: [
+                        'load',
+                        'domcontentloaded',
+                        'networkidle0',
+                        'networkidle2'
+                    ]
+                });
+                console.log('05 - Opening the url: ' + array_url[i].url);
+
+                let htmlItems = await page.$('#product-list');
+                await handleHtmlItems(htmlItems, array_url[i].category, array_url[i].subcategory, source);
+                console.log('06 - Starting Scrapping!');
+            }
         }
 
         // Close Chrome Testing Browser
@@ -174,14 +138,13 @@ const scrapping_image = {
 
     formatJson: async () => {
 
-        const filename = path.join(__dirname, './data_image.json');
+        const filename = path.join(__dirname, './data_url.json');
 
         fs.readFile(filename, 'utf8', (err, data) => {
             if (err) {
                 console.error('Error reading the file:', err);
                 return;
             }
-
             // Replace "][" with ","
             const modifiedData = data.replace(/\]\[/g, ',');
 
@@ -196,19 +159,10 @@ const scrapping_image = {
                     console.error('Error writing the file: ', err);
                     return;
                 }
-                console.log('Json file data_image.json format completed!');
+                console.log('Json file data_url.json format completed!');
             });
         });
     },
-
-    cleanJson: async () => {
-
-        const filename = path.join(__dirname, './data_image.json');
-
-        fs.writeFileSync(filename, '');
-
-        console.log('Json file data_image.json cleaned!');
-    }
 };
 
-module.exports = scrapping_image;
+module.exports = scrapping_website2;

@@ -209,15 +209,7 @@ const ComponentGallery = () => {
                             label='Source'
                             size='lg'
                             multiple
-                            data={[
-                                { text: 'Two' },
-                                { text: 'Three' },
-                                { text: 'Four' },
-                                { text: 'Five' },
-                                { text: 'Six' },
-                                { text: 'Seven' },
-                                { text: 'Eight' },
-                            ]}
+                            data={dataSourceOption}
                             className="me-4"
                         />
                         <MDBSelect
@@ -225,13 +217,12 @@ const ComponentGallery = () => {
                             size='lg'
                             multiple
                             data={[
-                                { text: 'Two' },
-                                { text: 'Three' },
-                                { text: 'Four' },
-                                { text: 'Five' },
-                                { text: 'Six' },
-                                { text: 'Seven' },
-                                { text: 'Eight' },
+                                { text: 'Living Room' },
+                                { text: 'Bedroom' },
+                                { text: 'Dining Room' },
+                                { text: 'Kitchen' },
+                                { text: 'Home Office' },
+                                { text: 'Outdoor' },
                             ]}
                             className="me-4"
                         />
@@ -241,13 +232,13 @@ const ComponentGallery = () => {
                             size='lg'
                             multiple
                             data={[
-                                { text: 'Two' },
-                                { text: 'Three' },
-                                { text: 'Four' },
-                                { text: 'Five' },
-                                { text: 'Six' },
-                                { text: 'Seven' },
-                                { text: 'Eight' },
+                                { text: 'Bed' },
+                                { text: 'Sofa' },
+                                { text: 'Armchair' },
+                                { text: 'Shelve' },
+                                { text: 'Table' },
+                                { text: 'Cabinet' },
+                                { text: 'TV Stand' },
                             ]}
                         />
                         <div className="d-flex ms-auto">

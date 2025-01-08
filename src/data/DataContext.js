@@ -33,11 +33,11 @@ const DataProvider = (props) => {
 
   // Data
   const [dataSourceOption, setDataSourceOption] = useState([
-    { text: 'Ikea', value: 'ikea' },
-    { text: 'Mohd', value: 'mohd' },
-    { text: 'Overstock', value: 'overstock' },
-    { text: 'Online Furniture', value: 'onlinefurniture' },
-    { text: 'Bed Bath and Beyond', value: 'bedbathandbeyond' },
+    { text: 'Website 1', value: 'website1' },
+    { text: 'Website 2', value: 'website2' },
+    { text: 'Website 3', value: 'website3' },
+    { text: 'Website 4', value: 'website4' },
+    { text: 'Website 5', value: 'website5' },
   ]);
   const [dataSourceCategoryJson, setDataSourceCategoryJson] = useState(null);
   const [dataSourceSubcategoryJson, setDataSourceSubcategoryJson] = useState(null);
@@ -82,12 +82,6 @@ const DataProvider = (props) => {
       },
       {
         sort: true,
-        inputType: "number",
-        label: "Image",
-        field: "image",
-      },
-      {
-        sort: true,
         inputType: "checkbox",
         label: "Enable",
         field: "enable",
@@ -102,22 +96,7 @@ const DataProvider = (props) => {
         sort: true,
         label: "ID",
         field: "id",
-      },
-      {
-        sort: false,
-        label: "Number",
-        field: "number",
-      },
-      {
-        sort: true,
-        label: "Name",
-        field: "name",
-      },
-      {
-        sort: false,
-        label: "Price",
-        field: "price",
-      },
+      },     
       {
         sort: true,
         label: "Category",
@@ -189,22 +168,7 @@ const DataProvider = (props) => {
         sort: false,
         label: "Filename",
         field: "filename",
-      },
-      {
-        sort: false,
-        label: "Number",
-        field: "number",       
-      },
-      {
-        sort: true,
-        label: "Name",
-        field: "name",
-      },
-      {
-        sort: false,
-        label: "Price",
-        field: "price",
-      },
+      },      
       {
         sort: true,
         label: "Category",

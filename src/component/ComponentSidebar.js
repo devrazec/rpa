@@ -92,7 +92,7 @@ const ComponentSidebar = () => {
     };
 
     useEffect(() => {
-        const source = 'ikea';
+        const source = 'website1';
         setDataSourceSelected(source);
     }, []);
 
@@ -169,11 +169,10 @@ const ComponentSidebar = () => {
                         rows: response.map((item) => ({
                             ...item,
                             id: item.id,
-                            source: item.source,
+                            source: getTextBySource(item.source),
                             category: item.category.trim(),
                             subcategory: item.subcategory.trim(),
                             url: item.url,
-                            image: item.image,
                             enable: item.enable
                         })),
                     });
@@ -205,10 +204,7 @@ const ComponentSidebar = () => {
                         columns: dataSourceUrlTable.columns,
                         rows: response.map((item) => ({
                             ...item,
-                            id: item.id,
-                            number: item.number,
-                            name: item.name,
-                            price: item.price,
+                            id: item.id,                            
                             category: item.category.trim(),
                             subcategory: item.subcategory.trim(),
                             url: (
@@ -267,10 +263,7 @@ const ComponentSidebar = () => {
                         rows: response.map((item) => ({
                             ...item,
                             id: item.id,
-                            filename: item.filename,
-                            number: item.number,
-                            name: item.name,
-                            price: item.price,
+                            filename: item.filename,                           
                             category: item.category.trim(),
                             subcategory: item.subcategory.trim(),
                             source: getTextBySource(item.source)

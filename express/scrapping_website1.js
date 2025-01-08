@@ -16,9 +16,6 @@ async function handleHtmlItems(htmlItems, category, subcategory, source) {
     let arrayItems = await htmlItems?.evaluate(() => {
         let elements = Array.from(document.querySelectorAll('.plp-mastercard'), (e, k) => ({
             id: '',
-            number: e?.getAttribute('data-product-number') || '',
-            name: e?.getAttribute('data-product-name') || '',
-            price: e?.getAttribute('data-price') || '',
             url: e?.querySelector('.plp-product__image-link').href || '',
             image_url: e?.querySelector('.plp-mastercard__image img').src || '',
             category: '',
@@ -53,7 +50,7 @@ async function writeJsonFile(arrayItems) {
     };
 };
 
-const scrapping_ikea = {
+const scrapping_website1 = {
 
     initialize: async () => {
 
@@ -108,15 +105,9 @@ const scrapping_ikea = {
 
     scrapping: async (source, data) => {
 
-        //const filePath = path.join(__dirname, './source_ikea.json');
-        //const json_url = fs.readFileSync(filePath, 'utf8');
         const array_url = JSON.parse(data);
-        //const array_url = JSON.parse(json_url);
 
-        //console.log(array_url1);
-        //console.log(array_url);
-
-        console.log('04 - Loading Url from json File: source_ikea.json');
+        console.log('04 - Loading Url from json File: website_source.json');
 
         for (let i = 0; i < array_url.length; i++) {
 
@@ -174,4 +165,4 @@ const scrapping_ikea = {
     },
 };
 
-module.exports = scrapping_ikea;
+module.exports = scrapping_website1;

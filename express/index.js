@@ -6,7 +6,13 @@ const cors = require('cors');
 const app = express();
 const port = 3003;
 
-const scrapping_ikea = require('./scrapping_ikea.js');
+const scrapping_website1 = require('./scrapping_website1.js');
+const scrapping_website2 = require('./scrapping_website2.js');
+//const scrapping_website3 = require('./scrapping_website3.js');
+//const scrapping_website4 = require('./scrapping_website4.js');
+//const scrapping_website5 = require('./scrapping_website5.js');
+//const scrapping_website6 = require('./scrapping_website6.js');
+
 const scrapping_image = require('./scrapping_image.js');
 
 app.use(cors());
@@ -14,14 +20,13 @@ app.use(bodyParser.json());
 
 app.post('/post_read_data_source', async (req, res) => {
     const body = req.body;
-    const source = body.params.source;
-    const filePath = path.join(__dirname, './source_' + source + '.json');
+    const filePath = path.join(__dirname, './website_source.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
-            console.error('Error reading source_' + source + '.json file:', err);
-            return res.status(500).send('Error reading file source_' + source + '.json!');
+            console.error('Error reading website_source.json file:', err);
+            return res.status(500).send('Error reading file website_source.json!');
         } else {
-            console.log('File source_' + source + '.json has been read!');
+            console.log('File website_source.json has been read!');
             setTimeout(() => {
                 res.status(200).send(data);
             }, 1000);
@@ -31,17 +36,16 @@ app.post('/post_read_data_source', async (req, res) => {
 
 app.post('/post_write_data_source', async (req, res) => {
     const body = req.body;
-    const source = body.params.source;
     const data = JSON.stringify(body.params.data);
-    const filePath = path.join(__dirname, './source_' + source + '.json');
+    const filePath = path.join(__dirname, './website_source.json');
     fs.writeFile(filePath, data, 'utf8', (err) => {
         if (err) {
-            console.error('Error writing source_' + source + '.json file:', err);
-            return res.status(500).send('Error writing file source_' + source + '.json!');
+            console.error('Error writing website_source.json file:', err);
+            return res.status(500).send('Error writing file website_source.json!');
         } else {
-            console.log('File source_' + source + '.json has been saved!');
+            console.log('File website_source.json has been saved!');
             setTimeout(() => {
-                res.status(200).send('File source_' + source + '.json has been saved!');
+                res.status(200).send('File website_source.json has been saved!');
             }, 1000);
         }
     });
@@ -52,9 +56,9 @@ app.post('/post_data_url', async (req, res) => {
         const body = req.body;
         const source = body.params.source;
         const data = JSON.stringify(body.params.data);
-        await scrapping_ikea.initialize();
-        await scrapping_ikea.scrapping(source, data);
-        await scrapping_ikea.formatJson();
+        await scrapping_website1.initialize();
+        await scrapping_website1.scrapping(source, data);
+        await scrapping_website1.formatJson();
 
         console.log('Script post_data_url executed successfully!');
 
