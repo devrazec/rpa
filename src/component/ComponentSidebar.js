@@ -422,7 +422,7 @@ const ComponentSidebar = () => {
                                 }}
                             >
                                 <MDBIcon className='me-4' fas icon='redo' size='1x' />
-                                Loading
+                                Load Data
                             </MDBBtn>
                             <MDBBtn
                                 className="w-100"
@@ -434,7 +434,7 @@ const ComponentSidebar = () => {
                                 }}
                             >
                                 <MDBIcon className='me-3' fas icon='play' size='1x' />
-                                Scrapping
+                                Get Data
                             </MDBBtn>
 
                             <hr />
@@ -449,7 +449,7 @@ const ComponentSidebar = () => {
                                 }}
                             >
                                 <MDBIcon className='me-4' fas icon='redo' size='1x' />
-                                Loading
+                                Load Data
                             </MDBBtn>
                             <MDBBtn
                                 className="w-100"
@@ -473,7 +473,7 @@ const ComponentSidebar = () => {
                                 }}
                             >
                                 <MDBIcon className='me-4' fas icon='redo' size='1x' />
-                                Loading
+                                Load Data
                             </MDBBtn>
                             <MDBBtn
                                 className="w-100 mb-4"
@@ -485,7 +485,7 @@ const ComponentSidebar = () => {
                                 }}
                             >
                                 <MDBIcon className='me-3' fas icon='play' size='1x' />
-                                Scrapping
+                                Get Image
                             </MDBBtn>
                             <MDBBtn
                                 className="w-100"

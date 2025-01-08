@@ -143,7 +143,7 @@ const ComponentGallery = () => {
         for (let i = 1; i <= numColumns; i++) {
             columns.push({
                 sort: false,
-                label: 'Category/Subcategory',
+                label: '',
                 field: `column${i}`,
             });
         }
@@ -204,11 +204,11 @@ const ComponentGallery = () => {
         <>
             <MDBNavbar
                 style={{
-                    backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FBFBFB'
+                    backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
                 }}
             >
                 <MDBContainer fluid>
-                    <MDBInputGroup className='d-flex w-100 justify-content-between mb-2'>
+                    <MDBInputGroup className='d-flex w-100 justify-content-between'>
                         <MDBSelect
                             label='Source'
                             size='lg'
@@ -293,7 +293,17 @@ const ComponentGallery = () => {
                     </MDBInputGroup>
                 </MDBContainer>
             </MDBNavbar>
-            <MDBDatatable maxWidth='100%' striped hover entries={2} entriesOptions={[2, 3, 4]} data={dataImageGalleryTable} />
+            <div>
+                <MDBDatatable
+                    className='mb-3'
+                    maxWidth='100%'
+                    striped
+                    hover
+                    dark={hookTheme === 'dark'}
+                    entries={2}
+                    entriesOptions={[2, 3, 4]}
+                    data={dataImageGalleryTable} />
+            </div>
         </>
     );
 };

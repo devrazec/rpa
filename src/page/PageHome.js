@@ -177,7 +177,9 @@ const PageHome = () => {
                 <MDBTabsContent>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Datasource'}>
-                        <MDBCard>
+                        <MDBCard
+                            className='mb-3'
+                        >
                             <MDBCardBody>
                                 <MDBTableEditor
                                     modal
@@ -193,7 +195,6 @@ const PageHome = () => {
                                 />
                             </MDBCardBody>
                         </MDBCard>
-
                     </MDBTabsPane>
                     <MDBTabsPane open={hookTabHomeActive === 'Dataurl'} >
                         <MDBNavbar
@@ -264,7 +265,14 @@ const PageHome = () => {
                             </MDBContainer>
                         </MDBNavbar>
 
-                        <MDBDatatable maxWidth='100%' sm fixedHeader striped data={dataSourceUrlTable} />
+                        <MDBDatatable
+                            className='mb-3'
+                            maxWidth='100%'
+                            sm
+                            fixedHeader
+                            striped
+                            dark={hookTheme === 'dark'}
+                            data={dataSourceUrlTable} />
                     </MDBTabsPane>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Dataimage'}>
@@ -335,7 +343,14 @@ const PageHome = () => {
                                 </MDBInputGroup>
                             </MDBContainer>
                         </MDBNavbar>
-                        <MDBDatatable maxWidth='100%' sm fixedHeader striped data={dataSourceImageTable} />
+                        <MDBDatatable
+                            className='mb-3'
+                            maxWidth='100%'
+                            sm
+                            fixedHeader
+                            striped
+                            dark={hookTheme === 'dark'}
+                            data={dataSourceImageTable} />
                     </MDBTabsPane>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Image'}>
