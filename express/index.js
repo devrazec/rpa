@@ -18,8 +18,7 @@ const scrapping_image = require('./scrapping_image.js');
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post('/post_read_data_source', async (req, res) => {
-    const body = req.body;
+app.get('/get_data_source', async (req, res) => {
     const filePath = path.join(__dirname, './website_source.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
@@ -34,7 +33,7 @@ app.post('/post_read_data_source', async (req, res) => {
     });
 });
 
-app.post('/post_write_data_source', async (req, res) => {
+app.post('/post_data_source', async (req, res) => {
     const body = req.body;
     const data = JSON.stringify(body.params.data);
     const filePath = path.join(__dirname, './website_source.json');

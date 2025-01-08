@@ -17,8 +17,8 @@ import { DataContext } from '../data/DataContext';
 
 // Api
 import {
-    postReadDataSource,
-    postWriteDataSource,
+    getDataSource,
+    postDataSource,
     getDataUrl,
     postDataUrl,
     getDataImage,
@@ -137,11 +137,11 @@ const ComponentSidebar = () => {
         return matchedItem ? matchedItem.text : '';
     };
 
-    const onPostReadDataSource = (source) => {
+    const onGetDataSource = () => {
 
         setHookLoadingVisible(true);
 
-        postReadDataSource(source).then(
+        getDataSource().then(
             (response) => {
                 if (response) {
 
@@ -416,13 +416,13 @@ const ComponentSidebar = () => {
                                 className="w-100 mb-4"
                                 size="sm"
                                 color='success'
-                                onClick={() => onPostReadDataSource(dataSourceSelected)}
+                                onClick={() => onGetDataSource()}
                                 disabled={dataSourceSelected ? (false) : (true)}
                                 style={{
                                 }}
                             >
                                 <MDBIcon className='me-4' fas icon='redo' size='1x' />
-                                Load Data
+                                Load
                             </MDBBtn>
                             <MDBBtn
                                 className="w-100"
@@ -434,7 +434,7 @@ const ComponentSidebar = () => {
                                 }}
                             >
                                 <MDBIcon className='me-3' fas icon='play' size='1x' />
-                                Get Data
+                                Get
                             </MDBBtn>
 
                             <hr />
@@ -449,7 +449,7 @@ const ComponentSidebar = () => {
                                 }}
                             >
                                 <MDBIcon className='me-4' fas icon='redo' size='1x' />
-                                Load Data
+                                Load
                             </MDBBtn>
                             <MDBBtn
                                 className="w-100"
@@ -473,7 +473,7 @@ const ComponentSidebar = () => {
                                 }}
                             >
                                 <MDBIcon className='me-4' fas icon='redo' size='1x' />
-                                Load Data
+                                Load
                             </MDBBtn>
                             <MDBBtn
                                 className="w-100 mb-4"
@@ -485,7 +485,7 @@ const ComponentSidebar = () => {
                                 }}
                             >
                                 <MDBIcon className='me-3' fas icon='play' size='1x' />
-                                Get Image
+                                Get
                             </MDBBtn>
                             <MDBBtn
                                 className="w-100"

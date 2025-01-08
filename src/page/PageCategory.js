@@ -23,8 +23,8 @@ import { DataContext } from '../data/DataContext';
 
 // Api
 import {
-    postReadDataSource,
-    postWriteDataSource,    
+    getDataSource,
+    postDataSource,  
     getDataUrl,
     postDataUrl,
     getDataImage,

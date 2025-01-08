@@ -1,25 +1,21 @@
 import axios from "axios";
 
-async function postReadDataSource(source) {
+async function getDataSource() {
     try {
-        return await axios.post(
-            `http://localhost:3003/post_read_data_source`, {
-            params: {
-                source: source
-            }
-        }).then((response) => response.data);
+        return await axios.get(
+            `http://localhost:3003/get_data_source`
+            ).then((response) => response.data);
     } catch (error) {
         console.log(error);
         return error;
     }
 }
 
-async function postWriteDataSource(source, data) {
+async function postDataSource(data) {
     try {
         return await axios.post(
-            `http://localhost:3003/post_write_data_source`, {
-            params: {
-                source: source,
+            `http://localhost:3003/post_data_source`, {
+            params: {                
                 data: data,
             }
         }).then((response) => response.data);
@@ -153,8 +149,8 @@ async function postDataSubcategory(data) {
 }
 
 export {
-    postReadDataSource,
-    postWriteDataSource,
+    getDataSource,
+    postDataSource,
     getDataUrl,
     postDataUrl,
     getDataImage,

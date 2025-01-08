@@ -86,7 +86,6 @@ const ComponentHeader = () => {
                     className='p-3'
                     style={{
                         marginLeft: hookSidebarEnable ? '242px' : '0px',
-                        //backgroundColor: '#e3f2fd',
                         backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
                     }}                   
                 >
@@ -105,7 +104,7 @@ const ComponentHeader = () => {
                         <MDBCollapse navbar id="navbarMenu">
                             <MDBNavbarNav className="ms-auto d-flex flex-row">
                                 <MDBNavbarItem>
-                                    <MDBNavbarLink onClick={() => navigate('/')}>
+                                    <MDBNavbarLink active onClick={() => navigate('/')}>
                                         Home
                                     </MDBNavbarLink>
                                 </MDBNavbarItem>

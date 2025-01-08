@@ -41,9 +41,9 @@ import { BsFiletypeJson } from "react-icons/bs";
 import { BsFiletypeXlsx } from "react-icons/bs";
 
 // Api
-import {
-    postReadDataSource,
-    postWriteDataSource,
+import {    
+    getDataSource,
+    postDataSource,
     getDataUrl,
     postDataUrl,
     getDataImage,
@@ -132,7 +132,7 @@ const PageHome = () => {
         setDataSourceTable({ ...dataSourceTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
         setDataSourceJson(jsonOutput);
-        postWriteDataSource(dataSourceSelected, jsonOutput).then(
+        postDataSource(jsonOutput).then(
             (response) => {
                 if (response) {
                     //console.log(response);
