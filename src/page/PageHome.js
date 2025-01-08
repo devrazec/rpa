@@ -14,7 +14,10 @@ import {
     MDBTabsPane,
     MDBBtn,
     MDBDatatable,
-
+    MDBNavbar,
+    MDBNavbarBrand,
+    MDBInputGroup,
+    MDBSelect,
 } from 'mdb-react-ui-kit';
 
 import { MDBTableEditor } from "mdb-react-table-editor";
@@ -24,6 +27,18 @@ import ComponentGallery from '../component/ComponentGallery';
 
 // Data Provider
 import { DataContext } from '../data/DataContext';
+
+// Icons
+import { LuColumns2 } from "react-icons/lu";
+import { LuColumns3 } from "react-icons/lu";
+import { LuColumns4 } from "react-icons/lu";
+
+import { TfiLayoutColumn2Alt } from "react-icons/tfi";
+import { TfiLayoutColumn3Alt } from "react-icons/tfi";
+import { TfiLayoutColumn4Alt } from "react-icons/tfi";
+
+import { BsFiletypeJson } from "react-icons/bs";
+import { BsFiletypeXlsx } from "react-icons/bs";
 
 // Api
 import {
@@ -104,7 +119,7 @@ const PageHome = () => {
     function convertRowsToJson(rows) {
         return rows.map(row => ({
             id: row.id,
-            source: row.source, 
+            source: row.source,
             category: row.category,
             subcategory: row.subcategory,
             url: row.url,
@@ -180,11 +195,146 @@ const PageHome = () => {
                         </MDBCard>
 
                     </MDBTabsPane>
-                    <MDBTabsPane open={hookTabHomeActive === 'Dataurl'}>
+                    <MDBTabsPane open={hookTabHomeActive === 'Dataurl'} >
+                        <MDBNavbar
+                            style={{
+                                backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
+                            }}
+                        >
+                            <MDBContainer fluid>
+                                <MDBInputGroup className='d-flex w-100 justify-content-between mb-3'>
+                                    <MDBSelect
+                                        label='Source'
+                                        size='lg'
+                                        multiple
+                                        data={dataSourceOption}
+                                        className="me-4"
+                                    />
+                                    <MDBSelect
+                                        label='Category'
+                                        size='lg'
+                                        multiple
+                                        data={[
+                                            { text: 'Living Room' },
+                                            { text: 'Bedroom' },
+                                            { text: 'Dining Room' },
+                                            { text: 'Kitchen' },
+                                            { text: 'Home Office' },
+                                            { text: 'Outdoor' },
+                                        ]}
+                                        className="me-4"
+                                    />
+
+                                    <MDBSelect
+                                        label='Subcategory'
+                                        size='lg'
+                                        multiple
+                                        data={[
+                                            { text: 'Bed' },
+                                            { text: 'Sofa' },
+                                            { text: 'Armchair' },
+                                            { text: 'Shelve' },
+                                            { text: 'Table' },
+                                            { text: 'Cabinet' },
+                                            { text: 'TV Stand' },
+                                        ]}
+                                    />
+                                    <div className="d-flex ms-auto">
+
+                                        <div style={{ textAlign: "center", alignItems: "center", display: "flex" }}>
+                                            <MDBBtn
+                                                tag='a'
+                                                color='none'
+                                                className="me-2"
+                                                onClick={() => setDataImageGalleryColumn(2)}
+                                            >
+                                                <BsFiletypeJson style={{ fontSize: '34px' }} />
+                                            </MDBBtn>
+                                            <MDBBtn
+                                                tag='a'
+                                                color='none'
+                                                className="me-2"
+                                                onClick={() => setDataImageGalleryColumn(2)}
+                                            >
+                                                <BsFiletypeXlsx style={{ fontSize: '34px' }} />
+                                            </MDBBtn>
+                                        </div>
+                                    </div>
+                                </MDBInputGroup>
+                            </MDBContainer>
+                        </MDBNavbar>
+
                         <MDBDatatable maxWidth='100%' sm fixedHeader striped data={dataSourceUrlTable} />
                     </MDBTabsPane>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Dataimage'}>
+                        <MDBNavbar
+                            style={{
+                                backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
+                            }}
+                        >
+                            <MDBContainer fluid>
+                                <MDBInputGroup className='d-flex w-100 justify-content-between mb-2'>
+                                    <MDBSelect
+                                        label='Source'
+                                        size='lg'
+                                        multiple
+                                        data={dataSourceOption}
+                                        className="me-4"
+                                    />
+                                    <MDBSelect
+                                        label='Category'
+                                        size='lg'
+                                        multiple
+                                        data={[
+                                            { text: 'Living Room' },
+                                            { text: 'Bedroom' },
+                                            { text: 'Dining Room' },
+                                            { text: 'Kitchen' },
+                                            { text: 'Home Office' },
+                                            { text: 'Outdoor' },
+                                        ]}
+                                        className="me-4"
+                                    />
+
+                                    <MDBSelect
+                                        label='Subcategory'
+                                        size='lg'
+                                        multiple
+                                        data={[
+                                            { text: 'Bed' },
+                                            { text: 'Sofa' },
+                                            { text: 'Armchair' },
+                                            { text: 'Shelve' },
+                                            { text: 'Table' },
+                                            { text: 'Cabinet' },
+                                            { text: 'TV Stand' },
+                                        ]}
+                                    />
+                                    <div className="d-flex ms-auto">
+
+                                        <div style={{ textAlign: "center", alignItems: "center", display: "flex" }}>
+                                            <MDBBtn
+                                                tag='a'
+                                                color='none'
+                                                className="me-2"
+                                                onClick={() => setDataImageGalleryColumn(2)}
+                                            >
+                                                <BsFiletypeJson style={{ fontSize: '34px' }} />
+                                            </MDBBtn>
+                                            <MDBBtn
+                                                tag='a'
+                                                color='none'
+                                                className="me-2"
+                                                onClick={() => setDataImageGalleryColumn(2)}
+                                            >
+                                                <BsFiletypeXlsx style={{ fontSize: '34px' }} />
+                                            </MDBBtn>
+                                        </div>
+                                    </div>
+                                </MDBInputGroup>
+                            </MDBContainer>
+                        </MDBNavbar>
                         <MDBDatatable maxWidth='100%' sm fixedHeader striped data={dataSourceImageTable} />
                     </MDBTabsPane>
 

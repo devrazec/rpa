@@ -96,7 +96,12 @@ const DataProvider = (props) => {
         sort: true,
         label: "ID",
         field: "id",
-      },     
+      },  
+      {
+        sort: true,
+        label: "Source",
+        field: "source",
+      },   
       {
         sort: true,
         label: "Category",
@@ -116,12 +121,7 @@ const DataProvider = (props) => {
         sort: false,
         label: "Image",
         field: "image_url",
-      },
-      {
-        sort: true,
-        label: "Source",
-        field: "source",
-      }
+      }      
     ],
     rows: [],
   });
@@ -163,12 +163,12 @@ const DataProvider = (props) => {
         sort: true,
         label: "ID",
         field: "id",
-      },
+      }, 
       {
-        sort: false,
-        label: "Filename",
-        field: "filename",
-      },      
+        sort: true,
+        label: "Source",
+        field: "source",
+      },          
       {
         sort: true,
         label: "Category",
@@ -178,11 +178,11 @@ const DataProvider = (props) => {
         sort: true,
         label: "Subcategory",
         field: "subcategory",
-      },
+      },      
       {
-        sort: true,
-        label: "Source",
-        field: "source",
+        sort: false,
+        label: "Filename",
+        field: "filename",
       }
     ],
     rows: [],

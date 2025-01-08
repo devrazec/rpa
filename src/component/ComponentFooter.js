@@ -43,7 +43,7 @@ const ComponentFooter = () => {
                     className='text-center shadow-inner'
                     style={{
                         marginLeft: hookSidebarEnable ? '242px' : '0px',
-                        //backgroundColor: '#e3f2fd',
+                        backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
                     }}
                 >
                     <MDBContainer fluid>

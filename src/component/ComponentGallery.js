@@ -143,7 +143,7 @@ const ComponentGallery = () => {
         for (let i = 1; i <= numColumns; i++) {
             columns.push({
                 sort: false,
-                label: '',
+                label: 'Category/Subcategory',
                 field: `column${i}`,
             });
         }
@@ -202,10 +202,14 @@ const ComponentGallery = () => {
 
     return (
         <>
-            <MDBNavbar>
+            <MDBNavbar
+                style={{
+                    backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FBFBFB'
+                }}
+            >
                 <MDBContainer fluid>
-                    <MDBInputGroup className='d-flex w-100 justify-content-between'>
-                    <MDBSelect
+                    <MDBInputGroup className='d-flex w-100 justify-content-between mb-2'>
+                        <MDBSelect
                             label='Source'
                             size='lg'
                             multiple
@@ -243,47 +247,47 @@ const ComponentGallery = () => {
                         />
                         <div className="d-flex ms-auto">
 
-                        <div style={{ textAlign: "center", alignItems: "center", display: "flex"}}>
-                            <MDBBtn
-                                tag='a'
-                                color='none'
-                                className="me-2"
-                                onClick={() => setDataImageGalleryColumn(2)}
-                            >
-                                <BsFiletypeJson style={{ fontSize: '34px' }} />
-                            </MDBBtn>
-                            <MDBBtn
-                                tag='a'
-                                color='none'
-                                className="me-2"
-                                onClick={() => setDataImageGalleryColumn(2)}
-                            >
-                                <BsFiletypeXlsx style={{ fontSize: '34px' }} />
-                            </MDBBtn>
-                            <MDBBtn
-                                tag='a'
-                                color='none'
-                                className="me-2"
-                                onClick={() => setDataImageGalleryColumn(2)}
-                            >
-                                <TfiLayoutColumn2Alt style={{ fontSize: '34px' }} />
-                            </MDBBtn>
-                            <MDBBtn
-                                tag='a'
-                                color='none'
-                                className="me-2"
-                                onClick={() => setDataImageGalleryColumn(3)}
-                            >
-                                <TfiLayoutColumn3Alt style={{ fontSize: '34px' }} />
-                            </MDBBtn>
-                            <MDBBtn
-                                tag='a'
-                                color='none'
-                                className="me-2"
-                                onClick={() => setDataImageGalleryColumn(4)}
-                            >
-                                <TfiLayoutColumn4Alt style={{ fontSize: '34px' }} />
-                            </MDBBtn>
+                            <div style={{ textAlign: "center", alignItems: "center", display: "flex" }}>
+                                <MDBBtn
+                                    tag='a'
+                                    color='none'
+                                    className="me-2"
+                                    onClick={() => setDataImageGalleryColumn(2)}
+                                >
+                                    <BsFiletypeJson style={{ fontSize: '34px' }} />
+                                </MDBBtn>
+                                <MDBBtn
+                                    tag='a'
+                                    color='none'
+                                    className="me-2"
+                                    onClick={() => setDataImageGalleryColumn(2)}
+                                >
+                                    <BsFiletypeXlsx style={{ fontSize: '34px' }} />
+                                </MDBBtn>
+                                <MDBBtn
+                                    tag='a'
+                                    color='none'
+                                    className="me-2"
+                                    onClick={() => setDataImageGalleryColumn(2)}
+                                >
+                                    <TfiLayoutColumn2Alt style={{ fontSize: '34px' }} />
+                                </MDBBtn>
+                                <MDBBtn
+                                    tag='a'
+                                    color='none'
+                                    className="me-2"
+                                    onClick={() => setDataImageGalleryColumn(3)}
+                                >
+                                    <TfiLayoutColumn3Alt style={{ fontSize: '34px' }} />
+                                </MDBBtn>
+                                <MDBBtn
+                                    tag='a'
+                                    color='none'
+                                    className="me-2"
+                                    onClick={() => setDataImageGalleryColumn(4)}
+                                >
+                                    <TfiLayoutColumn4Alt style={{ fontSize: '34px' }} />
+                                </MDBBtn>
                             </div>
                         </div>
                     </MDBInputGroup>
