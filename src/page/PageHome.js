@@ -41,7 +41,7 @@ import { BsFiletypeJson } from "react-icons/bs";
 import { BsFiletypeXlsx } from "react-icons/bs";
 
 // Api
-import {    
+import {
     getDataSource,
     postDataSource,
     getDataUrl,
@@ -152,7 +152,10 @@ const PageHome = () => {
                 }}
             >
                 <MDBTabs className='mb-3 mt-3'>
-                    <MDBTabsItem>
+                    <MDBTabsItem
+                        style={{
+                        }}
+                    >
                         <MDBTabsLink onClick={() => handleTabActive('Datasource')} active={hookTabHomeActive === 'Datasource'}>
                             <MDBIcon fas icon='table' className='me-2' /> Data Source
                         </MDBTabsLink>

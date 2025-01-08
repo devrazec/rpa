@@ -174,7 +174,7 @@ const ComponentGallery = () => {
                         const image = imageArray[index];
                         row.push(
                             <>
-                                <span style={{ marginBottom: "8px", fontSize: "16px", color: "#555", textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column" }}>
+                                <span style={{ marginBottom: "8px", fontSize: "16px", textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column" }}>
                                     {image.category} / {image.subcategory}
                                 </span>
                                 <MDBLightbox>
@@ -187,7 +187,7 @@ const ComponentGallery = () => {
                                     />
                                 </MDBLightbox>
 
-                                <span style={{ marginTop: "8px", fontSize: "16px", color: "#555", textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column" }}>
+                                <span style={{ marginTop: "8px", fontSize: "16px", textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column" }}>
                                     Filename: {image.filename}
                                 </span>
                             </>
