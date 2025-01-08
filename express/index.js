@@ -7,12 +7,6 @@ const app = express();
 const port = 3003;
 
 const scrapping_website1 = require('./scrapping_website1.js');
-const scrapping_website2 = require('./scrapping_website2.js');
-//const scrapping_website3 = require('./scrapping_website3.js');
-//const scrapping_website4 = require('./scrapping_website4.js');
-//const scrapping_website5 = require('./scrapping_website5.js');
-//const scrapping_website6 = require('./scrapping_website6.js');
-
 const scrapping_image = require('./scrapping_image.js');
 
 app.use(cors());

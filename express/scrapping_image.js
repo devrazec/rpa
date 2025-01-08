@@ -5,7 +5,6 @@ const pluginAnonymize = require('puppeteer-extra-plugin-anonymize-ua');
 const pluginPreferences = require('puppeteer-extra-plugin-user-preferences');
 const fs = require('node:fs');
 const path = require('path');
-const { v4: uuidv4, v1: uuidv1 } = require('uuid');
 const setTimeout = require('node:timers/promises');
 const exec = require('node:child_process');
 

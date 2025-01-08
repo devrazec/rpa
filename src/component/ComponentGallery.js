@@ -258,22 +258,6 @@ const ComponentGallery = () => {
                                     className="me-2"
                                     onClick={() => setDataImageGalleryColumn(2)}
                                 >
-                                    <BsFiletypeJson style={{ fontSize: '34px' }} />
-                                </MDBBtn>
-                                <MDBBtn
-                                    tag='a'
-                                    color='none'
-                                    className="me-2"
-                                    onClick={() => setDataImageGalleryColumn(2)}
-                                >
-                                    <BsFiletypeXlsx style={{ fontSize: '34px' }} />
-                                </MDBBtn>
-                                <MDBBtn
-                                    tag='a'
-                                    color='none'
-                                    className="me-2"
-                                    onClick={() => setDataImageGalleryColumn(2)}
-                                >
                                     <TfiLayoutColumn2Alt style={{ fontSize: '34px' }} />
                                 </MDBBtn>
                                 <MDBBtn
