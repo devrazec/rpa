@@ -263,24 +263,37 @@ const ComponentSidebar = () => {
                         rows: response.map((item) => ({
                             ...item,
                             id: item.id,
-                            filename: item.filename,                           
+                            source: getTextBySource(item.source),
                             category: item.category.trim(),
                             subcategory: item.subcategory.trim(),
-                            source: getTextBySource(item.source)
+                            filename: item.filename, 
+                            image_url: (
+                                <a
+                                    href={`http://localhost:3002/${item.category}/${item.subcategory}/${item.filename}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        src={`http://localhost:3002/${item.category}/${item.subcategory}/${item.filename}`}                                        
+                                        alt={item.filename}
+                                        style={{ width: "50px", height: "50px", objectFit: "cover", cursor: "pointer" }}
+                                    />
+                                </a>
+                            ),
                         }))
                     });
 
-                    setHookTabHomeActive('Dataimage');
                     setHookLoadingVisible(false);
 
                 } else {
-                    setHookTabHomeActive('Dataimage');
                     setHookLoadingVisible(false);
                     setHookToastActive(true);
                     setHookToastMessage('There is not Data Image!');
                 }
             }
         );
+
+        setHookTabHomeActive('Image');
     };
 
     const onPostDataUrl = (source, data) => {

@@ -177,7 +177,7 @@ const PageSubcategory = () => {
             >
                 <h1 className="h5 text-center py-3 mb-0">Subcategory Management</h1>
 
-                <MDBCard>
+                <MDBCard className='mb-3'>
                     <MDBCardBody>
                         <MDBTableEditor
                             //modal

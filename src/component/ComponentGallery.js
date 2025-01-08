@@ -174,17 +174,21 @@ const ComponentGallery = () => {
                         const image = imageArray[index];
                         row.push(
                             <>
+                                <span style={{ marginBottom: "8px", fontSize: "16px", color: "#555", textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column" }}>
+                                    {image.category} / {image.subcategory}
+                                </span>
                                 <MDBLightbox>
                                     <MDBLightboxItem
                                         src={image.image_url.startsWith("http") ? image.image_url : `https://${image.image_url}`}
                                         fullscreenSrc={image.image_url.startsWith("http") ? image.image_url : `https://${image.image_url}`}
                                         className='w-100'
                                         alt={`${image.subcategory}-${image.filename}`}
-                                        caption={image.category + '/' + image.subcategory}
+                                        caption={image.category + '/' + image.subcategory + ' | Filename: ' + image.filename}
                                     />
                                 </MDBLightbox>
+
                                 <span style={{ marginTop: "8px", fontSize: "16px", color: "#555", textAlign: "center", alignItems: "center", display: "flex", flexDirection: "column" }}>
-                                    {image.category} / {image.subcategory}
+                                    Filename: {image.filename}
                                 </span>
                             </>
                         );

@@ -183,6 +183,11 @@ const DataProvider = (props) => {
         sort: false,
         label: "Filename",
         field: "filename",
+      },
+      {
+        sort: false,
+        label: "Image",
+        field: "image_url",
       }
     ],
     rows: [],
@@ -193,7 +198,7 @@ const DataProvider = (props) => {
     columns: [],
     rows: [],
   });
-  const [dataImageGalleryColumn, setDataImageGalleryColumn] = useState(2);
+  const [dataImageGalleryColumn, setDataImageGalleryColumn] = useState(4);
 
   return (
 

@@ -177,10 +177,9 @@ const PageCategory = () => {
             >
                 <h1 className="h5 text-center py-3 mb-0">Category Management</h1>
 
-                <MDBCard>
+                <MDBCard className='mb-3'>
                     <MDBCardBody>
                         <MDBTableEditor
-                            //modal
                             sm
                             striped
                             dark={hookTheme === 'dark'}
