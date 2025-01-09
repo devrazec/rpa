@@ -180,7 +180,7 @@ const PageCategory = () => {
                 <MDBCard className='mb-3'>
                     <MDBCardBody>
                         <MDBTableEditor
-                            sm
+                            //sm
                             striped
                             dark={hookTheme === 'dark'}
                             data={dataSourceCategoryTable}

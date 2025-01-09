@@ -186,7 +186,7 @@ const PageHome = () => {
                             <MDBCardBody>
                                 <MDBTableEditor
                                     modal
-                                    sm
+                                  
                                     striped
                                     dark={hookTheme === 'dark'}
                                     data={dataSourceTable}

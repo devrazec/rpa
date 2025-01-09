@@ -181,7 +181,7 @@ const PageSubcategory = () => {
                     <MDBCardBody>
                         <MDBTableEditor
                             //modal
-                            sm
+                            //sm
                             striped
                             dark={hookTheme === 'dark'}
                             data={dataSourceSubcategoryTable}
