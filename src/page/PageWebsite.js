@@ -35,9 +35,11 @@ import {
     getDataCategory,
     getDataSubcategory,
     postDataSubcategory,
+    getDataWebsite,
+    postDataWebsite,
 } from '../api/ApiScrapping';
 
-const PageCategory = () => {
+const PageWebsite = () => {
 
     // Global Data Context
     const {
@@ -87,21 +89,21 @@ const PageCategory = () => {
     } = useContext(DataContext);
 
     useEffect(() => {
-        onGetCategory();
+        onGetWebsite();
     }, []);
 
-    const onGetCategory = () => {
+    const onGetWebsite = () => {
 
         setHookLoadingVisible(true);
 
-        getDataCategory().then(
+        getDataWebsite().then(
             (response) => {
                 if (response) {
 
-                    setDataSourceCategoryJson(response);
+                    setDataSourceWebsiteJson(response);
 
-                    setDataSourceCategoryTable({
-                        columns: dataSourceCategoryTable.columns,
+                    setDataSourceWebsiteTable({
+                        columns: dataSourceWebsiteTable.columns,
                         rows: response.map((item) => ({
                             ...item,
                             id: item.id,
@@ -113,7 +115,7 @@ const PageCategory = () => {
                 } else {
                     setHookLoadingVisible(false);
                     setHookToastActive(true);
-                    setHookToastMessage('There is not Data Category!');
+                    setHookToastMessage('There is not Data Website!');
                 }
             }
         );
@@ -127,11 +129,11 @@ const PageCategory = () => {
     }
 
     const handleRowAdd = (newRow) => {
-        const modifiedData = [...dataSourceCategoryTable.rows, newRow];
-        setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: modifiedData });
+        const modifiedData = [...dataSourceWebsiteTable.rows, newRow];
+        setDataSourceWebsiteTable({ ...dataSourceWebsiteTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
-        setDataSourceCategoryJson(jsonOutput);
-        postDataCategory(jsonOutput).then(
+        setDataSourceWebsiteJson(jsonOutput);
+        postDataWebsite(jsonOutput).then(
             (response) => {
                 if (response) {
                     //console.log(response);
@@ -141,10 +143,10 @@ const PageCategory = () => {
     };
 
     const handleRowEdit = (modifiedData) => {
-        setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: modifiedData });
+        setDataSourceWebsiteTable({ ...dataSourceWebsiteTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
-        setDataSourceCategoryJson(jsonOutput);
-        postDataCategory(jsonOutput).then(
+        setDataSourceWebsiteJson(jsonOutput);
+        postDataWebsite(jsonOutput).then(
             (response) => {
                 if (response) {
                     //console.log(response);
@@ -154,11 +156,11 @@ const PageCategory = () => {
     };
 
     const handleRowDelete = (id) => {
-        const modifiedData = dataSourceCategoryTable.rows.filter((row, index) => index !== id);
-        setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: modifiedData });
+        const modifiedData = dataSourceWebsiteTable.rows.filter((row, index) => index !== id);
+        setDataSourceWebsiteTable({ ...dataSourceWebsiteTable, rows: modifiedData });
         const jsonOutput = convertRowsToJson(modifiedData);
-        setDataSourceCategoryJson(jsonOutput);
-        postDataCategory(jsonOutput).then(
+        setDataSourceWebsiteJson(jsonOutput);
+        postDataWebsite(jsonOutput).then(
             (response) => {
                 if (response) {
                     //console.log(response);
@@ -177,7 +179,7 @@ const PageCategory = () => {
                     //backgroundColor: '#e3f2fd'
                 }}
             >
-                <h1 className="h5 text-center py-3 mb-0">Category Management</h1>
+                <h1 className="h5 text-center py-3 mb-0">Website Management</h1>
 
                 <MDBCard className='mb-3'>
                     <MDBCardBody>
@@ -185,17 +187,17 @@ const PageCategory = () => {
                             //sm
                             striped
                             dark={hookTheme === 'dark'}
-                            data={dataSourceCategoryTable}
+                            data={dataSourceWebsiteTable}
                             entriesOptions={[5, 10, 15]}
                             onAdd={(newRow) => handleRowAdd(newRow)}
                             onModify={handleRowEdit}
                             onDelete={(rowToDelete) => {
-                                const rowIndex = dataSourceCategoryTable.rows.findIndex(
+                                const rowIndex = dataSourceWebsiteTable.rows.findIndex(
                                     (row) => row.id === rowToDelete.id
                                 );
                                 handleRowDelete(rowToDelete);
                             }}
-                            setData={(e) => setDataSourceCategoryTable({ ...dataSourceCategoryTable, rows: e })}
+                            setData={(e) => setDataSourceWebsiteTable({ ...dataSourceWebsiteTable, rows: e })}
                         />
                     </MDBCardBody>
                 </MDBCard>
@@ -205,4 +207,4 @@ const PageCategory = () => {
     );
 };
 
-export default React.memo(PageCategory);
+export default React.memo(PageWebsite);

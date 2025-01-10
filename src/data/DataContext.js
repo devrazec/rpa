@@ -200,6 +200,23 @@ const DataProvider = (props) => {
   });
   const [dataImageGalleryColumn, setDataImageGalleryColumn] = useState(4);
 
+  const [dataSourceWebsiteJson, setDataSourceWebsiteJson] = useState([]);
+  const [dataSourceWebsiteTable, setDataSourceWebsiteTable] = useState({
+    columns: [
+      {
+        sort: true,
+        label: "ID",
+        field: "id",
+      },
+      {
+        sort: true,
+        label: "Name",
+        field: "name",
+      }
+    ],
+    rows: []
+  });
+  
   return (
 
     <DataContext.Provider value={{
@@ -244,6 +261,8 @@ const DataProvider = (props) => {
       dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
       dataSourceCategoryTable, setDataSourceCategoryTable,
       dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
+      dataSourceWebsiteJson, setDataSourceWebsiteJson,
+      dataSourceWebsiteTable, setDataSourceWebsiteTable,
       dataSourceImageJson, setDataSourceImageJson,
       dataSourceImageTable, setDataSourceImageTable,
       dataImageGalleryArray, setDataImageGalleryArray,

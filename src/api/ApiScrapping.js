@@ -148,6 +148,31 @@ async function postDataSubcategory(data) {
     }
 }
 
+async function getDataWebsite() {
+    try {
+        return await axios.get(
+            `http://localhost:3003/get_data_website`
+        ).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function postDataWebsite(data) {
+    try {
+        return await axios.post(
+            `http://localhost:3003/post_data_website`, {
+            params: {
+                data: data,
+            }
+        }).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
 export {
     getDataSource,
     postDataSource,
@@ -161,4 +186,6 @@ export {
     getDataCategory,
     getDataSubcategory,
     postDataSubcategory,
+    getDataWebsite,
+    postDataWebsite,
 };

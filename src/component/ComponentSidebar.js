@@ -76,6 +76,8 @@ const ComponentSidebar = () => {
         dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
         dataSourceCategoryTable, setDataSourceCategoryTable,
         dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
+        dataSourceWebsiteJson, setDataSourceWebsiteJson,
+        dataSourceWebsiteTable, setDataSourceWebsiteTable,
         dataSourceImageJson, setDataSourceImageJson,
         dataSourceImageTable, setDataSourceImageTable,
         dataImageGalleryArray, setDataImageGalleryArray,

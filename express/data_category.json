@@ -1,1 +1,34 @@
-[{"id":"1","name":"Living Room"},{"id":"2","name":"Bedroom"},{"id":"3","name":"Dining Room"},{"id":"4","name":"Bar"},{"id":"5","name":"Kitchen"},{"id":"6","name":"Home Office"},{"id":"7","name":"Bathroom"},{"id":"8","name":"Entryway"}]
+[
+    {
+        "id": "1",
+        "name": "Living Room"
+    },
+    {
+        "id": "2",
+        "name": "Bedroom"
+    },
+    {
+        "id": "3",
+        "name": "Dining Room"
+    },
+    {
+        "id": "4",
+        "name": "Bar"
+    },
+    {
+        "id": "5",
+        "name": "Kitchen"
+    },
+    {
+        "id": "6",
+        "name": "Home Office"
+    },
+    {
+        "id": "7",
+        "name": "Bathroom"
+    },
+    {
+        "id": "8",
+        "name": "Entryway"
+    }
+]
