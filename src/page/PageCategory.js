@@ -102,7 +102,7 @@ const PageCategory = () => {
 
                     setDataSourceCategoryTable({
                         columns: dataSourceCategoryTable.columns,
-                        rows: response.map((item) => ({
+                        rows: response?.map((item) => ({
                             ...item,
                             id: item.id,
                             name: item.name.trim()
@@ -120,7 +120,7 @@ const PageCategory = () => {
     };
 
     function convertRowsToJson(rows) {
-        return rows.map(row => ({
+        return rows?.map(row => ({
             id: row.id,
             name: row.name
         }));

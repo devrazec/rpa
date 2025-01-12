@@ -55,6 +55,8 @@ const PageFolder = () => {
 
     } = useContext(DataContext);
 
+    const serverIp = process.env.REACT_APP_SERVER_IP;
+
     const handleGoBack = () => {
         window.history.back();
     };
@@ -99,10 +101,10 @@ const PageFolder = () => {
                         <iframe
                             style={{
                                 width: '100%',
-                                height: '500px',                                
+                                height: '500px',
                                 backgroundColor: hookTheme === 'dark' && ' #4f4f4f',
                             }}
-                            src="https://localhost:3002/images"
+                            src={`https://${serverIp}:3002/images`}
                             title="Folder"
                         ></iframe>
 

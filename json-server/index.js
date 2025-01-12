@@ -8,6 +8,8 @@ const router = jsonServer.router('./src/data/DataSettings.json');
 const middlewares = jsonServer.defaults();
 const port = 3001;
 
+const serverIp = process.env.REACT_APP_SERVER_IP;
+
 // HTTPS options
 const options = {
     key: fs.readFileSync('./certs/private.key'),
@@ -22,5 +24,5 @@ server.use(router);
 
 // Create HTTPS server
 https.createServer(options, server).listen(port, () => {
-    console.log(`JSON Server is running at https://localhost:${port}`);
+    console.log(`JSON Server is running at https://${serverIp}:${port}`);
 });

@@ -39,13 +39,13 @@ const DataProvider = (props) => {
     { text: 'Website 4', value: 'website4' },
     { text: 'Website 5', value: 'website5' },
   ]);
-  const [dataSourceCategoryJson, setDataSourceCategoryJson] = useState(null);
-  const [dataSourceSubcategoryJson, setDataSourceSubcategoryJson] = useState(null);
+  const [dataSourceCategoryJson, setDataSourceCategoryJson] = useState([]);
+  const [dataSourceSubcategoryJson, setDataSourceSubcategoryJson] = useState([]);
 
-  const [dataSourceSelected, setDataSourceSelected] = useState(null);
-  const [dataCategoryOption, setDataCategoryOption] = useState(null);
-  const [dataSubcategoryOption, setDataSubcategoryOption] = useState(null);
-  const [dataSourceJson, setDataSourceJson] = useState(null);
+  const [dataSourceSelected, setDataSourceSelected] = useState([]);
+  const [dataCategoryOption, setDataCategoryOption] = useState([]);
+  const [dataSubcategoryOption, setDataSubcategoryOption] = useState([]);
+  const [dataSourceJson, setDataSourceJson] = useState([]);
   const [dataSourceTable, setDataSourceTable] = useState({
     columns: [
       {
@@ -193,7 +193,7 @@ const DataProvider = (props) => {
     rows: [],
   });
 
-  const [dataImageGalleryArray, setDataImageGalleryArray] = useState(null);
+  const [dataImageGalleryArray, setDataImageGalleryArray] = useState([]);
   const [dataImageGalleryTable, setDataImageGalleryTable] = useState({
     columns: [],
     rows: [],

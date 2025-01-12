@@ -110,6 +110,8 @@ const ComponentGallery = () => {
 
     } = useContext(DataContext);
 
+    const serverIp = process.env.REACT_APP_SERVER_IP;
+
     useEffect(() => {
         if (dataSourceImageJson) {
             handleGalleryColumn();
@@ -163,7 +165,7 @@ const ComponentGallery = () => {
                 filename: item.filename,
                 category: item.category,
                 subcategory: item.subcategory,
-                image_url: `https://localhost:3002/images/${item.category}/${item.subcategory}/${item.filename}`
+                image_url: `https://${serverIp}:3002/images/${item.category}/${item.subcategory}/${item.filename}`
             }));
 
             const rows = [];

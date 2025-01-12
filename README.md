@@ -15,5 +15,14 @@ Generate Certificate
 openssl genrsa -out private.key 2048
 openssl x509 -req -days 365 -in certificate.csr -signkey private.key -out certificate.crt
 
+openssl req -x509 -out localhost.crt -keyout localhost.key \
+    -newkey rsa:2048 -nodes -sha256 \
+    -subj '/CN=localhost' -extensions EXT -config <( \
+    printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost,IP:127.0.0.1\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
+
+
+"proxy": "http://192.168.1.100:5000"
+
+
 node ./express/index.js
 node ./json-server/index.js

@@ -1,9 +1,11 @@
 import axios from "axios";
 
+const serverIp = process.env.REACT_APP_SERVER_IP;
+
 async function getSettings() {
     try {
         return await axios.get(
-            `https://localhost:3001/settings`
+            `https://${serverIp}:3001/settings`
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -14,7 +16,7 @@ async function getSettings() {
 async function postSettings(data) {
     try {
         return await axios.post(
-            `https://localhost:3001/settings`, data
+            `https://${serverIp}:3001/settings`, data
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -25,7 +27,7 @@ async function postSettings(data) {
 async function patchtHookSettingsVisible(hookSettingsVisible) {
     try {
         return await axios.patch(
-            `https://localhost:3001/settings`, {
+            `https://${serverIp}:3001/settings`, {
             hookSettingsVisible
         }).then((response) => response.data);
     } catch (error) {
@@ -37,7 +39,7 @@ async function patchtHookSettingsVisible(hookSettingsVisible) {
 async function patchtHookSettingsEnable(hookSettingsEnable) {
     try {
         return await axios.patch(
-            `https://localhost:3001/settings`, {
+            `https://${serverIp}:3001/settings`, {
             hookSettingsEnable
         }).then((response) => response.data);
     } catch (error) {

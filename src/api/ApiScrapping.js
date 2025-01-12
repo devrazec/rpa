@@ -1,9 +1,11 @@
 import axios from "axios";
 
+const serverIp = process.env.REACT_APP_SERVER_IP;
+
 async function getDataSource() {
     try {
         return await axios.get(
-            `https://localhost:3002/get_data_source`
+            `https://${serverIp}:3002/get_data_source`
             ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -14,7 +16,7 @@ async function getDataSource() {
 async function postDataSource(data) {
     try {
         return await axios.post(
-            `https://localhost:3002/post_data_source`, {
+            `https://${serverIp}:3002/post_data_source`, {
             params: {                
                 data: data,
             }
@@ -28,7 +30,7 @@ async function postDataSource(data) {
 async function getDataImage() {
     try {
         return await axios.get(
-            `https://localhost:3002/get_data_image`
+            `https://${serverIp}:3002/get_data_image`
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -39,7 +41,7 @@ async function getDataImage() {
 async function postDataImage(data) {
     try {
         return await axios.post(
-            `https://localhost:3002/post_data_image`, {
+            `https://${serverIp}:3002/post_data_image`, {
             params: {                
                 data: data,
             }
@@ -53,7 +55,7 @@ async function postDataImage(data) {
 async function getDataUrl() {
     try {
         return await axios.get(
-            `https://localhost:3002/get_data_url`
+            `https://${serverIp}:3002/get_data_url`
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -64,7 +66,7 @@ async function getDataUrl() {
 async function postDataUrl(source, data) {
     try {
         return await axios.post(
-            `https://localhost:3002/post_data_url`, {
+            `https://${serverIp}:3002/post_data_url`, {
             params: {
                 source: source,
                 data: data,
@@ -79,7 +81,7 @@ async function postDataUrl(source, data) {
 async function getCleanDataImage() {
     try {
         return await axios.get(
-            `https://localhost:3002/get_clean_data_image`
+            `https://${serverIp}:3002/get_clean_data_image`
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -90,7 +92,7 @@ async function getCleanDataImage() {
 async function getCleanDataUrl() {
     try {
         return await axios.get(
-            `https://localhost:3002/get_clean_data_url`
+            `https://${serverIp}:3002/get_clean_data_url`
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -101,7 +103,7 @@ async function getCleanDataUrl() {
 async function getDataCategory() {
     try {
         return await axios.get(
-            `https://localhost:3002/get_data_category`
+            `https://${serverIp}:3002/get_data_category`
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -112,7 +114,7 @@ async function getDataCategory() {
 async function postDataCategory(data) {
     try {
         return await axios.post(
-            `https://localhost:3002/post_data_category`, {
+            `https://${serverIp}:3002/post_data_category`, {
             params: {
                 data: data,
             }
@@ -126,7 +128,7 @@ async function postDataCategory(data) {
 async function getDataSubcategory() {
     try {
         return await axios.get(
-            `https://localhost:3002/get_data_subcategory`
+            `https://${serverIp}:3002/get_data_subcategory`
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -137,7 +139,7 @@ async function getDataSubcategory() {
 async function postDataSubcategory(data) {
     try {
         return await axios.post(
-            `https://localhost:3002/post_data_subcategory`, {
+            `https://${serverIp}:3002/post_data_subcategory`, {
             params: {
                 data: data,
             }
@@ -151,7 +153,7 @@ async function postDataSubcategory(data) {
 async function getDataWebsite() {
     try {
         return await axios.get(
-            `https://localhost:3002/get_data_website`
+            `https://${serverIp}:3002/get_data_website`
         ).then((response) => response.data);
     } catch (error) {
         console.log(error);
@@ -162,7 +164,7 @@ async function getDataWebsite() {
 async function postDataWebsite(data) {
     try {
         return await axios.post(
-            `https://localhost:3002/post_data_website`, {
+            `https://${serverIp}:3002/post_data_website`, {
             params: {
                 data: data,
             }

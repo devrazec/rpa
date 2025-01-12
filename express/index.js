@@ -8,6 +8,8 @@ const cors = require('cors');
 const app = express();
 const port = 3002;
 
+const serverIp = process.env.REACT_APP_SERVER_IP;
+
 const options = {
     key: fs.readFileSync('./certs/private.key'),
     cert: fs.readFileSync('./certs/certificate.crt'),
@@ -261,5 +263,5 @@ app.post('/post_data_subcategory', async (req, res) => {
 });
 
 https.createServer(options, app).listen(port, () => {
-    console.log(`Secure server running at https://localhost:${port}/`);
+    console.log(`Secure server running at https://${serverIp}:${port}/`);
 });

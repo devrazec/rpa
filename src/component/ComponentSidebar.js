@@ -93,6 +93,8 @@ const ComponentSidebar = () => {
         return match ? match[1] : input;
     };
 
+    const serverIp = process.env.REACT_APP_SERVER_IP;
+
     useEffect(() => {
         const source = 'website1';
         setDataSourceSelected(source);
@@ -206,7 +208,7 @@ const ComponentSidebar = () => {
                         columns: dataSourceUrlTable.columns,
                         rows: response.map((item) => ({
                             ...item,
-                            id: item.id,                            
+                            id: item.id,
                             category: item.category.trim(),
                             subcategory: item.subcategory.trim(),
                             url: (
@@ -234,7 +236,7 @@ const ComponentSidebar = () => {
                             ),
                             source: getTextBySource(item.source)
                         }))
-                    });                  
+                    });
 
                     setHookLoadingVisible(false);
 
@@ -268,15 +270,15 @@ const ComponentSidebar = () => {
                             source: getTextBySource(item.source),
                             category: item.category.trim(),
                             subcategory: item.subcategory.trim(),
-                            filename: item.filename, 
+                            filename: item.filename,
                             image_url: (
                                 <a
-                                    href={`http://localhost:3002/${item.category}/${item.subcategory}/${item.filename}`}
+                                    href={`http://${serverIp}:3002/${item.category}/${item.subcategory}/${item.filename}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     <img
-                                        src={`http://localhost:3002/${item.category}/${item.subcategory}/${item.filename}`}                                        
+                                        src={`http://${serverIp}:3002/${item.category}/${item.subcategory}/${item.filename}`}
                                         alt={item.filename}
                                         style={{ width: "50px", height: "50px", objectFit: "cover", cursor: "pointer" }}
                                     />
