@@ -1,16 +1,30 @@
+const https = require('https');
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const serveIndex = require('serve-index');
 const cors = require('cors');
 const app = express();
-const port = 3003;
+const port = 3002;
+
+const options = {
+    key: fs.readFileSync('./certs/private.key'),
+    cert: fs.readFileSync('./certs/certificate.crt'),
+};
 
 const scrapping_website1 = require('./scrapping_website1.js');
 const scrapping_image = require('./scrapping_image.js');
 
 app.use(cors());
 app.use(bodyParser.json());
+
+const imagesPath = path.join(__dirname, '../images');
+app.use(
+    '/images',
+    express.static(imagesPath),
+    serveIndex(imagesPath, { icons: true })
+);
 
 app.get('/get_data_source', async (req, res) => {
     const filePath = path.join(__dirname, './website_source.json');
@@ -75,7 +89,7 @@ app.post('/post_data_url', async (req, res) => {
 
 app.post('/post_data_image', async (req, res) => {
     try {
-        const body = req.body;        
+        const body = req.body;
         const data = JSON.stringify(body.params.data);
         await scrapping_image.initialize();
         await scrapping_image.scrapping(data);
@@ -88,7 +102,7 @@ app.post('/post_data_image', async (req, res) => {
             if (err) {
                 console.error('Error reading data_image.json file:', err);
                 return res.status(500).send('Error reading file data_image.json!');
-            } else {                
+            } else {
                 setTimeout(() => {
                     if (!data || data.trim() === '' || data === 'null' || data === '[]' || data === '{}') {
                         console.log('File data_image.json is empty!');
@@ -246,6 +260,6 @@ app.post('/post_data_subcategory', async (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
+https.createServer(options, app).listen(port, () => {
+    console.log(`Secure server running at https://localhost:${port}/`);
 });

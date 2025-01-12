@@ -102,7 +102,7 @@ const PageFolder = () => {
                                 height: '500px',                                
                                 backgroundColor: hookTheme === 'dark' && ' #4f4f4f',
                             }}
-                            src="http://localhost:3002/"
+                            src="https://localhost:3002/images"
                             title="Folder"
                         ></iframe>
 

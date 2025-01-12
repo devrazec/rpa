@@ -10,3 +10,10 @@ The findings of this research provide information on how to improve the adaptabi
 npm i -S puppeteer puppeteer-extra puppeteer-extra-plugin-adblocker puppeteer-extra-plugin-anonymize-ua puppeteer-extra-plugin-stealth puppeteer-extra-plugin-user-preferences
 
 npm i -S express cors body-parser
+
+Generate Certificate
+openssl genrsa -out private.key 2048
+openssl x509 -req -days 365 -in certificate.csr -signkey private.key -out certificate.crt
+
+node ./express/index.js
+node ./json-server/index.js

@@ -163,7 +163,7 @@ const ComponentGallery = () => {
                 filename: item.filename,
                 category: item.category,
                 subcategory: item.subcategory,
-                image_url: `http://localhost:3002/${item.category}/${item.subcategory}/${item.filename}`
+                image_url: `https://localhost:3002/images/${item.category}/${item.subcategory}/${item.filename}`
             }));
 
             const rows = [];
