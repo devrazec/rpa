@@ -213,7 +213,7 @@ const ComponentSidebar = () => {
                             subcategory: item.subcategory.trim(),
                             url: (
                                 <a
-                                    href={extractUrl(item.url).startsWith("http") ? extractUrl(item.url) : `https://${extractUrl(item.url)}`}
+                                    href={extractUrl(item.url).startsWith("https") ? extractUrl(item.url) : `https://${extractUrl(item.url)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{ pointerEvents: "auto" }}
@@ -223,7 +223,7 @@ const ComponentSidebar = () => {
                             ),
                             image_url: (
                                 <a
-                                    href={item.image_url.startsWith("http") ? item.image_url : `https://${item.image_url}`}
+                                    href={item.image_url.startsWith("https") ? item.image_url : `https://${item.image_url}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -273,12 +273,12 @@ const ComponentSidebar = () => {
                             filename: item.filename,
                             image_url: (
                                 <a
-                                    href={`http://${serverIp}:3002/${item.category}/${item.subcategory}/${item.filename}`}
+                                    href={`https://${serverIp}:3002/${item.category}/${item.subcategory}/${item.filename}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     <img
-                                        src={`http://${serverIp}:3002/${item.category}/${item.subcategory}/${item.filename}`}
+                                        src={`https://${serverIp}:3002/${item.category}/${item.subcategory}/${item.filename}`}
                                         alt={item.filename}
                                         style={{ width: "50px", height: "50px", objectFit: "cover", cursor: "pointer" }}
                                     />

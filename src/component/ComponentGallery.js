@@ -183,8 +183,8 @@ const ComponentGallery = () => {
                                 </span>
                                 <MDBLightbox>
                                     <MDBLightboxItem
-                                        src={image.image_url.startsWith("http") ? image.image_url : `https://${image.image_url}`}
-                                        fullscreenSrc={image.image_url.startsWith("http") ? image.image_url : `https://${image.image_url}`}
+                                        src={image.image_url.startsWith("https") ? image.image_url : `https://${image.image_url}`}
+                                        fullscreenSrc={image.image_url.startsWith("https") ? image.image_url : `https://${image.image_url}`}
                                         className='w-100'
                                         alt={`${image.subcategory}-${image.filename}`}
                                         caption={image.category + '/' + image.subcategory + ' | Filename: ' + image.filename}
