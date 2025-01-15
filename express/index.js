@@ -35,8 +35,8 @@ fs.readFile(envFile, 'utf8', (err, data) => {
         key: fs.readFileSync(SSL_KEY_FILE),
     };
 
-    const scrapping_website1 = require('./scrapping_website1.js');
-    const scrapping_image = require('./scrapping_image.js');
+    const get_data_image = require('./get_data_image.js');
+    const get_data_website1 = require('./get_data_website1.js');
 
     app.use(cors());
     app.use(bodyParser.json());
@@ -49,13 +49,13 @@ fs.readFile(envFile, 'utf8', (err, data) => {
     );
 
     app.get('/get_data_source', async (req, res) => {
-        const filePath = path.join(__dirname, './website_source.json');
+        const filePath = path.join(__dirname, './data_source.json');
         fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
-                console.error('Error reading website_source.json file:', err);
-                return res.status(500).send('Error reading file website_source.json!');
+                console.error('Error reading data_source.json file:', err);
+                return res.status(500).send('Error reading file data_source.json!');
             } else {
-                console.log('File website_source.json has been read!');
+                console.log('File data_source.json has been read!');
                 setTimeout(() => {
                     res.status(200).send(data);
                 }, 1000);
@@ -66,15 +66,15 @@ fs.readFile(envFile, 'utf8', (err, data) => {
     app.post('/post_data_source', async (req, res) => {
         const body = req.body;
         const data = JSON.stringify(body.params.data);
-        const filePath = path.join(__dirname, './website_source.json');
+        const filePath = path.join(__dirname, './data_source.json');
         fs.writeFile(filePath, data, 'utf8', (err) => {
             if (err) {
-                console.error('Error writing website_source.json file:', err);
-                return res.status(500).send('Error writing file website_source.json!');
+                console.error('Error writing data_source.json file:', err);
+                return res.status(500).send('Error writing file data_source.json!');
             } else {
-                console.log('File website_source.json has been saved!');
+                console.log('File data_source.json has been saved!');
                 setTimeout(() => {
-                    res.status(200).send('File website_source.json has been saved!');
+                    res.status(200).send('File data_source.json has been saved!');
                 }, 1000);
             }
         });
@@ -85,9 +85,9 @@ fs.readFile(envFile, 'utf8', (err, data) => {
             const body = req.body;
             const source = body.params.source;
             const data = JSON.stringify(body.params.data);
-            await scrapping_website1.initialize();
-            await scrapping_website1.scrapping(source, data);
-            await scrapping_website1.formatJson();
+            await get_data_website1.initialize();
+            await get_data_website1.getData(source, data);
+            await get_data_website1.formatJson();
 
             console.log('Script post_data_url executed successfully!');
 
@@ -113,9 +113,9 @@ fs.readFile(envFile, 'utf8', (err, data) => {
         try {
             const body = req.body;
             const data = JSON.stringify(body.params.data);
-            await scrapping_image.initialize();
-            await scrapping_image.scrapping(data);
-            await scrapping_image.formatJson();
+            await get_data_image.initialize();
+            await get_data_image.getData(data);
+            await get_data_image.formatJson();
 
             console.log('Script post_data_image executed successfully!');
 
@@ -205,6 +205,42 @@ fs.readFile(envFile, 'utf8', (err, data) => {
                         console.log('File data_image.json has been read!');
                         res.status(200).send(data);
                     }
+                }, 1000);
+            }
+        });
+    });
+
+    app.get('/get_data_website', async (req, res) => {
+        const filePath = path.join(__dirname, './data_website.json');
+        fs.readFile(filePath, 'utf8', (err, data) => {
+            if (err) {
+                console.error('Error reading data_website.json file:', err);
+                return res.status(500).send('Error reading file data_website.json!');
+            } else {
+                setTimeout(() => {
+                    if (!data || data.trim() === '' || data === 'null' || data === '[]' || data === '{}') {
+                        console.log('File data_website.json is empty!');
+                        return res.status(200).send('');
+                    } else {
+                        console.log('File data_website.json has been read!');
+                        res.status(200).send(data);
+                    }
+                }, 1000);
+            }
+        });
+    });
+
+    app.post('/post_data_website', async (req, res) => {
+        const body = req.body;
+        const filePath = path.join(__dirname, './data_website.json');
+        fs.writeFile(filePath, JSON.stringify(body.params.data), 'utf8', (err) => {
+            if (err) {
+                console.error('Error writing data_website.json file:', err);
+                return res.status(500).send('Error writing file data_website.json!');
+            } else {
+                console.log('File data_website.json has been saved!');
+                setTimeout(() => {
+                    res.status(200).send('File data_website.json has been saved!');
                 }, 1000);
             }
         });

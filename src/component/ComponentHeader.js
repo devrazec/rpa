@@ -113,6 +113,9 @@ const ComponentHeader = () => {
                                     <MDBNavbarLink  onClick={() => navigate('/pagefolder')}>Folder</MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>
+                                    <MDBNavbarLink onClick={() => navigate('/pagewebsite')}>Website</MDBNavbarLink>
+                                </MDBNavbarItem>
+                                <MDBNavbarItem>
                                     <MDBNavbarLink onClick={() => navigate('/pagecategory')}>Category</MDBNavbarLink>
                                 </MDBNavbarItem>
                                 <MDBNavbarItem>

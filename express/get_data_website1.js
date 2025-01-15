@@ -50,7 +50,7 @@ async function writeJsonFile(arrayItems) {
     };
 };
 
-const scrapping_website1 = {
+const get_data_website1 = {
 
     initialize: async () => {
 
@@ -103,11 +103,11 @@ const scrapping_website1 = {
         console.log('03 - Creating a Browser Context!');
     },
 
-    scrapping: async (source, data) => {
+    getData: async (source, data) => {
 
         const array_url = JSON.parse(data);
 
-        console.log('04 - Loading Url from json File: website_source.json');
+        console.log('04 - Loading Url from json File: data_source.json');
 
         for (let i = 0; i < array_url.length; i++) {
 
@@ -125,7 +125,7 @@ const scrapping_website1 = {
 
                 let htmlItems = await page.$('#product-list');
                 await handleHtmlItems(htmlItems, array_url[i].category, array_url[i].subcategory, source);
-                console.log('06 - Starting Scrapping!');
+                console.log('06 - Getting Data!');
             }
         }
 
@@ -165,4 +165,4 @@ const scrapping_website1 = {
     },
 };
 
-module.exports = scrapping_website1;
+module.exports = get_data_website1;

@@ -19,6 +19,7 @@ import ComponentToast from './component/ComponentToast';
 import PageHome from './page/PageHome';
 import PageNotFound from './page/PageNotFound';
 import PageFolder from './page/PageFolder';
+import PageWebsite from './page/PageWebsite';
 import PageCategory from './page/PageCategory';
 import PageSubcategory from './page/PageSubcategory';
 
@@ -54,6 +55,7 @@ function App() {
             <Routes>
               <Route exact path="/" element={<PageHome />} />
               <Route exact path="/pagefolder" element={<PageFolder />} />
+              <Route exact path="/pagewebsite" element={<PageWebsite />} />
               <Route exact path="/pagecategory" element={<PageCategory />} />
               <Route exact path="/pagesubcategory" element={<PageSubcategory />} />
               <Route exact path="/pagenotfound" element={<PageNotFound />} />

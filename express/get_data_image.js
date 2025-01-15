@@ -42,7 +42,7 @@ async function writeJsonFile(arrayItems) {
     };
 };
 
-const scrapping_image = {
+const get_data_image = {
 
     initialize: async () => {
 
@@ -95,7 +95,7 @@ const scrapping_image = {
         console.log('03 - Creating a Browser Context!');
     },
 
-    scrapping: async (data) => {
+    getData: async (data) => {
 
         const array_url = JSON.parse(data);
 
@@ -210,4 +210,4 @@ const scrapping_image = {
     }
 };
 
-module.exports = scrapping_image;
+module.exports = get_data_image;

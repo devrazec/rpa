@@ -111,6 +111,31 @@ async function getCleanDataUrl() {
     }
 }
 
+async function getDataWebsite() {
+    try {
+        return await axios.get(
+            `${PROTOCOL}${BACKEND_IP}:${BACKEND_PORT}/get_data_website`
+        ).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
+async function postDataWebsite(data) {
+    try {
+        return await axios.post(
+            `${PROTOCOL}${BACKEND_IP}:${BACKEND_PORT}/post_data_website`, {
+            params: {
+                data: data,
+            }
+        }).then((response) => response.data);
+    } catch (error) {
+        console.log(error);
+        return error;
+    }
+}
+
 async function getDataCategory() {
     try {
         return await axios.get(
@@ -161,31 +186,6 @@ async function postDataSubcategory(data) {
     }
 }
 
-async function getDataWebsite() {
-    try {
-        return await axios.get(
-            `${PROTOCOL}${BACKEND_IP}:${BACKEND_PORT}/get_data_website`
-        ).then((response) => response.data);
-    } catch (error) {
-        console.log(error);
-        return error;
-    }
-}
-
-async function postDataWebsite(data) {
-    try {
-        return await axios.post(
-            `${PROTOCOL}${BACKEND_IP}:${BACKEND_PORT}/post_data_website`, {
-            params: {
-                data: data,
-            }
-        }).then((response) => response.data);
-    } catch (error) {
-        console.log(error);
-        return error;
-    }
-}
-
 export {
     getDataSource,
     postDataSource,
@@ -195,10 +195,10 @@ export {
     postDataImage,
     getCleanDataUrl,
     getCleanDataImage,
+    getDataWebsite,
+    postDataWebsite,
     postDataCategory,
     getDataCategory,
     getDataSubcategory,
-    postDataSubcategory,
-    getDataWebsite,
-    postDataWebsite,
+    postDataSubcategory    
 };
