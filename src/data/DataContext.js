@@ -6,6 +6,15 @@ const DataProvider = (props) => {
 
   // Hooks
   const [hookTheme, setHookTheme] = useState('light');
+  const [hookThemeSelected, setHookThemeSelected] = useState('light');
+  const [hookThemeOption, setHookThemeOption] = useState([
+    { text: 'Light', value: 'light' },
+    { text: 'Dark', value: 'dark' },
+    { text: 'Blue', value: 'blue' },
+    { text: 'Green', value: 'green' },
+    { text: 'Red', value: 'red' },
+    { text: 'Yellow', value: 'yellow' },
+  ]);
 
   // Size
   const [hookWindowSize, setHookWindowSize] = useState({ width: 0, height: 0 });
@@ -223,6 +232,8 @@ const DataProvider = (props) => {
 
       // Hooks
       hookTheme, setHookTheme,
+      hookThemeSelected, setHookThemeSelected,
+      hookThemeOption, setHookThemeOption,
 
       // Size
       hookWindowSize, setHookWindowSize,
