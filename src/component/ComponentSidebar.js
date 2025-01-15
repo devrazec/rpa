@@ -98,6 +98,9 @@ const ComponentSidebar = () => {
         dataImageGalleryTable, setDataImageGalleryTable,
         dataImageGalleryColumn, setDataImageGalleryColumn,
 
+        // Data Website
+        dataWebsiteOption, setDataWebsiteOption,
+
     } = useContext(DataContext);
 
     const sidebarRef = useRef(null);
@@ -106,8 +109,6 @@ const ComponentSidebar = () => {
         const match = input.match(/href=['"]([^'"]*)['"]/);
         return match ? match[1] : input;
     };
-
-    const serverIp = process.env.REACT_APP_SERVER_IP;
 
     useEffect(() => {
         const source = 'website1';
@@ -435,10 +436,10 @@ const ComponentSidebar = () => {
                             <MDBSelect
                                 className="mb-4"
                                 size="lg"
-                                data={dataSourceOption}
+                                data={dataWebsiteOption}
                                 placeholder='Select'
                                 //label='Theme'
-                                value={dataSourceSelected}
+                                //value={dataSourceSelected}
                                 onChange={(e) => {
                                     setDataSourceSelected(e.value);
                                 }}

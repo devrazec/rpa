@@ -24,7 +24,7 @@ import { DataContext } from '../data/DataContext';
 // Api
 import {
     getDataSource,
-    postDataSource,  
+    postDataSource,
     getDataUrl,
     postDataUrl,
     getDataImage,
@@ -87,6 +87,9 @@ const PageWebsite = () => {
         dataSourceWebsiteJson, setDataSourceWebsiteJson,
         dataSourceWebsiteTable, setDataSourceWebsiteTable,
 
+        // Data Website
+        dataWebsiteOption, setDataWebsiteOption,
+
     } = useContext(DataContext);
 
     useEffect(() => {
@@ -112,7 +115,15 @@ const PageWebsite = () => {
                         })),
                     });
 
+                    setDataWebsiteOption(
+                        response?.map(item => ({
+                            value: item.id,
+                            text: item.name,
+                        }))
+                    );
+ 
                     setHookLoadingVisible(false);
+
                 } else {
                     setHookLoadingVisible(false);
                     setHookToastActive(true);

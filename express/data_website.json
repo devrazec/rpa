@@ -1,1 +1,26 @@
-[{"id":"1","name":"Website 1"},{"id":"2","name":"Website 2"},{"id":"3","name":"Website 3"},{"id":"4","name":"Website 4"},{"id":"5","name":"Website 5"},{"id":"6","name":"Website 6"}]
+[
+    {
+        "id": "1",
+        "name": "Website 1"
+    },
+    {
+        "id": "2",
+        "name": "Website 2"
+    },
+    {
+        "id": "3",
+        "name": "Website 3"
+    },
+    {
+        "id": "4",
+        "name": "Website 4"
+    },
+    {
+        "id": "5",
+        "name": "Website 5"
+    },
+    {
+        "id": "6",
+        "name": "Website 6"
+    }
+]
