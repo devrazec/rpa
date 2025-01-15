@@ -31,6 +31,19 @@ import {
     postDataSubcategory,
 } from '../api/ApiScrapping';
 
+let PROTOCOL = '';
+
+const BACKEND_HTTPS = process.env.REACT_APP_BACKEND_HTTPS;
+
+if (BACKEND_HTTPS === 'true') {
+    PROTOCOL = 'https://'
+} else {
+    PROTOCOL = 'http://';
+}
+
+const BACKEND_IP = process.env.REACT_APP_BACKEND_IP;
+const BACKEND_PORT = process.env.REACT_APP_BACKEND_PORT;
+
 const ComponentSidebar = () => {
 
     // Global Data Context
@@ -273,12 +286,13 @@ const ComponentSidebar = () => {
                             filename: item.filename,
                             image_url: (
                                 <a
-                                    href={`https://${serverIp}:3002/${item.category}/${item.subcategory}/${item.filename}`}
+                                    href={`${PROTOCOL}${BACKEND_IP}:${BACKEND_PORT}/images/${item.category}/${item.subcategory}/${item.filename}`}
+
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     <img
-                                        src={`https://${serverIp}:3002/${item.category}/${item.subcategory}/${item.filename}`}
+                                        src={`${PROTOCOL}${BACKEND_IP}:${BACKEND_PORT}/images/${item.category}/${item.subcategory}/${item.filename}`}
                                         alt={item.filename}
                                         style={{ width: "50px", height: "50px", objectFit: "cover", cursor: "pointer" }}
                                     />

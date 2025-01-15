@@ -55,7 +55,18 @@ const PageFolder = () => {
 
     } = useContext(DataContext);
 
-    const serverIp = process.env.REACT_APP_SERVER_IP;
+    let PROTOCOL = '';
+
+    const BACKEND_HTTPS = process.env.REACT_APP_BACKEND_HTTPS;
+
+    if (BACKEND_HTTPS === 'true') {
+        PROTOCOL = 'https://'
+    } else {
+        PROTOCOL = 'http://';
+    }
+
+    const BACKEND_IP = process.env.REACT_APP_BACKEND_IP;
+    const BACKEND_PORT = process.env.REACT_APP_BACKEND_PORT;
 
     const handleGoBack = () => {
         window.history.back();
@@ -104,7 +115,7 @@ const PageFolder = () => {
                                 height: '500px',
                                 backgroundColor: hookTheme === 'dark' && ' #4f4f4f',
                             }}
-                            src={`https://${serverIp}:3002/images`}
+                            src={`${PROTOCOL}${BACKEND_IP}:${BACKEND_PORT}/images`}
                             title="Folder"
                         ></iframe>
 

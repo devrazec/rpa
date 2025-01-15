@@ -59,6 +59,19 @@ import {
     postDataSubcategory,
 } from '../api/ApiScrapping';
 
+let PROTOCOL = '';
+
+const BACKEND_HTTPS = process.env.REACT_APP_BACKEND_HTTPS;
+
+if (BACKEND_HTTPS === 'true') {
+    PROTOCOL = 'https://'
+} else {
+    PROTOCOL = 'http://';
+}
+
+const BACKEND_IP = process.env.REACT_APP_BACKEND_IP;
+const BACKEND_PORT = process.env.REACT_APP_BACKEND_PORT;
+
 const ComponentGallery = () => {
 
     // Global Data Context
@@ -165,7 +178,7 @@ const ComponentGallery = () => {
                 filename: item.filename,
                 category: item.category,
                 subcategory: item.subcategory,
-                image_url: `https://${serverIp}:3002/images/${item.category}/${item.subcategory}/${item.filename}`
+                image_url: `${PROTOCOL}${BACKEND_IP}:${BACKEND_PORT}/images/${item.category}/${item.subcategory}/${item.filename}`
             }));
 
             const rows = [];
@@ -183,8 +196,8 @@ const ComponentGallery = () => {
                                 </span>
                                 <MDBLightbox>
                                     <MDBLightboxItem
-                                        src={image.image_url.startsWith("https") ? image.image_url : `https://${image.image_url}`}
-                                        fullscreenSrc={image.image_url.startsWith("https") ? image.image_url : `https://${image.image_url}`}
+                                        src={image.image_url}
+                                        fullscreenSrc={image.image_url}
                                         className='w-100'
                                         alt={`${image.subcategory}-${image.filename}`}
                                         caption={image.category + '/' + image.subcategory + ' | Filename: ' + image.filename}
