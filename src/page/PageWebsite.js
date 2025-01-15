@@ -45,7 +45,8 @@ const PageWebsite = () => {
     const {
 
         // Hooks
-        hookTheme, setHookTheme,
+        hookThemeSelected, setHookThemeSelected,
+        hookThemeOption, setHookThemeOption,
 
         // Size
         hookWindowSize, setHookWindowSize,
@@ -186,7 +187,7 @@ const PageWebsite = () => {
                         <MDBTableEditor
                             //sm
                             striped
-                            dark={hookTheme === 'dark'}
+                            dark={hookThemeSelected === 'dark'}
                             data={dataSourceWebsiteTable}
                             entriesOptions={[5, 10, 15]}
                             onAdd={(newRow) => handleRowAdd(newRow)}

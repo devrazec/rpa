@@ -43,7 +43,8 @@ const PageCategory = () => {
     const {
 
         // Hooks
-        hookTheme, setHookTheme,
+        hookThemeSelected, setHookThemeSelected,
+        hookThemeOption, setHookThemeOption,
 
         // Size
         hookWindowSize, setHookWindowSize,
@@ -184,7 +185,7 @@ const PageCategory = () => {
                         <MDBTableEditor
                             //sm
                             striped
-                            dark={hookTheme === 'dark'}
+                            dark={hookThemeSelected === 'dark'}
                             data={dataSourceCategoryTable}
                             entriesOptions={[5, 10, 15]}
                             onAdd={(newRow) => handleRowAdd(newRow)}

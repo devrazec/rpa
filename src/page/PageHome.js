@@ -62,7 +62,8 @@ const PageHome = () => {
     const {
 
         // Hooks
-        hookTheme, setHookTheme,
+        hookThemeSelected, setHookThemeSelected,
+        hookThemeOption, setHookThemeOption,
 
         // Size
         hookWindowSize, setHookWindowSize,
@@ -188,7 +189,7 @@ const PageHome = () => {
                                     modal
                                   
                                     striped
-                                    dark={hookTheme === 'dark'}
+                                    dark={hookThemeSelected === 'dark'}
                                     data={dataSourceTable}
                                     entriesOptions={[5, 10, 15]}
                                     onAdd={(newRow) => setDataSourceTable({ ...dataSourceTable, rows: [...dataSourceTable.rows, newRow] })}
@@ -202,7 +203,7 @@ const PageHome = () => {
                     <MDBTabsPane open={hookTabHomeActive === 'Dataurl'} >
                         <MDBNavbar
                             style={{
-                                backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
+                                backgroundColor: hookThemeSelected === 'dark' ? '#424242' : ' #FFFFFF'
                             }}
                         >
                             <MDBContainer fluid>
@@ -274,14 +275,14 @@ const PageHome = () => {
                             sm
                             fixedHeader
                             striped
-                            dark={hookTheme === 'dark'}
+                            dark={hookThemeSelected === 'dark'}
                             data={dataSourceUrlTable} />
                     </MDBTabsPane>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Dataimage'}>
                         <MDBNavbar
                             style={{
-                                backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
+                                backgroundColor: hookThemeSelected === 'dark' ? '#424242' : ' #FFFFFF'
                             }}
                         >
                             <MDBContainer fluid>
@@ -352,7 +353,7 @@ const PageHome = () => {
                             sm
                             fixedHeader
                             striped
-                            dark={hookTheme === 'dark'}
+                            dark={hookThemeSelected === 'dark'}
                             data={dataSourceImageTable} />
                     </MDBTabsPane>
 

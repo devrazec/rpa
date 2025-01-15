@@ -28,19 +28,20 @@ function App() {
   const {
 
     // Theme
-    hookTheme
+    hookThemeSelected, setHookThemeSelected,
+    hookThemeOption, setHookThemeOption,
 
   } = useContext(DataContext);
 
   return (
     <>
-      
+
       <ComponentToast />
 
       <ComponentLoading />
 
       <ComponentSettings />
-      
+
       <div style={{ display: "flex", height: "100vh", flexDirection: "column" }}>
 
         <ComponentHeader />
@@ -48,7 +49,7 @@ function App() {
         <div style={{ display: "flex", flex: 1 }}>
 
           <ComponentSidebar />
-          
+
           <Suspense>
             <Routes>
               <Route exact path="/" element={<PageHome />} />

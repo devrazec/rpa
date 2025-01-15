@@ -23,7 +23,8 @@ const ComponentSettings = () => {
     const {
 
         // Hooks
-        hookTheme, setHookTheme,
+        hookThemeSelected, setHookThemeSelected,
+        hookThemeOption, setHookThemeOption,
 
         // Size
         hookWindowSize, setHookWindowSize,
@@ -75,7 +76,7 @@ const ComponentSettings = () => {
         getSettings().then(
             (response) => {
                 if (response) {
-                    setHookTheme(response.hookTheme);
+                    setHookThemeSelected(response.hookThemeSelected);
                     setHookHeaderEnable(response.hookHeaderEnable);
                     setHookSidebarEnable(response.hookSidebarEnable);
                     setHookFooterEnable(response.hookFooterEnable);
@@ -92,7 +93,7 @@ const ComponentSettings = () => {
 
             postSettings(
                 {
-                    "hookTheme": hookTheme,
+                    "hookThemeSelected": hookThemeSelected,
                     "hookHeaderEnable": hookHeaderEnable,
                     "hookSidebarEnable": hookSidebarEnable,
                     "hookFooterEnable": hookFooterEnable,
@@ -108,7 +109,7 @@ const ComponentSettings = () => {
             )
         }
     }, [
-        hookTheme,
+        hookThemeSelected,
         hookHeaderEnable,
         hookSidebarEnable,
         hookFooterEnable,
@@ -120,31 +121,31 @@ const ComponentSettings = () => {
 
         const cssTheme = document.getElementById("css-theme");
 
-        document.documentElement.setAttribute('data-mdb-theme', hookTheme);
+        document.documentElement.setAttribute('data-mdb-theme', hookThemeSelected);
 
         if (cssTheme) {
 
-            if (hookTheme === 'light') {
+            if (hookThemeSelected === 'light') {
                 cssTheme.href = 'theme/mdb.min.css';
             }
 
-            if (hookTheme === 'dark') {
+            if (hookThemeSelected === 'dark') {
                 cssTheme.href = 'theme/mdb.dark.min.css';
             }
 
-            if (hookTheme === 'blue') {
+            if (hookThemeSelected === 'blue') {
                 cssTheme.href = 'theme/mdb.blue.min.css';
             }
 
-            if (hookTheme === 'green') {
+            if (hookThemeSelected === 'green') {
                 cssTheme.href = 'theme/mdb.green.min.css';
             }
 
-            if (hookTheme === 'red') {
+            if (hookThemeSelected === 'red') {
                 cssTheme.href = 'theme/mdb.red.min.css';
             }
 
-            if (hookTheme === 'yellow') {
+            if (hookThemeSelected === 'yellow') {
                 cssTheme.href = 'theme/mdb.yellow.min.css';
             }
 
@@ -155,27 +156,27 @@ const ComponentSettings = () => {
             link.id = "css-theme";
             link.rel = 'stylesheet';
 
-            if (hookTheme === 'light') {
+            if (hookThemeSelected === 'light') {
                 link.href = 'theme/mdb.min.css';
             }
 
-            if (hookTheme === 'dark') {
+            if (hookThemeSelected === 'dark') {
                 link.href = 'theme/mdb.dark.min.css';
             }
 
-            if (hookTheme === 'blue') {
+            if (hookThemeSelected === 'blue') {
                 link.href = 'theme/mdb.blue.min.css';
             }
 
-            if (hookTheme === 'green') {
+            if (hookThemeSelected === 'green') {
                 link.href = 'theme/mdb.green.min.css';
             }
 
-            if (hookTheme === 'red') {
+            if (hookThemeSelected === 'red') {
                 link.href = 'theme/mdb.red.min.css';
             }
 
-            if (hookTheme === 'yellow') {
+            if (hookThemeSelected === 'yellow') {
                 link.href = 'theme/mdb.yellow.min.css';
             }
 
@@ -184,10 +185,10 @@ const ComponentSettings = () => {
     };
 
     useEffect(() => {
-        if (hookTheme) {
+        if (hookThemeSelected) {
             loadTheme();
         }
-    }, [hookTheme]);
+    }, [hookThemeSelected]);
 
     const handleSettingsVisible = () => {
         setHookSettingsVisible(false);
@@ -231,11 +232,11 @@ const ComponentSettings = () => {
                             <MDBSelect
                                 className="mb-4"
                                 size="lg"
-                                data={selectTheme}
+                                data={hookThemeOption}
                                 //label='Theme'
-                                value={hookTheme}
+                                value={hookThemeSelected}
                                 onChange={(e) => {
-                                    setHookTheme(e.value);
+                                    setHookThemeSelected(e.value);
                                 }}
                             />
 

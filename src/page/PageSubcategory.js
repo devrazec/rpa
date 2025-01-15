@@ -43,7 +43,8 @@ const PageSubcategory = () => {
     const {
 
         // Hooks
-        hookTheme, setHookTheme,
+        hookThemeSelected, setHookThemeSelected,
+        hookThemeOption, setHookThemeOption,
 
         // Size
         hookWindowSize, setHookWindowSize,
@@ -185,7 +186,7 @@ const PageSubcategory = () => {
                             //modal
                             //sm
                             striped
-                            dark={hookTheme === 'dark'}
+                            dark={hookThemeSelected === 'dark'}
                             data={dataSourceSubcategoryTable}
                             entriesOptions={[5, 10, 15]}
                             onAdd={(newRow) => handleRowAdd(newRow)}

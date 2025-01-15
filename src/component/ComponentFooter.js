@@ -15,7 +15,8 @@ const ComponentFooter = () => {
     const {
 
         // Hooks
-        hookTheme, setHookTheme,
+        hookThemeSelected, setHookThemeSelected,
+        hookThemeOption, setHookThemeOption,
 
         // Size
         hookWindowSize, setHookWindowSize,
@@ -43,7 +44,7 @@ const ComponentFooter = () => {
                     className='text-center shadow-inner'
                     style={{
                         marginLeft: hookSidebarEnable ? '242px' : '0px',
-                        backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
+                        backgroundColor: hookThemeSelected === 'dark' ? '#424242' : ' #FFFFFF'
                     }}
                 >
                     <MDBContainer fluid>

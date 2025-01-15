@@ -18,7 +18,8 @@ const PageFolder = () => {
     const {
 
         // Hooks
-        hookTheme, setHookTheme,
+        hookThemeSelected, setHookThemeSelected,
+        hookThemeOption, setHookThemeOption,
 
         // Size
         hookWindowSize, setHookWindowSize,
@@ -78,7 +79,7 @@ const PageFolder = () => {
                 style={{
                     flex: 1,
                     marginLeft: '0px',
-                    backgroundColor: hookTheme === 'dark' && ' #303030',
+                    backgroundColor: hookThemeSelected === 'dark' && ' #303030',
                     //marginTop: hookHeaderEnable ? '20px' : '0px',
                     //backgroundColor: '#e3f2fd'
                     //backgroundColor: '#4f4f4f'
@@ -89,7 +90,7 @@ const PageFolder = () => {
 
                 <MDBNavbar
                     style={{
-                        backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
+                        backgroundColor: hookThemeSelected === 'dark' ? '#424242' : ' #FFFFFF'
                     }}
                 >
                     <MDBContainer fluid>
@@ -113,7 +114,7 @@ const PageFolder = () => {
                             style={{
                                 width: '100%',
                                 height: '500px',
-                                backgroundColor: hookTheme === 'dark' && ' #4f4f4f',
+                                backgroundColor: hookThemeSelected === 'dark' && ' #4f4f4f',
                             }}
                             src={`${PROTOCOL}${BACKEND_IP}:${BACKEND_PORT}/images`}
                             title="Folder"

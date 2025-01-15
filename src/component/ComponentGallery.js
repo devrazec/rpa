@@ -78,7 +78,8 @@ const ComponentGallery = () => {
     const {
 
         // Hooks
-        hookTheme, setHookTheme,
+        hookThemeSelected, setHookThemeSelected,
+        hookThemeOption, setHookThemeOption,
 
         // Size
         hookWindowSize, setHookWindowSize,
@@ -225,7 +226,7 @@ const ComponentGallery = () => {
         <>
             <MDBNavbar
                 style={{
-                    backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
+                    backgroundColor: hookThemeSelected === 'dark' ? '#424242' : ' #FFFFFF'
                 }}
             >
                 <MDBContainer fluid>
@@ -304,7 +305,7 @@ const ComponentGallery = () => {
                     maxWidth='100%'
                     striped
                     hover
-                    dark={hookTheme === 'dark'}
+                    dark={hookThemeSelected === 'dark'}
                     entries={2}
                     entriesOptions={[2, 3, 4]}
                     data={dataImageGalleryTable} />

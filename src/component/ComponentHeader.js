@@ -32,7 +32,8 @@ const ComponentHeader = () => {
     const {
 
         // Hooks
-        hookTheme, setHookTheme,
+        hookThemeSelected, setHookThemeSelected,
+        hookThemeOption, setHookThemeOption,
 
         // Size
         hookWindowSize, setHookWindowSize,
@@ -86,7 +87,7 @@ const ComponentHeader = () => {
                     className='p-3'
                     style={{
                         marginLeft: hookSidebarEnable ? '242px' : '0px',
-                        backgroundColor: hookTheme === 'dark' ? '#424242' : ' #FFFFFF'
+                        backgroundColor: hookThemeSelected === 'dark' ? '#424242' : ' #FFFFFF'
                     }}                   
                 >
                     <MDBContainer fluid>

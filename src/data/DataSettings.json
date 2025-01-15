@@ -1,6 +1,6 @@
 {
   "settings": {
-    "hookTheme": "blue",
+    "hookThemeSelected": "blue",
     "hookHeaderEnable": true,
     "hookSidebarEnable": true,
     "hookFooterEnable": true,

@@ -5,7 +5,6 @@ export const DataContext = createContext();
 const DataProvider = (props) => {
 
   // Hooks
-  const [hookTheme, setHookTheme] = useState('light');
   const [hookThemeSelected, setHookThemeSelected] = useState('light');
   const [hookThemeOption, setHookThemeOption] = useState([
     { text: 'Light', value: 'light' },
@@ -231,7 +230,6 @@ const DataProvider = (props) => {
     <DataContext.Provider value={{
 
       // Hooks
-      hookTheme, setHookTheme,
       hookThemeSelected, setHookThemeSelected,
       hookThemeOption, setHookThemeOption,
 
