@@ -54,7 +54,7 @@ import {
     getDataCategory,
     getDataSubcategory,
     postDataSubcategory,
-} from '../api/ApiScrapping';
+} from '../api/ApiGetData';
 
 const PageHome = () => {
 
@@ -291,9 +291,10 @@ const PageHome = () => {
                                         label='Source'
                                         size='lg'
                                         multiple
-                                        data={dataSourceOption}
+                                        data={dataSourceJson}
                                         className="me-4"
                                     />
+
                                     <MDBSelect
                                         label='Category'
                                         size='lg'

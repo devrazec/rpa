@@ -37,7 +37,7 @@ import {
     postDataSubcategory,
     getDataWebsite,
     postDataWebsite,
-} from '../api/ApiScrapping';
+} from '../api/ApiGetData';
 
 const PageWebsite = () => {
 

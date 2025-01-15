@@ -29,7 +29,7 @@ import {
     getDataCategory,
     getDataSubcategory,
     postDataSubcategory,
-} from '../api/ApiScrapping';
+} from '../api/ApiGetData';
 
 let PROTOCOL = '';
 
