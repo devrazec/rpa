@@ -209,7 +209,8 @@ const DataProvider = (props) => {
   const [dataImageGalleryColumn, setDataImageGalleryColumn] = useState(4);
 
   // Data Website
-  const [dataWebsiteOption, setDataWebsiteOption] = useState([{}]);
+  const [dataWebsiteSelected, setDataWebsiteSelected] = useState([]);
+  const [dataWebsiteOption, setDataWebsiteOption] = useState([]);
   const [dataSourceWebsiteJson, setDataSourceWebsiteJson] = useState([]);
   const [dataSourceWebsiteTable, setDataSourceWebsiteTable] = useState({
     columns: [
@@ -262,28 +263,36 @@ const DataProvider = (props) => {
       // Data Source      
       dataSourceOption, setDataSourceOption,
       dataSourceSelected, setDataSourceSelected,
-      dataCategoryOption, setDataCategoryOption,
-      dataSubcategoryOption, setDataSubcategoryOption,
       dataSourceJson, setDataSourceJson,
       dataSourceTable, setDataSourceTable,
       dataSourceUrlJson, setDataSourceUrlJson,
-      dataSourceUrlTable, setDataSourceUrlTable,
-      dataSourceCategoryJson, setDataSourceCategoryJson,
-      dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
-      dataSourceCategoryTable, setDataSourceCategoryTable,
-      dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
- 
+      dataSourceUrlTable, setDataSourceUrlTable,   
       dataSourceImageJson, setDataSourceImageJson,
       dataSourceImageTable, setDataSourceImageTable,
 
       // Data Website
+      dataWebsiteSelected, setDataWebsiteSelected,
       dataWebsiteOption, setDataWebsiteOption,
       dataSourceWebsiteJson, setDataSourceWebsiteJson,
       dataSourceWebsiteTable, setDataSourceWebsiteTable,
 
       // Data Category
+      //dataCategorySelectedTab1, setDataCategorySelectedTab1,
+      //dataCategorySelectedTab2, setDataCategorySelectedTab2,
+      //dataCategorySelectedTab3, setDataCategorySelectedTab3,
+      //dataCategorySelectedTab4, setDataCategorySelectedTab4,
+      dataCategoryOption, setDataCategoryOption,
+      dataSourceCategoryJson, setDataSourceCategoryJson,
+      dataSourceCategoryTable, setDataSourceCategoryTable,
 
       // Data Subcategory
+      //dataSubcategorySelectedTab1, setDataSubcategorySelectedTab1,
+      //dataSubcategorySelectedTab2, setDataSubcategorySelectedTab2,
+      //dataSubcategorySelectedTab3, setDataSubcategorySelectedTab3,
+      //dataSubcategorySelectedTab4, setDataSubcategorySelectedTab4,
+      dataSubcategoryOption, setDataSubcategoryOption,
+      dataSourceSubcategoryJson, setDataSourceSubcategoryJson,
+      dataSourceSubcategoryTable, setDataSourceSubcategoryTable,
 
       // Data Image
       dataImageGalleryArray, setDataImageGalleryArray,

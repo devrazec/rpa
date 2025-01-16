@@ -124,8 +124,6 @@ const ComponentGallery = () => {
 
     } = useContext(DataContext);
 
-    const serverIp = process.env.REACT_APP_SERVER_IP;
-
     useEffect(() => {
         if (dataSourceImageJson) {
             handleGalleryColumn();
@@ -230,14 +228,7 @@ const ComponentGallery = () => {
                 }}
             >
                 <MDBContainer fluid>
-                    <MDBInputGroup className='d-flex w-100 justify-content-between'>
-                        <MDBSelect
-                            label='Source'
-                            size='lg'
-                            multiple
-                            data={dataSourceOption}
-                            className="me-4"
-                        />
+                    <MDBInputGroup className='d-flex w-100 justify-content-between'>                        
                         <MDBSelect
                             label='Category'
                             size='lg'

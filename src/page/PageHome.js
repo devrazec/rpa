@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
+import ReactDOM from 'react-dom';
 
 // MD BootStrap Component
 import {
@@ -110,6 +111,38 @@ const PageHome = () => {
 
     } = useContext(DataContext);
 
+    const [divCustomSearch, setDivCustomSearch] = useState(null);
+
+    useEffect(() => {
+
+        const cardBody = document.querySelector('.card-body > div:nth-child(1)');
+        if (cardBody) {
+            if (cardBody && !document.querySelector('.custom-search')) {
+                const newDiv = document.createElement('div');
+                newDiv.className = 'custom-search';
+                cardBody.appendChild(newDiv);
+                setDivCustomSearch(newDiv);
+            }
+        }
+
+        const cssDiv1 = document.querySelector('.card-body .d-flex.justify-content-end');
+        if (cssDiv1) {
+            cssDiv1.classList.remove('justify-content-end');
+            cssDiv1.classList.add('justify-content-between');
+        }
+
+        //const div1 = document.querySelector('.card-body > div:nth-child(1)');
+        //if (div1) {
+        //    div1.remove();
+        //}
+
+        //const hr = document.querySelector('.card-body > hr');
+        //if (hr) {
+        //    hr.remove();
+        //}
+
+    }, []);
+
     const handleTabActive = (value) => {
         if (value === hookTabHomeActive) {
             return;
@@ -139,6 +172,65 @@ const PageHome = () => {
                     //console.log(response);
                 }
             }
+        );
+    };
+
+    const renderComponent = () => {
+        return (
+
+            <MDBInputGroup className='d-flex w-100 justify-content-end gap-3'>
+                <MDBSelect
+                    label='Category'
+                    size='lg'
+                    multiple
+                    data={[
+                        { text: 'Living Room' },
+                        { text: 'Bedroom' },
+                        { text: 'Dining Room' },
+                        { text: 'Kitchen' },
+                        { text: 'Home Office' },
+                        { text: 'Outdoor' },
+                    ]}
+                    className="me-4"
+                />
+
+                <MDBSelect
+                    label='Subcategory'
+                    size='lg'
+                    multiple
+                    data={[
+                        { text: 'Bed' },
+                        { text: 'Sofa' },
+                        { text: 'Armchair' },
+                        { text: 'Shelve' },
+                        { text: 'Table' },
+                        { text: 'Cabinet' },
+                        { text: 'TV Stand' },
+                    ]}
+                />
+                <div className="d-flex ms-auto">
+
+                    <div style={{ textAlign: "center", alignItems: "center", display: "flex" }}>
+                        <MDBBtn
+                            tag='a'
+                            color='none'
+                            className="me-2"
+                            onClick={() => setDataImageGalleryColumn(2)}
+                        >
+                            <BsFiletypeJson style={{ fontSize: '34px' }} />
+                        </MDBBtn>
+                        <MDBBtn
+                            tag='a'
+                            color='none'
+                            className="me-2"
+                            onClick={() => setDataImageGalleryColumn(2)}
+                        >
+                            <BsFiletypeXlsx style={{ fontSize: '34px' }} />
+                        </MDBBtn>
+
+                    </div>
+                </div>
+            </MDBInputGroup>
         );
     };
 
@@ -181,14 +273,19 @@ const PageHome = () => {
                 <MDBTabsContent>
 
                     <MDBTabsPane open={hookTabHomeActive === 'Datasource'}>
+
+                        {divCustomSearch && ReactDOM.createPortal(renderComponent(), divCustomSearch)}
+
                         <MDBCard
                             className='mb-3'
                         >
                             <MDBCardBody>
                                 <MDBTableEditor
-                                    modal
-                                  
+                                    //modal
+                                    //advancedSearch={[ { text: 'All columns', value: '' }, { text: 'Category', value: 'category' }, { text: 'Subcategory', value: 'subcategory' }, ]} 
+                                    search={false}
                                     striped
+                                    hover
                                     dark={hookThemeSelected === 'dark'}
                                     data={dataSourceTable}
                                     entriesOptions={[5, 10, 15]}
@@ -208,13 +305,6 @@ const PageHome = () => {
                         >
                             <MDBContainer fluid>
                                 <MDBInputGroup className='d-flex w-100 justify-content-between mb-3'>
-                                    <MDBSelect
-                                        label='Source'
-                                        size='lg'
-                                        multiple
-                                        data={dataSourceOption}
-                                        className="me-4"
-                                    />
                                     <MDBSelect
                                         label='Category'
                                         size='lg'
@@ -263,10 +353,16 @@ const PageHome = () => {
                                             >
                                                 <BsFiletypeXlsx style={{ fontSize: '34px' }} />
                                             </MDBBtn>
+
                                         </div>
+
                                     </div>
+
                                 </MDBInputGroup>
+
                             </MDBContainer>
+
+
                         </MDBNavbar>
 
                         <MDBDatatable
@@ -287,13 +383,6 @@ const PageHome = () => {
                         >
                             <MDBContainer fluid>
                                 <MDBInputGroup className='d-flex w-100 justify-content-between mb-2'>
-                                    <MDBSelect
-                                        label='Source'
-                                        size='lg'
-                                        multiple
-                                        data={dataSourceJson}
-                                        className="me-4"
-                                    />
 
                                     <MDBSelect
                                         label='Category'
