@@ -39,7 +39,7 @@ The solution was developed using **Puppeteer**, a Node.js library for browser au
 - [Node.js](https://nodejs.org/)  
 - [Puppeteer](https://pptr.dev/)  
 - [JavaScript/ES6]  
-- [SQLite] or [MongoDB] (optional for structured storage)  
+- [Json-Server] (optional for structured storage)  
 
 ---
 
@@ -67,7 +67,7 @@ The solution was developed using **Puppeteer**, a Node.js library for browser au
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/rpa-thesis.git
+   git clone https://github.com/devrazec/rpa.git
    cd rpa-thesis
 
 Install dependencies:
