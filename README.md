@@ -46,12 +46,19 @@ The solution was developed using **Puppeteer**, a Node.js library for browser au
 ## 📂 Project Structure
 
 ├── src/ # Source code
+
 │ ├── App.js # Main RPA script using Puppeteer
+
 │ ├── package.json # Configuration (URLs, selectors, settings)
+
 │ └── utils/ # Helper functions
+
 ├── images/ # Collected images
+
 ├── express/ # Metadata
+
 ├── docs/ # Thesis documentation & presentation
+
 ├── README.md # Project documentation
 
 ---
