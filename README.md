@@ -1,28 +1,90 @@
-# rpa
-Exploring and Understanding the Use of Robotic Process Automation (RPA) in Enterprise Systems.
+# Exploring and Understanding the Use of RPA in Enterprise Systems
 
-This research investigates the challenges of using RPA, which often do not meet the unique requirements of specific industries.
-A case study of the company Desion GmbH, a German company specializing in AI solutions, which faces difficulties in obtaining data for its computer vision models. 
+This repository contains the implementation and demonstration code developed as part of the Master’s thesis **“Exploring and Understanding the Use of Robotic Process Automation (RPA) in Enterprise Systems”**, completed in 2025 by **Cezar**.  
 
-Desion needs customized RPA solutions to meet specific industry demands.
-The findings of this research provide information on how to improve the adaptability of RPA to industry needs and improve its role in optimizing Enterprise Systems to drive Digital Transformation with the use of Automation Technologies.
+The project investigates how RPA can be customized and integrated into enterprise systems to improve efficiency, scalability, and return on investment.  
 
-npm i -S puppeteer puppeteer-extra puppeteer-extra-plugin-adblocker puppeteer-extra-plugin-anonymize-ua puppeteer-extra-plugin-stealth puppeteer-extra-plugin-user-preferences
+---
 
-npm i -S express cors body-parser
+## 📖 Overview
 
-Generate Certificate
-openssl genrsa -out private.key 2048
-openssl x509 -req -days 365 -in certificate.csr -signkey private.key -out certificate.crt
+Robotic Process Automation (RPA) allows organizations to automate repetitive and rule-based tasks by using software robots that emulate human interactions.  
+In this project, an **Action Research methodology** was applied in collaboration with **Desion GmbH**, a German company specialized in AI and computer vision, to automate the acquisition of high-quality image datasets for training machine learning models.  
 
-openssl req -x509 -out localhost.crt -keyout localhost.key \
-    -newkey rsa:2048 -nodes -sha256 \
-    -subj '/CN=localhost' -extensions EXT -config <( \
-    printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost,IP:127.0.0.1\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
+The solution was developed using **Puppeteer**, a Node.js library for browser automation.  
+
+---
+
+## 🚀 Features
+
+- Automated navigation across multiple websites  
+- Extraction of product images and metadata (e.g., furniture descriptions)  
+- Robust scraping with flexible selectors  
+- Storage of collected images and structured data  
+- Significant improvements in efficiency, error reduction, and scalability  
+
+---
+
+## 📊 Results
+
+- **Cycle time reduction:** from 180s to 5s per image (97% faster)  
+- **Error rate reduction:** from 12.5% to 2.8%  
+- **Throughput:** from 100 images/day to 3,600 images/day  
+- **Cost savings:** ~62.5% reduction in labor costs  
+
+---
+
+## 🛠️ Technologies
+
+- [Node.js](https://nodejs.org/)  
+- [Puppeteer](https://pptr.dev/)  
+- [JavaScript/ES6]  
+- [SQLite] or [MongoDB] (optional for structured storage)  
+
+---
+
+## 📂 Project Structure
+
+├── src/ # Source code
+│ ├── App.js # Main RPA script using Puppeteer
+│ ├── package.json # Configuration (URLs, selectors, settings)
+│ └── utils/ # Helper functions
+├── images/ # Collected images
+├── express/ # Metadata
+├── docs/ # Thesis documentation & presentation
+├── README.md # Project documentation
+
+---
+
+## ⚙️ Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/rpa-thesis.git
+   cd rpa-thesis
+
+Install dependencies:
+npm install
 
 
-"proxy": "http://192.168.1.100:5000"
+⚠️ Legal & Ethical Notice
+
+This code is for research and educational purposes only.
+
+Web scraping may be subject to the terms of service of target websites.
+
+Ensure compliance with GDPR, copyright law, and data usage policies before applying in production.
 
 
-node ./express/index.js
-node ./json-server/index.js
+📌 Future Work
+
+Integration with AI for Intelligent Process Automation (IPA)
+
+Scaling across distributed/cloud environments
+
+Application to other enterprise workflows (procurement, inventory management, etc.)
+
+
+📜 License
+
+This project is licensed under the MIT License. See LICENSE for details.
