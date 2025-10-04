@@ -68,7 +68,7 @@ The solution was developed using **Puppeteer**, a Node.js library for browser au
 1. Clone this repository:
    ```bash
    git clone https://github.com/devrazec/rpa.git
-   cd rpa-thesis
+   cd rpa
 
 Install dependencies:
 npm install
