@@ -143,6 +143,8 @@ const PageHome = () => {
 
     }, []);
 
+    console.log(dataSourceTable);
+
     const handleTabActive = (value) => {
         if (value === hookTabHomeActive) {
             return;
@@ -187,9 +189,11 @@ const PageHome = () => {
                         { text: 'Living Room' },
                         { text: 'Bedroom' },
                         { text: 'Dining Room' },
+                        { text: 'Bar' },
                         { text: 'Kitchen' },
                         { text: 'Home Office' },
-                        { text: 'Outdoor' },
+                        { text: 'Bathroom' },
+                        { text: 'Entryway' },
                     ]}
                     className="me-4"
                 />
@@ -199,13 +203,15 @@ const PageHome = () => {
                     size='lg'
                     multiple
                     data={[
-                        { text: 'Bed' },
                         { text: 'Sofa' },
                         { text: 'Armchair' },
+                        { text: 'Bed' },
                         { text: 'Shelve' },
                         { text: 'Table' },
                         { text: 'Cabinet' },
                         { text: 'TV Stand' },
+                        { text: 'Outdoor' },
+
                     ]}
                 />
                 <div className="d-flex ms-auto">
@@ -313,9 +319,11 @@ const PageHome = () => {
                                             { text: 'Living Room' },
                                             { text: 'Bedroom' },
                                             { text: 'Dining Room' },
+                                            { text: 'Bar' },
                                             { text: 'Kitchen' },
                                             { text: 'Home Office' },
-                                            { text: 'Outdoor' },
+                                            { text: 'Bathroom' },
+                                            { text: 'Entryway' },
                                         ]}
                                         className="me-4"
                                     />
@@ -325,13 +333,14 @@ const PageHome = () => {
                                         size='lg'
                                         multiple
                                         data={[
-                                            { text: 'Bed' },
                                             { text: 'Sofa' },
                                             { text: 'Armchair' },
+                                            { text: 'Bed' },
                                             { text: 'Shelve' },
                                             { text: 'Table' },
                                             { text: 'Cabinet' },
                                             { text: 'TV Stand' },
+                                            { text: 'Outdoor' },
                                         ]}
                                     />
                                     <div className="d-flex ms-auto">
@@ -392,9 +401,11 @@ const PageHome = () => {
                                             { text: 'Living Room' },
                                             { text: 'Bedroom' },
                                             { text: 'Dining Room' },
+                                            { text: 'Bar' },
                                             { text: 'Kitchen' },
                                             { text: 'Home Office' },
-                                            { text: 'Outdoor' },
+                                            { text: 'Bathroom' },
+                                            { text: 'Entryway' },
                                         ]}
                                         className="me-4"
                                     />
@@ -404,13 +415,14 @@ const PageHome = () => {
                                         size='lg'
                                         multiple
                                         data={[
-                                            { text: 'Bed' },
                                             { text: 'Sofa' },
                                             { text: 'Armchair' },
+                                            { text: 'Bed' },
                                             { text: 'Shelve' },
                                             { text: 'Table' },
                                             { text: 'Cabinet' },
                                             { text: 'TV Stand' },
+                                            { text: 'Outdoor' },
                                         ]}
                                     />
                                     <div className="d-flex ms-auto">

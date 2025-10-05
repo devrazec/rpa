@@ -228,7 +228,7 @@ const ComponentGallery = () => {
                 }}
             >
                 <MDBContainer fluid>
-                    <MDBInputGroup className='d-flex w-100 justify-content-between'>                        
+                    <MDBInputGroup className='d-flex w-100 justify-content-between'>
                         <MDBSelect
                             label='Category'
                             size='lg'
@@ -237,9 +237,11 @@ const ComponentGallery = () => {
                                 { text: 'Living Room' },
                                 { text: 'Bedroom' },
                                 { text: 'Dining Room' },
+                                { text: 'Bar' },
                                 { text: 'Kitchen' },
                                 { text: 'Home Office' },
-                                { text: 'Outdoor' },
+                                { text: 'Bathroom' },
+                                { text: 'Entryway' },
                             ]}
                             className="me-4"
                         />
@@ -249,13 +251,14 @@ const ComponentGallery = () => {
                             size='lg'
                             multiple
                             data={[
-                                { text: 'Bed' },
                                 { text: 'Sofa' },
                                 { text: 'Armchair' },
+                                { text: 'Bed' },
                                 { text: 'Shelve' },
                                 { text: 'Table' },
                                 { text: 'Cabinet' },
                                 { text: 'TV Stand' },
+                                { text: 'Outdoor' },
                             ]}
                         />
                         <div className="d-flex ms-auto">

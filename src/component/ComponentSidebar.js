@@ -29,6 +29,8 @@ import {
     getDataCategory,
     getDataSubcategory,
     postDataSubcategory,
+    getDataWebsite,
+    postDataWebsite,
 } from '../api/ApiGetData';
 
 let PROTOCOL = '';
@@ -133,6 +135,38 @@ const ComponentSidebar = () => {
             }
         );
 
+        getDataWebsite().then(
+            (response) => {
+                if (response) {
+
+                    setDataSourceWebsiteJson(response);
+
+                    setDataSourceWebsiteTable({
+                        columns: dataSourceWebsiteTable.columns,
+                        rows: response.map((item) => ({
+                            ...item,
+                            id: item.id,
+                            name: item.name.trim()
+                        })),
+                    });
+
+                    setDataWebsiteOption(
+                        response?.map(item => ({
+                            value: item.id,
+                            text: item.name,
+                        }))
+                    );
+ 
+                    setHookLoadingVisible(false);
+
+                } else {
+                    setHookLoadingVisible(false);
+                    setHookToastActive(true);
+                    setHookToastMessage('There is not Data Website!');
+                }
+            }
+        );
+
     }, []);
 
     useEffect(() => {
@@ -189,6 +223,7 @@ const ComponentSidebar = () => {
                             ...item,
                             id: item.id,
                             source: getTextBySource(item.source),
+                            //source: item.source.trim(),
                             category: item.category.trim(),
                             subcategory: item.subcategory.trim(),
                             url: item.url,
@@ -250,6 +285,9 @@ const ComponentSidebar = () => {
                                 </a>
                             ),
                             source: getTextBySource(item.source)
+                            //source: item.source.trim(),
+
+
                         }))
                     });
 
@@ -283,6 +321,7 @@ const ComponentSidebar = () => {
                             ...item,
                             id: item.id,
                             source: getTextBySource(item.source),
+                            //source: item.source.trim(),
                             category: item.category.trim(),
                             subcategory: item.subcategory.trim(),
                             filename: item.filename,

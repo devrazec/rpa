@@ -454,5 +454,93 @@
         "category": "Living Room",
         "subcategory": "Sofa",
         "source": "website1"
+    },
+    {
+        "id": 58,
+        "url": "https://www.ikea.com/pt/en/p/skarpoe-armchair-outdoor-white-70234185/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/skarpoe-armchair-outdoor-white__0729491_pe737010_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 59,
+        "url": "https://www.ikea.com/pt/en/p/naemmaroe-lounge-chair-outdoor-light-brown-stained-kuddarna-light-grey-beige-s69575217/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-lounge-chair-outdoor-light-brown-stained-kuddarna-light-grey-beige__1469157_pe996440_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 60,
+        "url": "https://www.ikea.com/pt/en/p/taernoe-table-2-chairs-outdoor-black-light-brown-stained-s69898415/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/taernoe-table-2-chairs-outdoor-black-light-brown-stained__0736028_pe740355_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 61,
+        "url": "https://www.ikea.com/pt/en/p/naemmaroe-sun-lounger-outdoor-light-brown-stained-30503354/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-sun-lounger-outdoor-light-brown-stained__1138752_pe880052_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 62,
+        "url": "https://www.ikea.com/pt/en/p/laeckoe-table-2-chairs-outdoor-grey-kuddarna-light-grey-beige-s89575363/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/laeckoe-table-2-chairs-outdoor-grey-kuddarna-light-grey-beige__1379430_pe961539_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 63,
+        "url": "https://www.ikea.com/pt/en/p/naemmaroe-bench-outdoor-light-brown-stained-60510310/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-bench-outdoor-light-brown-stained__1138759_pe880059_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 64,
+        "url": "https://www.ikea.com/pt/en/p/sundsoe-table-and-2-folding-chairs-outdoor-dark-blue-dark-blue-kuddarna-light-grey-beige-s69573256/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/sundsoe-table-and-2-folding-chairs-outdoor-dark-blue-dark-blue-kuddarna-light-grey-beige__1355141_pe952934_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 65,
+        "url": "https://www.ikea.com/pt/en/p/naemmaroe-reclining-chair-outdoor-foldable-light-brown-stained-50510301/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-reclining-chair-outdoor-foldable-light-brown-stained__1138757_pe880057_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 66,
+        "url": "https://www.ikea.com/pt/en/p/naemmaroe-backrest-for-modular-sofa-outdoor-light-brown-stained-60510305/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-backrest-for-modular-sofa-outdoor-light-brown-stained__1138758_pe880058_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 67,
+        "url": "https://www.ikea.com/pt/en/p/naemmaroe-storage-box-light-brown-stained-indoor-outdoor-40532742/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/naemmaroe-storage-box-light-brown-stained-indoor-outdoor__1175345_pe894657_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
+    },
+    {
+        "id": 68,
+        "url": "https://www.ikea.com/pt/en/p/taernoe-table-4-chairs-outdoor-black-light-brown-stained-foldable-foldable-kuddarna-light-grey-beige-s49575360/",
+        "image_url": "https://www.ikea.com/pt/en/images/products/taernoe-table-4-chairs-outdoor-black-light-brown-stained-foldable-foldable-kuddarna-light-grey-beige__1379453_pe961558_s5.jpg?f=xxs",
+        "category": "Living Room",
+        "subcategory": "Outdoor",
+        "source": "website1"
     }
 ]

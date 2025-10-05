@@ -41,11 +41,11 @@ const DataProvider = (props) => {
 
   // Data
   const [dataSourceOption, setDataSourceOption] = useState([
-    { text: 'Website 1', value: 'website1' },
-    { text: 'Website 2', value: 'website2' },
-    { text: 'Website 3', value: 'website3' },
-    { text: 'Website 4', value: 'website4' },
-    { text: 'Website 5', value: 'website5' },
+    { text: 'website1', value: 'website1' },
+    { text: 'website2', value: 'website2' },
+    { text: 'website3', value: 'website3' },
+    { text: 'website4', value: 'website4' },
+    { text: 'website5', value: 'website5' },
   ]);
   const [dataSourceCategoryJson, setDataSourceCategoryJson] = useState([]);
   const [dataSourceSubcategoryJson, setDataSourceSubcategoryJson] = useState([]);

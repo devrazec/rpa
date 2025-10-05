@@ -1,26 +1,26 @@
 [
     {
         "id": "1",
-        "name": "Website 1"
+        "name": "website1"
     },
     {
         "id": "2",
-        "name": "Website 2"
+        "name": "website2"
     },
     {
         "id": "3",
-        "name": "Website 3"
+        "name": "website3"
     },
     {
         "id": "4",
-        "name": "Website 4"
+        "name": "website4"
     },
     {
         "id": "5",
-        "name": "Website 5"
+        "name": "website5"
     },
     {
         "id": "6",
-        "name": "Website 6"
+        "name": "website6"
     }
 ]
