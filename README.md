@@ -39,7 +39,7 @@ The solution was developed using **Puppeteer**, a Node.js library for browser au
 - [Node.js](https://nodejs.org/)  
 - [Puppeteer](https://pptr.dev/)  
 - [JavaScript/ES6]  
-- [Json-Server] (optional for structured storage)  
+- [Json-Server] (optional for settings)  
 
 ---
 
@@ -69,9 +69,21 @@ The solution was developed using **Puppeteer**, a Node.js library for browser au
    ```bash
    git clone https://github.com/devrazec/rpa.git
    cd rpa
+   npm install
 
-Install dependencies:
-npm install
+
+## ⚙️ Start
+
+1. Start this project:
+   ```bash
+   npm start
+
+## ⚙️ Screenshot
+
+![Pic1](./src/images/data_source.png)  
+![Pic2](./src/images/data_url.png)  
+![Pic3](./src/images/data_image.png)  
+![Pic4](./src/images/stored_image.png)  
 
 
 ⚠️ Legal & Ethical Notice
