@@ -45,19 +45,29 @@ The solution was developed using **Puppeteer**, a Node.js library for browser au
 
 ## 📂 Project Structure
 
-├── src/ # Source code
+├── certs/ # SSL Certificates for HTTPS
 
-│ ├── App.js # Main RPA script using Puppeteer
-
-│ ├── package.json # Configuration (URLs, selectors, settings)
-
-│ └── utils/ # Helper functions
+├── express/ # Main RPA script using Puppeteer and Json Data files
 
 ├── images/ # Collected images
 
-├── express/ # Metadata
+├── json-server/ # Settings for the frontend interface (Theme)
 
-├── docs/ # Thesis documentation & presentation
+├── src/ # Source code
+
+│ ├── App.js # React App
+
+│ ├── component # React Components
+
+│ ├── data # React Data
+
+│ ├── paga # React Pages
+
+│ ├── package.json # Configuration (Scripts, packages, settings)
+
+│ └── screenshot/ # Frontend Interface
+
+├── docs/ # Dissertation documentation & presentation
 
 ├── README.md # Project documentation
 
@@ -80,10 +90,10 @@ The solution was developed using **Puppeteer**, a Node.js library for browser au
 
 ## ⚙️ Screenshot
 
-![Pic1](./src/images/data_source.png)  
-![Pic2](./src/images/data_url.png)  
-![Pic3](./src/images/data_image.png)  
-![Pic4](./src/images/stored_image.png)  
+![Pic1](./src/screenshot/data_source.png)  
+![Pic2](./src/screenshot/data_url.png)  
+![Pic3](./src/screenshot/data_image.png)  
+![Pic4](./src/screenshot/stored_image.png)  
 
 
 ⚠️ Legal & Ethical Notice
