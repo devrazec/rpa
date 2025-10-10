@@ -69,7 +69,8 @@ const get_data_image = {
         console.log('01 - Starting Puppeteer Plugins!');
 
         browser = await puppeteer.launch({
-            headless: true,
+            //headless: true,
+            headless: false,
             args: [
                 '--start-maximized',
                 //'--incognito',
